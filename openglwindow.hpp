@@ -21,12 +21,26 @@ public:
     
     void setAnimating(bool animating);
     
+    
+    
 public slots:
     void renderLater();
     void renderNow();
     
 protected:
+    
     bool event(QEvent *event) override;
+    
+    // Key events
+    void keyPressEvent(QKeyEvent *i_event) override;
+    void keyReleaseEvent(QKeyEvent *i_event) override;
+    
+    // Mouse events
+    void mousePressEvent(QMouseEvent *i_event) override;
+    void mouseReleaseEvent(QMouseEvent *i_event) override;
+    void mouseMoveEvent(QMouseEvent *i_event) override;
+    
+    void resizeEvent(QResizeEvent *i_event) override;
     
     void exposeEvent(QExposeEvent *event) override;
     

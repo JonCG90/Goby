@@ -487,6 +487,32 @@
 				"ARCHS[sdk=macosx*]" = x86_64;
 				COPY_PHASE_STRIP = NO;
 				ENABLE_BITCODE = NO;
+				HEADER_SEARCH_PATHS = (
+					.,
+					../../Qt/5.12.1/clang_64/lib/QtWidgets.framework/Headers,
+					../../Qt/5.12.1/clang_64/lib/QtGui.framework/Headers,
+					../../Qt/5.12.1/clang_64/lib/QtCore.framework/Headers,
+					.,
+					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/Applications/Xcode10.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework/Headers,
+					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/Applications/Xcode10.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/AGL.framework/Headers/,
+					.,
+					"../../Qt/5.12.1/clang_64/mkspecs/macx-clang",
+					/usr/local/opt/USD/include,
+				);
+				LD_RUNPATH_SEARCH_PATHS = /usr/local/opt/USD/lib;
+				LIBRARY_SEARCH_PATHS = (
+					/Users/jongraham/Qt/5.12.1/clang_64/lib,
+					/System/Library/Frameworks/,
+					/usr/local/opt/USD/lib,
+				);
+				OTHER_LDFLAGS = (
+					"-stdlib=libc++",
+					"-headerpad_max_install_names",
+					"-Wl,-rpath,@executable_path/Frameworks",
+					"-Wl,-rpath,/Users/jongraham/Qt/5.12.1/clang_64/lib",
+					"-F/Users/jongraham/Qt/5.12.1/clang_64/lib",
+					"-lusd_ms",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Graham.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = Goby;
 				QMAKE_PKGINFO_TYPEINFO = "????";
@@ -503,7 +529,33 @@
 				COPY_PHASE_STRIP = NO;
 				ENABLE_BITCODE = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				HEADER_SEARCH_PATHS = (
+					.,
+					../../Qt/5.12.1/clang_64/lib/QtWidgets.framework/Headers,
+					../../Qt/5.12.1/clang_64/lib/QtGui.framework/Headers,
+					../../Qt/5.12.1/clang_64/lib/QtCore.framework/Headers,
+					.,
+					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/Applications/Xcode10.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework/Headers,
+					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/Applications/Xcode10.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/AGL.framework/Headers/,
+					.,
+					"../../Qt/5.12.1/clang_64/mkspecs/macx-clang",
+					/usr/local/opt/USD/include,
+				);
+				LD_RUNPATH_SEARCH_PATHS = /usr/local/opt/USD/lib;
+				LIBRARY_SEARCH_PATHS = (
+					/Users/jongraham/Qt/5.12.1/clang_64/lib,
+					/System/Library/Frameworks/,
+					/usr/local/opt/USD/lib,
+				);
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-stdlib=libc++",
+					"-headerpad_max_install_names",
+					"-Wl,-rpath,@executable_path/Frameworks",
+					"-Wl,-rpath,/Users/jongraham/Qt/5.12.1/clang_64/lib",
+					"-F/Users/jongraham/Qt/5.12.1/clang_64/lib",
+					"-lusd_ms",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Graham.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = Goby;
 				QMAKE_PKGINFO_TYPEINFO = "????";
