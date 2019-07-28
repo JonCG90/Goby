@@ -28,6 +28,7 @@
 		23237F1E22C4D48F003ACB0B /* rendererPlugin.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 23237F1C22C4D48F003ACB0B /* rendererPlugin.cpp */; };
 		234EA77122EDA92500803B89 /* openglwindow.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 234EA76F22EDA92500803B89 /* openglwindow.cpp */; };
 		234EA77322EDA9C200803B89 /* main.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 234EA77222EDA9C200803B89 /* main.cpp */; };
+		234EA77622EDAA3D00803B89 /* usdRenderWindow.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 234EA77422EDAA3D00803B89 /* usdRenderWindow.cpp */; };
 		23A7DF0E22CB6B7600AA0E6C /* renderDelegate.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 23A7DF0C22CB6B7600AA0E6C /* renderDelegate.cpp */; };
 		563CF89DC182C977E17F2B26 /* QtGui.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = 897F7DBDCA6B394E806B8406 /* QtGui.framework */; };
 		7E5709D3FE807F8C875AE381 /* moc_mainWindow.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = C70E9616EF3EBD83D0000B2E /* moc_mainWindow.cpp */; settings = {ATTRIBUTES = (); }; };
@@ -69,6 +70,8 @@
 		234EA76F22EDA92500803B89 /* openglwindow.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = openglwindow.cpp; path = src/ui/openglwindow.cpp; sourceTree = "<group>"; };
 		234EA77022EDA92500803B89 /* openglwindow.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = openglwindow.hpp; path = src/ui/openglwindow.hpp; sourceTree = "<group>"; };
 		234EA77222EDA9C200803B89 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = src/main.cpp; sourceTree = "<group>"; };
+		234EA77422EDAA3D00803B89 /* usdRenderWindow.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = usdRenderWindow.cpp; path = src/ui/usdRenderWindow.cpp; sourceTree = "<group>"; };
+		234EA77522EDAA3D00803B89 /* usdRenderWindow.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = usdRenderWindow.hpp; path = src/ui/usdRenderWindow.hpp; sourceTree = "<group>"; };
 		23A7DF0C22CB6B7600AA0E6C /* renderDelegate.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = renderDelegate.cpp; sourceTree = "<group>"; };
 		23A7DF0D22CB6B7600AA0E6C /* renderDelegate.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = renderDelegate.hpp; sourceTree = "<group>"; };
 		2B774D8E4178765CE52EAAF5 /* DiskArbitration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DiskArbitration.framework; path = /System/Library/Frameworks/DiskArbitration.framework; sourceTree = "<absolute>"; };
@@ -238,6 +241,8 @@
 				234EA77022EDA92500803B89 /* openglwindow.hpp */,
 				8AB4ACE0B063C484E0B9CB4A /* mainWindow.cpp */,
 				4F5AC65C949567C2B2372090 /* mainWindow.hpp */,
+				234EA77422EDAA3D00803B89 /* usdRenderWindow.cpp */,
+				234EA77522EDAA3D00803B89 /* usdRenderWindow.hpp */,
 			);
 			name = ui;
 			sourceTree = "<group>";
@@ -354,6 +359,7 @@
 				234EA77122EDA92500803B89 /* openglwindow.cpp in Compile Sources */,
 				234EA77322EDA9C200803B89 /* main.cpp in Compile Sources */,
 				222C237AEDD0C7A3314EA04A /* dummy.cpp in Compile Sources */,
+				234EA77622EDAA3D00803B89 /* usdRenderWindow.cpp in Compile Sources */,
 			);
 			name = "Compile Sources";
 			runOnlyForDeploymentPostprocessing = 0;

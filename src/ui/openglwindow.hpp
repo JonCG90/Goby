@@ -1,8 +1,8 @@
-#include <pxr/usd/usd/stage.h>
-#include <pxr/usdImaging/usdImagingGL/engine.h>
-
 #include <QtGui/QWindow>
 #include <QtGui/QOpenGLFunctions>
+
+#ifndef OpenGLWindow_HPP
+#define OpenGLWindow_HPP
 
 QT_BEGIN_NAMESPACE
 class QPainter;
@@ -51,7 +51,6 @@ private:
     
     QOpenGLContext *m_context;
     QOpenGLPaintDevice *m_device;
-    
-    pxr::UsdStageRefPtr m_stage;
-    std::shared_ptr< pxr::UsdImagingGLEngine > m_engine;
 };
+
+#endif /* OpenGLWindow_HPP */
