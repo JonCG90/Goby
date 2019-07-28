@@ -13,27 +13,35 @@
 #include "pxr/pxr.h"
 #include "pxr/imaging/hdx/rendererPlugin.h"
 
-class HdMarlinRendererPlugin final : public pxr::HdxRendererPlugin
+PXR_NAMESPACE_OPEN_SCOPE
+
+class HdMarlinRendererPlugin final : public HdxRendererPlugin
 {
     
 public:
     
+    /// Constructor
     HdMarlinRendererPlugin() = default;
+    
+    /// Destructor
     ~HdMarlinRendererPlugin() override = default;
     
-    pxr::HdRenderDelegate* CreateRenderDelegate() override;
     
-    pxr::HdRenderDelegate* CreateRenderDelegate( pxr::HdRenderSettingsMap const &i_settingsMap ) override;
+    HdRenderDelegate* CreateRenderDelegate() override;
     
-    void DeleteRenderDelegate(pxr::HdRenderDelegate* i_renderDelegate) override;
+    HdRenderDelegate* CreateRenderDelegate( HdRenderSettingsMap const &i_settingsMap ) override;
+    
+    void DeleteRenderDelegate( HdRenderDelegate* i_renderDelegate ) override;
     
     bool IsSupported() const override;
     
 private:
     
-    // This class does not support copying.
+    // Disable copying.
     HdMarlinRendererPlugin( const HdMarlinRendererPlugin & ) = delete;
     HdMarlinRendererPlugin & operator =( const HdMarlinRendererPlugin & ) = delete;
 };
+
+PXR_NAMESPACE_CLOSE_SCOPE
 
 #endif /* MARLIN_RENDERER_PLUGIN_HPP */
