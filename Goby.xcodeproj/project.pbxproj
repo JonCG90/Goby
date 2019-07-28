@@ -27,6 +27,8 @@
 		222C237AEDD0C7A3314EA04A /* dummy.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = A434EA1BF3B22D6BB7A988ED /* dummy.cpp */; settings = {ATTRIBUTES = (); }; };
 		23237F1522BF846E003ACB0B /* openglwindow.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 23237F1322BF846E003ACB0B /* openglwindow.cpp */; };
 		23237F1722BF855D003ACB0B /* moc_openglwindow.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 23237F1622BF855D003ACB0B /* moc_openglwindow.cpp */; };
+		23237F1E22C4D48F003ACB0B /* rendererPlugin.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 23237F1C22C4D48F003ACB0B /* rendererPlugin.cpp */; };
+		23A7DF0E22CB6B7600AA0E6C /* renderDelegate.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 23A7DF0C22CB6B7600AA0E6C /* renderDelegate.cpp */; };
 		563CF89DC182C977E17F2B26 /* QtGui.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = 897F7DBDCA6B394E806B8406 /* QtGui.framework */; };
 		7E5709D3FE807F8C875AE381 /* moc_mainWindow.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = C70E9616EF3EBD83D0000B2E /* moc_mainWindow.cpp */; settings = {ATTRIBUTES = (); }; };
 		8771A8C96E9C391044035D99 /* OpenGL.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = D4B32C2222F82AC56BADEB21 /* OpenGL.framework */; };
@@ -64,6 +66,10 @@
 		23237F1322BF846E003ACB0B /* openglwindow.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = openglwindow.cpp; sourceTree = "<group>"; };
 		23237F1422BF846E003ACB0B /* openglwindow.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = openglwindow.hpp; sourceTree = "<group>"; };
 		23237F1622BF855D003ACB0B /* moc_openglwindow.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moc_openglwindow.cpp; sourceTree = "<group>"; };
+		23237F1C22C4D48F003ACB0B /* rendererPlugin.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = rendererPlugin.cpp; sourceTree = "<group>"; };
+		23237F1D22C4D48F003ACB0B /* rendererPlugin.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = rendererPlugin.hpp; sourceTree = "<group>"; };
+		23A7DF0C22CB6B7600AA0E6C /* renderDelegate.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = renderDelegate.cpp; sourceTree = "<group>"; };
+		23A7DF0D22CB6B7600AA0E6C /* renderDelegate.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = renderDelegate.hpp; sourceTree = "<group>"; };
 		2B774D8E4178765CE52EAAF5 /* DiskArbitration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DiskArbitration.framework; path = /System/Library/Frameworks/DiskArbitration.framework; sourceTree = "<absolute>"; };
 		2D99D235A4070068BDCE48F0 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = /Users/jongraham/Projects/Goby/main.cpp; sourceTree = "<absolute>"; };
 		3244324228FB6239A33DB996 /* ui_mainWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ui_mainWindow.h; path = /Users/jongraham/Projects/Goby/ui_mainWindow.h; sourceTree = "<absolute>"; };
@@ -109,6 +115,42 @@
 			name = "Sources [uic]";
 			sourceTree = "<group>";
 		};
+		23237F1822C4D40B003ACB0B /* rendering */ = {
+			isa = PBXGroup;
+			children = (
+				23237F1922C4D40B003ACB0B /* marlin */,
+				23237F1B22C4D40B003ACB0B /* koi */,
+			);
+			name = rendering;
+			path = src/rendering;
+			sourceTree = "<group>";
+		};
+		23237F1922C4D40B003ACB0B /* marlin */ = {
+			isa = PBXGroup;
+			children = (
+				23237F1A22C4D40B003ACB0B /* usd */,
+			);
+			path = marlin;
+			sourceTree = "<group>";
+		};
+		23237F1A22C4D40B003ACB0B /* usd */ = {
+			isa = PBXGroup;
+			children = (
+				23237F1C22C4D48F003ACB0B /* rendererPlugin.cpp */,
+				23237F1D22C4D48F003ACB0B /* rendererPlugin.hpp */,
+				23A7DF0C22CB6B7600AA0E6C /* renderDelegate.cpp */,
+				23A7DF0D22CB6B7600AA0E6C /* renderDelegate.hpp */,
+			);
+			path = usd;
+			sourceTree = "<group>";
+		};
+		23237F1B22C4D40B003ACB0B /* koi */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = koi;
+			sourceTree = "<group>";
+		};
 		25B08E2869634E9BCBA333A2 /* Generated Sources */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +191,7 @@
 		921315FAA7F261D737F4F4C7 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				23237F1822C4D40B003ACB0B /* rendering */,
 				F4F73F9AA934BE4F8929D179 /* ui */,
 			);
 			name = src;
@@ -304,10 +347,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				23237F1522BF846E003ACB0B /* openglwindow.cpp in Compile Sources */,
+				23237F1E22C4D48F003ACB0B /* rendererPlugin.cpp in Compile Sources */,
 				04900C73EF28011E46577FA7 /* main.cpp in Compile Sources */,
 				B2A6F1FFBA4E92771BB02D52 /* mainWindow.cpp in Compile Sources */,
 				7E5709D3FE807F8C875AE381 /* moc_mainWindow.cpp in Compile Sources */,
 				23237F1722BF855D003ACB0B /* moc_openglwindow.cpp in Compile Sources */,
+				23A7DF0E22CB6B7600AA0E6C /* renderDelegate.cpp in Compile Sources */,
 				222C237AEDD0C7A3314EA04A /* dummy.cpp in Compile Sources */,
 			);
 			name = "Compile Sources";

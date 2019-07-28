@@ -1,3 +1,6 @@
+#include <pxr/usd/usd/stage.h>
+#include <pxr/usdImaging/usdImagingGL/engine.h>
+
 #include <QtGui/QWindow>
 #include <QtGui/QOpenGLFunctions>
 
@@ -20,8 +23,6 @@ public:
     virtual void initialize();
     
     void setAnimating(bool animating);
-    
-    
     
 public slots:
     void renderLater();
@@ -50,4 +51,7 @@ private:
     
     QOpenGLContext *m_context;
     QOpenGLPaintDevice *m_device;
+    
+    pxr::UsdStageRefPtr m_stage;
+    std::shared_ptr< pxr::UsdImagingGLEngine > m_engine;
 };
