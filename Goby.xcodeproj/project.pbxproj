@@ -29,6 +29,11 @@
 		234EA77122EDA92500803B89 /* openglwindow.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 234EA76F22EDA92500803B89 /* openglwindow.cpp */; };
 		234EA77322EDA9C200803B89 /* main.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 234EA77222EDA9C200803B89 /* main.cpp */; };
 		234EA77622EDAA3D00803B89 /* usdRenderWindow.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 234EA77422EDAA3D00803B89 /* usdRenderWindow.cpp */; };
+		234EA77822F1961F00803B89 /* pluginInfo.json in Copy Bundle Resources */ = {isa = PBXBuildFile; fileRef = 234EA77722F1961F00803B89 /* pluginInfo.json */; };
+		234EA78322FACCFD00803B89 /* scene.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 234EA77A22FACCFC00803B89 /* scene.cpp */; };
+		234EA78422FACCFD00803B89 /* item.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 234EA77C22FACCFC00803B89 /* item.cpp */; };
+		234EA78522FACCFD00803B89 /* meshSchema.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 234EA77F22FACCFC00803B89 /* meshSchema.cpp */; };
+		234EA78622FACCFD00803B89 /* transform.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 234EA78022FACCFC00803B89 /* transform.cpp */; };
 		23A7DF0E22CB6B7600AA0E6C /* renderDelegate.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 23A7DF0C22CB6B7600AA0E6C /* renderDelegate.cpp */; };
 		563CF89DC182C977E17F2B26 /* QtGui.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = 897F7DBDCA6B394E806B8406 /* QtGui.framework */; };
 		7E5709D3FE807F8C875AE381 /* moc_mainWindow.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = C70E9616EF3EBD83D0000B2E /* moc_mainWindow.cpp */; settings = {ATTRIBUTES = (); }; };
@@ -72,6 +77,15 @@
 		234EA77222EDA9C200803B89 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = src/main.cpp; sourceTree = "<group>"; };
 		234EA77422EDAA3D00803B89 /* usdRenderWindow.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = usdRenderWindow.cpp; path = src/ui/usdRenderWindow.cpp; sourceTree = "<group>"; };
 		234EA77522EDAA3D00803B89 /* usdRenderWindow.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = usdRenderWindow.hpp; path = src/ui/usdRenderWindow.hpp; sourceTree = "<group>"; };
+		234EA77722F1961F00803B89 /* pluginInfo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = pluginInfo.json; sourceTree = "<group>"; };
+		234EA77A22FACCFC00803B89 /* scene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = scene.cpp; sourceTree = "<group>"; };
+		234EA77B22FACCFC00803B89 /* transform.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = transform.hpp; sourceTree = "<group>"; };
+		234EA77C22FACCFC00803B89 /* item.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = item.cpp; sourceTree = "<group>"; };
+		234EA77E22FACCFC00803B89 /* meshSchema.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = meshSchema.hpp; sourceTree = "<group>"; };
+		234EA77F22FACCFC00803B89 /* meshSchema.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = meshSchema.cpp; sourceTree = "<group>"; };
+		234EA78022FACCFC00803B89 /* transform.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = transform.cpp; sourceTree = "<group>"; };
+		234EA78122FACCFC00803B89 /* item.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = item.hpp; sourceTree = "<group>"; };
+		234EA78222FACCFC00803B89 /* scene.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = scene.hpp; sourceTree = "<group>"; };
 		23A7DF0C22CB6B7600AA0E6C /* renderDelegate.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = renderDelegate.cpp; sourceTree = "<group>"; };
 		23A7DF0D22CB6B7600AA0E6C /* renderDelegate.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = renderDelegate.hpp; sourceTree = "<group>"; };
 		2B774D8E4178765CE52EAAF5 /* DiskArbitration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DiskArbitration.framework; path = /System/Library/Frameworks/DiskArbitration.framework; sourceTree = "<absolute>"; };
@@ -143,6 +157,7 @@
 				23237F1D22C4D48F003ACB0B /* rendererPlugin.hpp */,
 				23A7DF0C22CB6B7600AA0E6C /* renderDelegate.cpp */,
 				23A7DF0D22CB6B7600AA0E6C /* renderDelegate.hpp */,
+				234EA77722F1961F00803B89 /* pluginInfo.json */,
 			);
 			path = usd;
 			sourceTree = "<group>";
@@ -152,6 +167,30 @@
 			children = (
 			);
 			path = koi;
+			sourceTree = "<group>";
+		};
+		234EA77922FACCFC00803B89 /* coral */ = {
+			isa = PBXGroup;
+			children = (
+				234EA77C22FACCFC00803B89 /* item.cpp */,
+				234EA78122FACCFC00803B89 /* item.hpp */,
+				234EA77A22FACCFC00803B89 /* scene.cpp */,
+				234EA78222FACCFC00803B89 /* scene.hpp */,
+				234EA78022FACCFC00803B89 /* transform.cpp */,
+				234EA77B22FACCFC00803B89 /* transform.hpp */,
+				234EA77D22FACCFC00803B89 /* schema */,
+			);
+			name = coral;
+			path = src/coral;
+			sourceTree = "<group>";
+		};
+		234EA77D22FACCFC00803B89 /* schema */ = {
+			isa = PBXGroup;
+			children = (
+				234EA77E22FACCFC00803B89 /* meshSchema.hpp */,
+				234EA77F22FACCFC00803B89 /* meshSchema.cpp */,
+			);
+			path = schema;
 			sourceTree = "<group>";
 		};
 		25B08E2869634E9BCBA333A2 /* Generated Sources */ = {
@@ -191,6 +230,7 @@
 		921315FAA7F261D737F4F4C7 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				234EA77922FACCFC00803B89 /* coral */,
 				234EA77222EDA9C200803B89 /* main.cpp */,
 				23237F1822C4D40B003ACB0B /* rendering */,
 				F4F73F9AA934BE4F8929D179 /* ui */,
@@ -315,6 +355,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				234EA77822F1961F00803B89 /* pluginInfo.json in Copy Bundle Resources */,
 			);
 			name = "Copy Bundle Resources";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -351,6 +392,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				234EA78322FACCFD00803B89 /* scene.cpp in Compile Sources */,
+				234EA78422FACCFD00803B89 /* item.cpp in Compile Sources */,
 				23237F1E22C4D48F003ACB0B /* rendererPlugin.cpp in Compile Sources */,
 				B2A6F1FFBA4E92771BB02D52 /* mainWindow.cpp in Compile Sources */,
 				7E5709D3FE807F8C875AE381 /* moc_mainWindow.cpp in Compile Sources */,
@@ -358,8 +401,10 @@
 				23A7DF0E22CB6B7600AA0E6C /* renderDelegate.cpp in Compile Sources */,
 				234EA77122EDA92500803B89 /* openglwindow.cpp in Compile Sources */,
 				234EA77322EDA9C200803B89 /* main.cpp in Compile Sources */,
+				234EA78522FACCFD00803B89 /* meshSchema.cpp in Compile Sources */,
 				222C237AEDD0C7A3314EA04A /* dummy.cpp in Compile Sources */,
 				234EA77622EDAA3D00803B89 /* usdRenderWindow.cpp in Compile Sources */,
+				234EA78622FACCFD00803B89 /* transform.cpp in Compile Sources */,
 			);
 			name = "Compile Sources";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -549,6 +594,7 @@
 					.,
 					"../../Qt/5.12.1/clang_64/mkspecs/macx-clang",
 					/usr/local/opt/USD/include,
+					./src,
 				);
 				LD_RUNPATH_SEARCH_PATHS = /usr/local/opt/USD/lib;
 				LIBRARY_SEARCH_PATHS = (
@@ -591,6 +637,7 @@
 					.,
 					"../../Qt/5.12.1/clang_64/mkspecs/macx-clang",
 					/usr/local/opt/USD/include,
+					./src,
 				);
 				LD_RUNPATH_SEARCH_PATHS = /usr/local/opt/USD/lib;
 				LIBRARY_SEARCH_PATHS = (

@@ -7,6 +7,8 @@
 
 #include "usdRenderWindow.hpp"
 
+#include <iostream>
+
 UsdRenderWindow::UsdRenderWindow()
 : m_program(0)
 , m_frame(0)
@@ -45,6 +47,13 @@ void UsdRenderWindow::initialize()
     pxr::SdfPathVector excludedPaths;
     m_engine = std::make_shared< pxr::UsdImagingGLEngine >( m_stage->GetPseudoRoot().GetPath(), excludedPaths );
     m_engine->SetRendererPlugin( pxr::TfToken( "HdMarlinRendererPlugin" ) );
+    
+    pxr::TfTokenVector plugins = m_engine->GetRendererPlugins();
+    for ( const auto &plugin : plugins )
+    {
+        std::cout << m_engine->GetRendererDisplayName( plugin ) << std::endl;
+    }
+    std::cout << plugins.size();
 }
 
 void UsdRenderWindow::render()
