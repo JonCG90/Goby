@@ -10,6 +10,8 @@
 
 #include "openglwindow.hpp"
 
+#include <coral/scene.hpp>
+
 #include <pxr/usd/usd/stage.h>
 #include <pxr/usdImaging/usdImagingGL/engine.h>
 
@@ -30,6 +32,7 @@ public:
     void render() override;
     
 private:
+    
     GLuint m_posAttr;
     GLuint m_colAttr;
     GLuint m_matrixUniform;
@@ -37,8 +40,7 @@ private:
     QOpenGLShaderProgram *m_program;
     int m_frame;
     
-    pxr::UsdStageRefPtr m_stage;
-    std::shared_ptr< pxr::UsdImagingGLEngine > m_engine;
+    coral::Scene m_scene;
 };
 
 #endif /* USDRENDERWINDOW_HPP */

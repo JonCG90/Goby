@@ -7,6 +7,8 @@
 
 #include "usdRenderWindow.hpp"
 
+#include <coral/schema/meshSchema.hpp>
+
 #include <iostream>
 
 UsdRenderWindow::UsdRenderWindow()
@@ -41,19 +43,15 @@ void UsdRenderWindow::initialize()
     m_colAttr = m_program->attributeLocation( "colAttr" );
     m_matrixUniform = m_program->uniformLocation( "matrix" );
     
-    m_stage = pxr::UsdStage::Open( "/Users/jongraham/Documents/Models/Kitchen_set/Kitchen_set.usd" );
-    //m_stage = pxr::UsdStage::Open( "/Users/jongraham/Documents/Models/Kitchen_set/assets/Bottle/Bottle.usd" );
+    m_scene.load( "/Users/jongraham/Documents/Models/Kitchen_set/Kitchen_set.usd" );
+    coral::Items items = m_scene.getAllItems();
     
-    pxr::SdfPathVector excludedPaths;
-    m_engine = std::make_shared< pxr::UsdImagingGLEngine >( m_stage->GetPseudoRoot().GetPath(), excludedPaths );
-    m_engine->SetRendererPlugin( pxr::TfToken( "HdMarlinRendererPlugin" ) );
-    
-    pxr::TfTokenVector plugins = m_engine->GetRendererPlugins();
-    for ( const auto &plugin : plugins )
+    for ( const coral::Item &item : items )
     {
-        std::cout << m_engine->GetRendererDisplayName( plugin ) << std::endl;
+        std::cout << item.getPath() << std::endl;
+        coral::MeshSchema mesh = coral::MeshSchema( item );
+        coral::MeshPolygons geom = mesh.getPolygons();
     }
-    std::cout << plugins.size();
 }
 
 void UsdRenderWindow::render()
@@ -84,6 +82,8 @@ void UsdRenderWindow::render()
         1.0f, 1.0f, 0.0f
     };
     
+    
+    
     glVertexAttribPointer( m_posAttr, 2, GL_FLOAT, GL_FALSE, 0, vertices );
     glVertexAttribPointer( m_colAttr, 3, GL_FLOAT, GL_FALSE, 0, colors );
     
@@ -98,9 +98,4 @@ void UsdRenderWindow::render()
     m_program->release();
     
     ++m_frame;
-    
-    const pxr::UsdPrim root = m_stage->GetPseudoRoot();
-    pxr::UsdImagingGLRenderParams params;
-    
-    m_engine->Render( root, params );
 }

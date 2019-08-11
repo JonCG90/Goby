@@ -6,28 +6,38 @@
 #include <glm/vec4.hpp>
 #include <glm/mat3x3.hpp>
 #include <glm/mat4x4.hpp>
+#include <glm/detail/precision.hpp>
 #include <glm/gtc/quaternion.hpp>
 
-typedef glm::fvec2 vec2f;
-typedef glm::fvec3 vec3f;
-typedef glm::fvec4 vec4f;
-typedef glm::fmat3 mat3f;
-typedef glm::fmat4 mat4f;
-typedef glm::fquat quatf;
+using vec2f = glm::fvec2;
+using vec3f = glm::fvec3;
+using vec4f = glm::fvec4;
+using mat3f = glm::fmat3;
+using mat4f = glm::fmat4;
+using quatf = glm::fquat;
 
-typedef glm::dvec2 vec2d;
-typedef glm::dvec3 vec3d;
-typedef glm::dvec4 vec4d;
-typedef glm::dmat3 mat3d;
-typedef glm::dmat4 mat4d;
-typedef glm::dquat quatd;
+using vec2d = glm::dvec2;
+using vec3d = glm::dvec3;
+using vec4d = glm::dvec4;
+using mat3d = glm::dmat3;
+using mat4d = glm::dmat4;
+using quatd = glm::dquat;
 
-typedef glm::ivec2 vec2i;
-typedef glm::ivec3 vec3i;
-typedef glm::ivec4 vec4i;
+using vec2i = glm::ivec2;
+using vec3i = glm::ivec3;
+using vec4i = glm::ivec4;
 
-typedef glm::uvec2 vec2u;
-typedef glm::uvec3 vec3u;
-typedef glm::uvec4 vec4u;
+using vec2u = glm::uvec2;
+using vec3u = glm::uvec3;
+using vec4u = glm::uvec4;
+
+template< class T >
+using vec2 = glm::tvec2< T, glm::precision::defaultp >;
+
+template< class T >
+using vec3 = glm::tvec3< T, glm::precision::defaultp >;
+
+template< class T >
+using vec4 = glm::tvec4< T, glm::precision::defaultp >;
 
 #endif /* MATH_DEFS_HPP */

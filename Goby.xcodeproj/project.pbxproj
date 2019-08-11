@@ -35,6 +35,12 @@
 		234EA78522FACCFD00803B89 /* meshSchema.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 234EA77F22FACCFC00803B89 /* meshSchema.cpp */; };
 		234EA78622FACCFD00803B89 /* transform.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 234EA78022FACCFC00803B89 /* transform.cpp */; };
 		234EA78B22FAD34100803B89 /* math.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 234EA78922FAD34100803B89 /* math.cpp */; };
+		234EA79222FE7DC100803B89 /* buffer.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 234EA79022FE7DC100803B89 /* buffer.cpp */; };
+		2361F5B222FED82A00F4B0CB /* buffer.tpp in Copy Bundle Resources */ = {isa = PBXBuildFile; fileRef = 2361F5B122FED82A00F4B0CB /* buffer.tpp */; };
+		2361F5BC22FFC93200F4B0CB /* mesh.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 2361F5B722FFC93200F4B0CB /* mesh.cpp */; };
+		2361F5BD22FFC93200F4B0CB /* meshUtilities.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 2361F5BA22FFC93200F4B0CB /* meshUtilities.cpp */; };
+		2361F5C022FFC95800F4B0CB /* geometry.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 2361F5BE22FFC95800F4B0CB /* geometry.cpp */; };
+		2361F5C322FFD40800F4B0CB /* vertexArray.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 2361F5C122FFD40800F4B0CB /* vertexArray.cpp */; };
 		23A7DF0E22CB6B7600AA0E6C /* renderDelegate.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 23A7DF0C22CB6B7600AA0E6C /* renderDelegate.cpp */; };
 		563CF89DC182C977E17F2B26 /* QtGui.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = 897F7DBDCA6B394E806B8406 /* QtGui.framework */; };
 		7E5709D3FE807F8C875AE381 /* moc_mainWindow.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = C70E9616EF3EBD83D0000B2E /* moc_mainWindow.cpp */; settings = {ATTRIBUTES = (); }; };
@@ -90,6 +96,17 @@
 		234EA78822FAD23000803B89 /* defs.hh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = defs.hh; sourceTree = "<group>"; };
 		234EA78922FAD34100803B89 /* math.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = math.cpp; sourceTree = "<group>"; };
 		234EA78A22FAD34100803B89 /* math.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = math.hpp; sourceTree = "<group>"; };
+		234EA79022FE7DC100803B89 /* buffer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = buffer.cpp; sourceTree = "<group>"; };
+		234EA79122FE7DC100803B89 /* buffer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = buffer.hpp; sourceTree = "<group>"; };
+		2361F5B122FED82A00F4B0CB /* buffer.tpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = buffer.tpp; sourceTree = "<group>"; };
+		2361F5B722FFC93200F4B0CB /* mesh.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mesh.cpp; sourceTree = "<group>"; };
+		2361F5B822FFC93200F4B0CB /* meshUtilities.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = meshUtilities.hpp; sourceTree = "<group>"; };
+		2361F5B922FFC93200F4B0CB /* mesh.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = mesh.hpp; sourceTree = "<group>"; };
+		2361F5BA22FFC93200F4B0CB /* meshUtilities.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = meshUtilities.cpp; sourceTree = "<group>"; };
+		2361F5BE22FFC95800F4B0CB /* geometry.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = geometry.cpp; sourceTree = "<group>"; };
+		2361F5BF22FFC95800F4B0CB /* geometry.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = geometry.hpp; sourceTree = "<group>"; };
+		2361F5C122FFD40800F4B0CB /* vertexArray.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = vertexArray.cpp; sourceTree = "<group>"; };
+		2361F5C222FFD40800F4B0CB /* vertexArray.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = vertexArray.hpp; sourceTree = "<group>"; };
 		23A7DF0C22CB6B7600AA0E6C /* renderDelegate.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = renderDelegate.cpp; sourceTree = "<group>"; };
 		23A7DF0D22CB6B7600AA0E6C /* renderDelegate.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = renderDelegate.hpp; sourceTree = "<group>"; };
 		2B774D8E4178765CE52EAAF5 /* DiskArbitration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DiskArbitration.framework; path = /System/Library/Frameworks/DiskArbitration.framework; sourceTree = "<absolute>"; };
@@ -149,6 +166,9 @@
 		23237F1922C4D40B003ACB0B /* marlin */ = {
 			isa = PBXGroup;
 			children = (
+				2361F5B622FFC93200F4B0CB /* geometry */,
+				2361F5BB22FFC93200F4B0CB /* materials */,
+				234EA78C22FE7AFF00803B89 /* gl */,
 				23237F1A22C4D40B003ACB0B /* usd */,
 			);
 			path = marlin;
@@ -206,6 +226,38 @@
 			);
 			name = math;
 			path = src/math;
+			sourceTree = "<group>";
+		};
+		234EA78C22FE7AFF00803B89 /* gl */ = {
+			isa = PBXGroup;
+			children = (
+				234EA79022FE7DC100803B89 /* buffer.cpp */,
+				234EA79122FE7DC100803B89 /* buffer.hpp */,
+				2361F5B122FED82A00F4B0CB /* buffer.tpp */,
+				2361F5C122FFD40800F4B0CB /* vertexArray.cpp */,
+				2361F5C222FFD40800F4B0CB /* vertexArray.hpp */,
+			);
+			path = gl;
+			sourceTree = "<group>";
+		};
+		2361F5B622FFC93200F4B0CB /* geometry */ = {
+			isa = PBXGroup;
+			children = (
+				2361F5B722FFC93200F4B0CB /* mesh.cpp */,
+				2361F5B922FFC93200F4B0CB /* mesh.hpp */,
+				2361F5BA22FFC93200F4B0CB /* meshUtilities.cpp */,
+				2361F5B822FFC93200F4B0CB /* meshUtilities.hpp */,
+				2361F5BE22FFC95800F4B0CB /* geometry.cpp */,
+				2361F5BF22FFC95800F4B0CB /* geometry.hpp */,
+			);
+			path = geometry;
+			sourceTree = "<group>";
+		};
+		2361F5BB22FFC93200F4B0CB /* materials */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = materials;
 			sourceTree = "<group>";
 		};
 		25B08E2869634E9BCBA333A2 /* Generated Sources */ = {
@@ -371,6 +423,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2361F5B222FED82A00F4B0CB /* buffer.tpp in Copy Bundle Resources */,
 				234EA77822F1961F00803B89 /* pluginInfo.json in Copy Bundle Resources */,
 			);
 			name = "Copy Bundle Resources";
@@ -410,16 +463,21 @@
 			files = (
 				234EA78322FACCFD00803B89 /* scene.cpp in Compile Sources */,
 				234EA78422FACCFD00803B89 /* item.cpp in Compile Sources */,
+				2361F5BD22FFC93200F4B0CB /* meshUtilities.cpp in Compile Sources */,
 				23237F1E22C4D48F003ACB0B /* rendererPlugin.cpp in Compile Sources */,
 				B2A6F1FFBA4E92771BB02D52 /* mainWindow.cpp in Compile Sources */,
 				7E5709D3FE807F8C875AE381 /* moc_mainWindow.cpp in Compile Sources */,
 				23237F1722BF855D003ACB0B /* moc_openglwindow.cpp in Compile Sources */,
+				2361F5BC22FFC93200F4B0CB /* mesh.cpp in Compile Sources */,
 				23A7DF0E22CB6B7600AA0E6C /* renderDelegate.cpp in Compile Sources */,
+				2361F5C322FFD40800F4B0CB /* vertexArray.cpp in Compile Sources */,
 				234EA77122EDA92500803B89 /* openglwindow.cpp in Compile Sources */,
 				234EA77322EDA9C200803B89 /* main.cpp in Compile Sources */,
+				2361F5C022FFC95800F4B0CB /* geometry.cpp in Compile Sources */,
 				234EA78522FACCFD00803B89 /* meshSchema.cpp in Compile Sources */,
 				222C237AEDD0C7A3314EA04A /* dummy.cpp in Compile Sources */,
 				234EA78B22FAD34100803B89 /* math.cpp in Compile Sources */,
+				234EA79222FE7DC100803B89 /* buffer.cpp in Compile Sources */,
 				234EA77622EDAA3D00803B89 /* usdRenderWindow.cpp in Compile Sources */,
 				234EA78622FACCFD00803B89 /* transform.cpp in Compile Sources */,
 			);
