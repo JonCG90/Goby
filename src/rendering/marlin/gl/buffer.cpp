@@ -42,6 +42,7 @@ void ArrayBuffer::load()
     }
     
     glGenBuffers( 1, &m_handle );
+    m_loaded = true;
 }
     
 void ArrayBuffer::bind()
@@ -63,6 +64,7 @@ void ArrayBuffer::unload()
     
     glDeleteBuffers( 1, &m_handle );
     m_handle = 0;
+    m_loaded = false;
 }
     
 void ArrayBuffer::bufferData( GLsizeiptr i_size, const void* i_data )
