@@ -53,6 +53,7 @@ UsdRenderWindow::UsdRenderWindow()
 
 void UsdRenderWindow::initialize()
 {
+    m_scene.load( "/Users/jongraham/Documents/Models/Kitchen_set/assets/Bottle/Bottle.usd" );
 //    m_scene.load( "/Users/jongraham/Documents/Models/Kitchen_set/Kitchen_set.usd" );
 //    coral::Items items = m_scene.getAllItems();
 //
@@ -73,7 +74,7 @@ void UsdRenderWindow::render()
         
     QMatrix4x4 matrix;
     matrix.perspective( 60.0f, 4.0f / 3.0f, 0.1f, 100.0f );
-    matrix.translate(0, 0, -2);
+    matrix.translate(0, 0, -60);
     matrix.rotate( 100.0f * m_frame / screen()->refreshRate(), 0, 1, 0 );
     
     
@@ -88,21 +89,27 @@ void UsdRenderWindow::render()
     material.load();
     material.bind();
     
-    marlin::MeshGeom geom;
+    coral::Items items = m_scene.getAllItems();
     
-    geom.points = {
-        vec3f( 0.0f,  0.707f, 0.0f ),
-        vec3f( -0.5f, -0.5f,  0.0f ),
-        vec3f( 0.5f,  -0.5f,  0.0f )
-    };
-    
-    geom.faceVertexCounts = { 3 };
-    geom.faceVertexIndices = { 0, 1, 2 };
+    for ( const coral::Item &item : items )
+    {
+        coral::MeshSchema meshSchema = coral::MeshSchema( item );
+        coral::MeshPolygons polygons = meshSchema.getPolygons();
+        
+        marlin::MeshGeom geom;
+        geom.points = polygons.points;
+        geom.normals = polygons.normals;
+        geom.texCoords = polygons.texCoords;
+        geom.colors = polygons.colors;
+        
+        geom.faceVertexIndices = polygons.faceVertexIndices;
+        geom.faceVertexCounts = polygons.faceVertexCounts;
 
-    marlin::Mesh mesh( geom );
-    mesh.load();
-    mesh.render();
-    mesh.unload();
+        marlin::Mesh mesh( geom );
+        mesh.load();
+        mesh.render();
+        mesh.unload();
+    }
     
     material.unbind();
     material.unload();

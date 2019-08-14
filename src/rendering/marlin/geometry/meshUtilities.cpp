@@ -7,6 +7,8 @@
 
 #include "meshUtilities.hpp"
 
+#include <iostream>
+
 namespace marlin
 {
 
@@ -37,7 +39,7 @@ bool convertMeshToGlArrays( const MeshGeom &i_geom,
     
     // Make normals same size as points
     o_normals.clear();
-    o_normals.resize( numPoints );
+    o_normals.resize( 3 * numPoints );
     std::fill( o_normals.begin(), o_normals.end(), GLfloat( 0.0 ) );
     
     o_indices.clear();
@@ -90,7 +92,7 @@ bool convertMeshToGlArrays( const MeshGeom &i_geom,
         o_normals[ 3 * i0     ] += n[ 0 ];
         o_normals[ 3 * i0 + 1 ] += n[ 1 ];
         o_normals[ 3 * i0 + 2 ] += n[ 2 ];
-        
+
         o_normals[ 3 * i1     ] += n[ 0 ];
         o_normals[ 3 * i1 + 1 ] += n[ 1 ];
         o_normals[ 3 * i2 + 2 ] += n[ 2 ];
