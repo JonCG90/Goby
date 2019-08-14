@@ -46,7 +46,12 @@ void ArrayBuffer::load()
     
 void ArrayBuffer::bind()
 {
-    glBindBuffer( GL_ARRAY_BUFFER, m_handle );
+    glBindBuffer( m_target, m_handle );
+}
+    
+void ArrayBuffer::unbind()
+{
+    glBindBuffer( m_target, 0 );
 }
     
 void ArrayBuffer::unload()

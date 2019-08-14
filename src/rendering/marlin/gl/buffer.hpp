@@ -31,8 +31,10 @@ public:
     explicit ArrayBuffer( BufferType i_type );
     
     void load();
-    void bind();
     void unload();
+    
+    void bind();
+    void unbind();
     
     void bufferData( GLsizeiptr i_size, const void* i_data );
 
