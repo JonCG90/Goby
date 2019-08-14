@@ -7,8 +7,6 @@
 
 #include "meshUtilities.hpp"
 
-#include <iostream>
-
 namespace marlin
 {
 
@@ -76,18 +74,18 @@ bool convertMeshToGlArrays( const MeshGeom &i_geom,
     // Compute smooth normals
     for ( size_t faceIdx = 0; faceIdx < o_indices.size(); faceIdx += 3 )
     {
-        GLuint i0 = o_indices[ faceIdx     ];
-        GLuint i1 = o_indices[ faceIdx + 1 ];
-        GLuint i2 = o_indices[ faceIdx + 2 ];
+        const GLuint i0 = o_indices[ faceIdx     ];
+        const GLuint i1 = o_indices[ faceIdx + 1 ];
+        const GLuint i2 = o_indices[ faceIdx + 2 ];
         
-        vec3< GLfloat > v1( o_points[ 3 * i0 ], o_points[ 3 * i0 + 1 ], o_points[ 3 * i0 + 2 ] );
-        vec3< GLfloat > v2( o_points[ 3 * i1 ], o_points[ 3 * i1 + 1 ], o_points[ 3 * i1 + 2 ] );
-        vec3< GLfloat > v3( o_points[ 3 * i2 ], o_points[ 3 * i2 + 1 ], o_points[ 3 * i2 + 2 ] );
+        const vec3< GLfloat > v1( o_points[ 3 * i0 ], o_points[ 3 * i0 + 1 ], o_points[ 3 * i0 + 2 ] );
+        const vec3< GLfloat > v2( o_points[ 3 * i1 ], o_points[ 3 * i1 + 1 ], o_points[ 3 * i1 + 2 ] );
+        const vec3< GLfloat > v3( o_points[ 3 * i2 ], o_points[ 3 * i2 + 1 ], o_points[ 3 * i2 + 2 ] );
         
-        vec3< GLfloat > l1 = v1 - v2;
-        vec3< GLfloat > l2 = v3 - v2;
+        const vec3< GLfloat > l1 = v1 - v2;
+        const vec3< GLfloat > l2 = v3 - v2;
         
-        vec3< GLfloat > n = -glm::normalize( glm::cross( l1, l2 ) );
+        const vec3< GLfloat > n = -glm::normalize( glm::cross( l1, l2 ) );
         
         o_normals[ 3 * i0     ] += n[ 0 ];
         o_normals[ 3 * i0 + 1 ] += n[ 1 ];
@@ -105,8 +103,8 @@ bool convertMeshToGlArrays( const MeshGeom &i_geom,
     // Normalize normals
     for ( size_t normalIdx = 0; normalIdx < o_normals.size(); normalIdx += 3 )
     {
-        vec3< GLfloat > n( o_normals[ normalIdx ], o_normals[ normalIdx + 1 ], o_normals[ normalIdx + 2 ] );
-        vec3< GLfloat > normalized = glm::normalize( n );
+        const vec3< GLfloat > n( o_normals[ normalIdx ], o_normals[ normalIdx + 1 ], o_normals[ normalIdx + 2 ] );
+        const vec3< GLfloat > normalized = glm::normalize( n );
         
         o_normals[ normalIdx     ] = normalized.x;
         o_normals[ normalIdx + 1 ] = normalized.y;
@@ -114,12 +112,12 @@ bool convertMeshToGlArrays( const MeshGeom &i_geom,
     }
     
     // Use the polygon color if there are the correct amount, otherwise use the first color
-    vec4f firstColor = i_geom.colors.empty() ? vec4f( 1.0 ) : i_geom.colors[ 0 ];
-    bool usePolyColor = i_geom.colors.size() == numPoints;
+    const vec4f firstColor = i_geom.colors.empty() ? vec4f( 1.0 ) : i_geom.colors[ 0 ];
+    const bool usePolyColor = i_geom.colors.size() == numPoints;
     
     for ( size_t i = 0; i < numPoints; i++ )
     {
-        vec4f currentColor = usePolyColor ? i_geom.colors[ i ] : firstColor;
+        const vec4f currentColor = usePolyColor ? i_geom.colors[ i ] : firstColor;
         
         o_colors.push_back( static_cast< GLfloat >( currentColor[ 0 ] ) );
         o_colors.push_back( static_cast< GLfloat >( currentColor[ 1 ] ) );

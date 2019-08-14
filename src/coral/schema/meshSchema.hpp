@@ -50,7 +50,6 @@ public:
 private:
     
     pxr::UsdGeomMesh m_mesh;
-    
 };
     
 } // namespace coral

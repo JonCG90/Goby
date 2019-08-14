@@ -26,7 +26,7 @@ MeshPolygons MeshSchema::getPolygons() const
 {
     const UsdGeomMesh &mesh = m_mesh;
 
-    if ( !m_mesh )
+    if ( !mesh )
     {
         return MeshPolygons();
     }
@@ -44,7 +44,8 @@ MeshPolygons MeshSchema::getPolygons() const
     vertIndicesAttr.Get( &faceVertexIndices );
     
     mesh.GetPointsAttr().Get( &pointData );
-    if ( mesh.GetNormalsAttr().HasAuthoredValueOpinion() )
+
+    if ( mesh.GetNormalsAttr().HasAuthoredValue() )
     {
         mesh.GetNormalsAttr().Get( &normalData );
     }
@@ -78,14 +79,13 @@ MeshPolygons MeshSchema::getPolygons() const
 
     if ( UsdImagingGprimAdapter::GetColor( mesh.GetPrim(), UsdTimeCode::Default(), nullptr, &colorAsVt ) )
     {
-        VtVec3fArray colorData = colorAsVt.Get< VtVec3fArray >();
+        const VtVec3fArray &colorData = colorAsVt.Get< VtVec3fArray >();
         
         for ( const GfVec3f &color : colorData )
         {
             colors.push_back( vec4f( color[0], color[ 1 ], color[ 2 ], 1.0 ) );
         }
     }
-
     
     MeshPolygons polygons;
     polygons.points = points;
