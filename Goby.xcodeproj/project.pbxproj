@@ -41,6 +41,10 @@
 		2361F5BD22FFC93200F4B0CB /* meshUtilities.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 2361F5BA22FFC93200F4B0CB /* meshUtilities.cpp */; };
 		2361F5C022FFC95800F4B0CB /* geometry.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 2361F5BE22FFC95800F4B0CB /* geometry.cpp */; };
 		2361F5C322FFD40800F4B0CB /* vertexArray.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 2361F5C122FFD40800F4B0CB /* vertexArray.cpp */; };
+		2361F5C62300209700F4B0CB /* shader.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 2361F5C42300209700F4B0CB /* shader.cpp */; };
+		2361F5C92303947F00F4B0CB /* material.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 2361F5C72303947F00F4B0CB /* material.cpp */; };
+		2361F5CC230397EF00F4B0CB /* shaderParameter.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 2361F5CA230397EF00F4B0CB /* shaderParameter.cpp */; };
+		2361F5CE2303999300F4B0CB /* shaderParameter.tpp in Copy Bundle Resources */ = {isa = PBXBuildFile; fileRef = 2361F5CD2303999300F4B0CB /* shaderParameter.tpp */; };
 		23A7DF0E22CB6B7600AA0E6C /* renderDelegate.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 23A7DF0C22CB6B7600AA0E6C /* renderDelegate.cpp */; };
 		563CF89DC182C977E17F2B26 /* QtGui.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = 897F7DBDCA6B394E806B8406 /* QtGui.framework */; };
 		7E5709D3FE807F8C875AE381 /* moc_mainWindow.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = C70E9616EF3EBD83D0000B2E /* moc_mainWindow.cpp */; settings = {ATTRIBUTES = (); }; };
@@ -107,6 +111,13 @@
 		2361F5BF22FFC95800F4B0CB /* geometry.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = geometry.hpp; sourceTree = "<group>"; };
 		2361F5C122FFD40800F4B0CB /* vertexArray.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = vertexArray.cpp; sourceTree = "<group>"; };
 		2361F5C222FFD40800F4B0CB /* vertexArray.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = vertexArray.hpp; sourceTree = "<group>"; };
+		2361F5C42300209700F4B0CB /* shader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = shader.cpp; sourceTree = "<group>"; };
+		2361F5C52300209700F4B0CB /* shader.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = shader.hpp; sourceTree = "<group>"; };
+		2361F5C72303947F00F4B0CB /* material.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = material.cpp; sourceTree = "<group>"; };
+		2361F5C82303947F00F4B0CB /* material.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = material.hpp; sourceTree = "<group>"; };
+		2361F5CA230397EF00F4B0CB /* shaderParameter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = shaderParameter.cpp; sourceTree = "<group>"; };
+		2361F5CB230397EF00F4B0CB /* shaderParameter.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = shaderParameter.hpp; sourceTree = "<group>"; };
+		2361F5CD2303999300F4B0CB /* shaderParameter.tpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = shaderParameter.tpp; sourceTree = "<group>"; };
 		23A7DF0C22CB6B7600AA0E6C /* renderDelegate.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = renderDelegate.cpp; sourceTree = "<group>"; };
 		23A7DF0D22CB6B7600AA0E6C /* renderDelegate.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = renderDelegate.hpp; sourceTree = "<group>"; };
 		2B774D8E4178765CE52EAAF5 /* DiskArbitration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DiskArbitration.framework; path = /System/Library/Frameworks/DiskArbitration.framework; sourceTree = "<absolute>"; };
@@ -236,6 +247,8 @@
 				2361F5B122FED82A00F4B0CB /* buffer.tpp */,
 				2361F5C122FFD40800F4B0CB /* vertexArray.cpp */,
 				2361F5C222FFD40800F4B0CB /* vertexArray.hpp */,
+				2361F5C42300209700F4B0CB /* shader.cpp */,
+				2361F5C52300209700F4B0CB /* shader.hpp */,
 			);
 			path = gl;
 			sourceTree = "<group>";
@@ -256,6 +269,11 @@
 		2361F5BB22FFC93200F4B0CB /* materials */ = {
 			isa = PBXGroup;
 			children = (
+				2361F5C72303947F00F4B0CB /* material.cpp */,
+				2361F5C82303947F00F4B0CB /* material.hpp */,
+				2361F5CA230397EF00F4B0CB /* shaderParameter.cpp */,
+				2361F5CB230397EF00F4B0CB /* shaderParameter.hpp */,
+				2361F5CD2303999300F4B0CB /* shaderParameter.tpp */,
 			);
 			path = materials;
 			sourceTree = "<group>";
@@ -425,6 +443,7 @@
 			files = (
 				2361F5B222FED82A00F4B0CB /* buffer.tpp in Copy Bundle Resources */,
 				234EA77822F1961F00803B89 /* pluginInfo.json in Copy Bundle Resources */,
+				2361F5CE2303999300F4B0CB /* shaderParameter.tpp in Copy Bundle Resources */,
 			);
 			name = "Copy Bundle Resources";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -461,6 +480,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2361F5CC230397EF00F4B0CB /* shaderParameter.cpp in Compile Sources */,
 				234EA78322FACCFD00803B89 /* scene.cpp in Compile Sources */,
 				234EA78422FACCFD00803B89 /* item.cpp in Compile Sources */,
 				2361F5BD22FFC93200F4B0CB /* meshUtilities.cpp in Compile Sources */,
@@ -470,7 +490,9 @@
 				23237F1722BF855D003ACB0B /* moc_openglwindow.cpp in Compile Sources */,
 				2361F5BC22FFC93200F4B0CB /* mesh.cpp in Compile Sources */,
 				23A7DF0E22CB6B7600AA0E6C /* renderDelegate.cpp in Compile Sources */,
+				2361F5C92303947F00F4B0CB /* material.cpp in Compile Sources */,
 				2361F5C322FFD40800F4B0CB /* vertexArray.cpp in Compile Sources */,
+				2361F5C62300209700F4B0CB /* shader.cpp in Compile Sources */,
 				234EA77122EDA92500803B89 /* openglwindow.cpp in Compile Sources */,
 				234EA77322EDA9C200803B89 /* main.cpp in Compile Sources */,
 				2361F5C022FFC95800F4B0CB /* geometry.cpp in Compile Sources */,

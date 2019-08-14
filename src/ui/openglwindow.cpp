@@ -34,9 +34,11 @@ void OpenGLWindow::initialize()
 void OpenGLWindow::render()
 {
     if (!m_device)
+    {
         m_device = new QOpenGLPaintDevice;
+    }
     
-    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_STENCIL_BUFFER_BIT);
+    glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_STENCIL_BUFFER_BIT );
     
     m_device->setSize(size() * devicePixelRatio());
     m_device->setDevicePixelRatio(devicePixelRatio());
@@ -78,7 +80,15 @@ void OpenGLWindow::renderNow()
     
     if (!m_context) {
         m_context = new QOpenGLContext(this);
-        m_context->setFormat(requestedFormat());
+        
+        QSurfaceFormat format;
+        format.setDepthBufferSize( 24 );
+        format.setMajorVersion( 3 );
+        format.setMinorVersion( 2 );
+        format.setSamples( 4 );
+        format.setProfile( QSurfaceFormat::CoreProfile );
+        
+        m_context->setFormat(format);
         m_context->create();
         
         needsInitialize = true;

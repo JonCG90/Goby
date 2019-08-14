@@ -7,9 +7,43 @@
 
 #include "usdRenderWindow.hpp"
 
-#include <coral/schema/meshSchema.hpp>
-
 #include <iostream>
+
+// Temp
+#include <coral/schema/meshSchema.hpp>
+#include <rendering/marlin/geometry/mesh.hpp>
+
+static const std::string kSolidVertexShader = R"SHADER_SRC(
+#version 410
+
+layout (location = 0) in vec3 vertexPostion;
+layout (location = 1) in vec3 vertexNormal;
+layout (location = 2) in vec2 vertexTexCoord;
+layout (location = 3) in vec4 vertexColor;
+
+uniform mat4 model;
+uniform mat4 view;
+uniform mat4 projection;
+
+void main()
+{
+    gl_Position = projection * view * model * vec4( vertexPostion, 1.0 );
+}
+
+)SHADER_SRC";
+
+static const std::string kSolidFragmentShader = R"SHADER_SRC(
+#version 410
+
+out vec4 FragColor;
+
+uniform vec4 albedo;
+
+void main() {
+    FragColor = vec4( 1.0, 0.0, 0.0, 1.0 );
+}
+
+)SHADER_SRC";
 
 UsdRenderWindow::UsdRenderWindow()
 : m_program(0)
@@ -36,8 +70,8 @@ static const char *fragmentShaderSource =
 void UsdRenderWindow::initialize()
 {
     m_program = new QOpenGLShaderProgram( this );
-    m_program->addShaderFromSourceCode( QOpenGLShader::Vertex, vertexShaderSource );
-    m_program->addShaderFromSourceCode( QOpenGLShader::Fragment, fragmentShaderSource );
+    m_program->addShaderFromSourceCode( QOpenGLShader::Vertex, kSolidVertexShader.c_str() );
+    m_program->addShaderFromSourceCode( QOpenGLShader::Fragment, kSolidFragmentShader.c_str() );
     m_program->link();
     m_posAttr = m_program->attributeLocation( "posAttr" );
     m_colAttr = m_program->attributeLocation( "colAttr" );
@@ -71,9 +105,9 @@ void UsdRenderWindow::render()
     m_program->setUniformValue( m_matrixUniform, matrix );
     
     GLfloat vertices[] = {
-        0.0f, 0.707f,
-        -0.5f, -0.5f,
-        0.5f, -0.5f
+        0.0f, 0.707f, 0.0f,
+        -0.5f, -0.5f, 0.0f,
+        0.5f, -0.5f, 0.0f
     };
     
     GLfloat colors[] = {
@@ -82,9 +116,29 @@ void UsdRenderWindow::render()
         1.0f, 1.0f, 0.0f
     };
     
+    marlin::MeshGeom geom;
     
+    geom.points = {
+        vec3f( 0.0f,  0.707f, 0.0f ),
+        vec3f( -0.5f, -0.5f,  0.0f ),
+        vec3f( 0.5f,  -0.5f,  0.0f )
+    };
     
-    glVertexAttribPointer( m_posAttr, 2, GL_FLOAT, GL_FALSE, 0, vertices );
+    geom.colors = {
+        vec4f( 1.0f, 1.0f, 0.0f, 1.0f ),
+        vec4f( 1.0f, 1.0f, 0.0f, 1.0f ),
+        vec4f( 1.0f, 1.0f, 0.0f, 1.0f )
+    };
+    
+    geom.faceVertexCounts = { 3 };
+    geom.faceVertexIndices = { 0, 1, 2 };
+
+    marlin::Mesh mesh( geom );
+    mesh.load();
+    mesh.render();
+    mesh.unload();
+    
+    glVertexAttribPointer( m_posAttr, 3, GL_FLOAT, GL_FALSE, 0, vertices );
     glVertexAttribPointer( m_colAttr, 3, GL_FLOAT, GL_FALSE, 0, colors );
     
     glEnableVertexAttribArray( 0 );

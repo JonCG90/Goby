@@ -49,8 +49,8 @@ void Mesh::load()
     GLintptr offset = 0;
     m_vertexBuffer.bufferVertexData( 0, 3, &offset, points );
     m_vertexBuffer.bufferVertexData( 2, 3, &offset, normals );
-    m_vertexBuffer.bufferVertexData( 3, 4, &offset, texCoords );
-    m_vertexBuffer.bufferVertexData( 4, 2, &offset, colors );
+    m_vertexBuffer.bufferVertexData( 3, 2, &offset, texCoords );
+    m_vertexBuffer.bufferVertexData( 4, 4, &offset, colors );
     
     m_indexBuffer = ArrayBuffer( BufferType::Index );
     m_indexBuffer.load();
