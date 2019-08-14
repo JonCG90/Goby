@@ -12,6 +12,9 @@
 // Temp
 #include <coral/schema/meshSchema.hpp>
 #include <rendering/marlin/geometry/mesh.hpp>
+#include <rendering/marlin/shading/material.hpp>
+#include <glm/gtc/type_ptr.hpp>
+#include <testing/openGLRender.hpp>
 
 static const std::string kSolidVertexShader = R"SHADER_SRC(
 #version 410
@@ -21,13 +24,11 @@ layout (location = 1) in vec3 vertexNormal;
 layout (location = 2) in vec2 vertexTexCoord;
 layout (location = 3) in vec4 vertexColor;
 
-uniform mat4 model;
-uniform mat4 view;
-uniform mat4 projection;
+uniform mat4 matrix;
 
 void main()
 {
-    gl_Position = projection * view * model * vec4( vertexPostion, 1.0 );
+    gl_Position = matrix * vec4( vertexPostion, 1.0 );
 }
 
 )SHADER_SRC";
@@ -40,7 +41,7 @@ out vec4 FragColor;
 uniform vec4 albedo;
 
 void main() {
-    FragColor = vec4( 1.0, 0.0, 0.0, 1.0 );
+    FragColor = albedo;
 }
 
 )SHADER_SRC";
@@ -90,19 +91,33 @@ void UsdRenderWindow::initialize()
 
 void UsdRenderWindow::render()
 {
+    renderQuad();
+    return;
+    
     const qreal scale = devicePixelRatio();
     glViewport( 0, 0, width() * scale, height() * scale );
     
     glClear( GL_COLOR_BUFFER_BIT );
     
-    m_program->bind();
+//    m_program->bind();
     
     QMatrix4x4 matrix;
     matrix.perspective( 60.0f, 4.0f / 3.0f, 0.1f, 100.0f );
     matrix.translate(0, 0, -2);
     matrix.rotate( 100.0f * m_frame / screen()->refreshRate(), 0, 1, 0 );
     
-    m_program->setUniformValue( m_matrixUniform, matrix );
+//    m_program->setUniformValue( m_matrixUniform, matrix );
+    
+    marlin::Material material;
+    material.update( kSolidVertexShader, kSolidFragmentShader );
+    
+    mat4f m = glm::make_mat4( matrix.data() );
+    
+    material.setParameter( "matrix", m );
+    material.setParameter( "albedo", vec4f( 1.0, 1.0, 0.0, 0.5 ) );
+
+    material.load();
+    material.bind();
     
     GLfloat vertices[] = {
         0.0f, 0.707f, 0.0f,
@@ -138,18 +153,18 @@ void UsdRenderWindow::render()
     mesh.render();
     mesh.unload();
     
-    glVertexAttribPointer( m_posAttr, 3, GL_FLOAT, GL_FALSE, 0, vertices );
-    glVertexAttribPointer( m_colAttr, 3, GL_FLOAT, GL_FALSE, 0, colors );
-    
-    glEnableVertexAttribArray( 0 );
-    glEnableVertexAttribArray( 1 );
-    
-    glDrawArrays( GL_TRIANGLES, 0, 3 );
-    
-    glDisableVertexAttribArray( 1 );
-    glDisableVertexAttribArray( 0 );
-    
-    m_program->release();
+//    glVertexAttribPointer( m_posAttr, 3, GL_FLOAT, GL_FALSE, 0, vertices );
+//    glVertexAttribPointer( m_colAttr, 3, GL_FLOAT, GL_FALSE, 0, colors );
+//
+//    glEnableVertexAttribArray( 0 );
+//    glEnableVertexAttribArray( 1 );
+//
+//    glDrawArrays( GL_TRIANGLES, 0, 3 );
+//
+//    glDisableVertexAttribArray( 1 );
+//    glDisableVertexAttribArray( 0 );
+//
+//    m_program->release();
     
     ++m_frame;
 }

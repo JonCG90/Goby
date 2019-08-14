@@ -30,6 +30,8 @@ public:
     void bind();
     void unbind();
     
+    void setShaderSource( const std::string &i_vertexSource, const std::string &i_fragmentSource );
+    
     void setBool( const std::string &i_param, bool i_value );
     void setInt( const std::string &i_param, int i_value );
     void setFloat( const std::string &i_param, float i_value );
@@ -40,14 +42,15 @@ public:
     
 private:
     
+    bool m_loaded;
     GLuint m_handle;
     std::string m_vertexSource;
     std::string m_fragmentSource;
     
 private:
     
-    GLint getUniformLocation( const std::string &i_param ) const;
-
+    bool getUniformLocation( const std::string &i_param, GLint &o_location ) const;
+    
 };
 
 } // namespace marlin

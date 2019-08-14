@@ -13,7 +13,7 @@ namespace marlin
 template < typename T >
 ShaderParameterPtr ShaderParameterValue::createParameter( const std::string &name, T value )
 {
-    std::shared_ptr< ShaderParameter< T > > param = std::make_shared< T >( name, value );
+    std::shared_ptr< ShaderParameter< T > > param = std::make_shared< ShaderParameter< T > >( name, value );
     return param;
 }
 
@@ -46,12 +46,6 @@ T ShaderParameter< T >::getValue() const {
 template< typename T >
 void ShaderParameter< T >::setValue( T value ) {
     m_value = value;
-}
-
-template< typename T >
-void ShaderParameter< T >::setType()
-{
-    m_type = ShaderParameterType::Count;
 }
     
 } // namespace marlin

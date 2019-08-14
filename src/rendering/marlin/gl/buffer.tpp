@@ -27,11 +27,11 @@ void ArrayBuffer::enableVertexAttribute( size_t i_index,
 {
     glEnableVertexAttribArray( i_index );
     glVertexAttribPointer( static_cast< GLuint >( i_index ),
-                          static_cast< GLint >( i_size ),
-                          GL_FLOAT,
-                          GL_FALSE,
-                          static_cast< GLsizei >( i_size * sizeof( T ) ),
-                          reinterpret_cast< GLvoid * >( io_offset ) );
+                           static_cast< GLint >( i_size ),
+                           GL_FLOAT,
+                           GL_FALSE,
+                           static_cast< GLsizei >( i_size * sizeof( T ) ),
+                           reinterpret_cast< GLvoid * >( io_offset ) );
 }
     
 template < class T, class A >

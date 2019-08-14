@@ -9,6 +9,31 @@
 
 namespace marlin
 {
+
+void Material::load()
+{
+    m_shader.load();
+}
+
+void Material::unload()
+{
+    m_shader.unload();
+}
+    
+void Material::update( const std::string &i_vertexSource, const std::string &i_fragmentSource )
+{
+    m_shader.setShaderSource( i_vertexSource, i_fragmentSource );
+}
+
+void Material::bind()
+{
+    bindParameters();
+}
+
+void Material::unbind()
+{
+    m_shader.unbind();
+}
     
 void Material::setParameter( ShaderParameterPtr i_param )
 {
@@ -23,8 +48,6 @@ void Material::bindParameters()
     {
         bindParameter( pair.second );
     }
-    
-    m_shader.unbind();
 }
     
 void Material::bindParameter( ShaderParameterPtr i_param )
@@ -71,7 +94,7 @@ void Material::bindParameter( ShaderParameterPtr i_param )
         }
         case ShaderParameterType::Vec4f:
         {
-            vec4f value = i_param->getAsType<  vec4f >();
+            vec4f value = i_param->getAsType< vec4f >();
             m_shader.setVec4f( name, value );
             break;
         }
@@ -84,6 +107,7 @@ void Material::bindParameter( ShaderParameterPtr i_param )
 
         default:
             break;
-    }}
+    }
+}
     
 } // namespace marlin
