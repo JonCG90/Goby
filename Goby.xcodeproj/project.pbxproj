@@ -47,6 +47,10 @@
 		2361F5D72303BAFE00F4B0CB /* material.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 2361F5D42303BAFE00F4B0CB /* material.cpp */; };
 		2361F5D92303C08500F4B0CB /* material.tpp in Copy Bundle Resources */ = {isa = PBXBuildFile; fileRef = 2361F5D82303C08500F4B0CB /* material.tpp */; };
 		2361F5E02303CFC700F4B0CB /* openGLRender.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 2361F5DE2303CFC700F4B0CB /* openGLRender.cpp */; };
+		2361F5E42305486000F4B0CB /* cameraController.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 2361F5E22305486000F4B0CB /* cameraController.cpp */; };
+		2361F5E92307971400F4B0CB /* actionManager.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 2361F5E72307971400F4B0CB /* actionManager.cpp */; };
+		2361F5EC2307971F00F4B0CB /* action.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 2361F5EA2307971F00F4B0CB /* action.cpp */; };
+		2361F5EF2307973300F4B0CB /* cameraActions.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 2361F5ED2307973300F4B0CB /* cameraActions.cpp */; };
 		23A7DF0E22CB6B7600AA0E6C /* renderDelegate.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 23A7DF0C22CB6B7600AA0E6C /* renderDelegate.cpp */; };
 		563CF89DC182C977E17F2B26 /* QtGui.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = 897F7DBDCA6B394E806B8406 /* QtGui.framework */; };
 		7E5709D3FE807F8C875AE381 /* moc_mainWindow.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = C70E9616EF3EBD83D0000B2E /* moc_mainWindow.cpp */; settings = {ATTRIBUTES = (); }; };
@@ -123,6 +127,14 @@
 		2361F5D82303C08500F4B0CB /* material.tpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = material.tpp; sourceTree = "<group>"; };
 		2361F5DE2303CFC700F4B0CB /* openGLRender.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = openGLRender.cpp; sourceTree = "<group>"; };
 		2361F5DF2303CFC700F4B0CB /* openGLRender.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = openGLRender.hpp; sourceTree = "<group>"; };
+		2361F5E22305486000F4B0CB /* cameraController.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = cameraController.cpp; sourceTree = "<group>"; };
+		2361F5E32305486000F4B0CB /* cameraController.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = cameraController.hpp; sourceTree = "<group>"; };
+		2361F5E72307971400F4B0CB /* actionManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = actionManager.cpp; sourceTree = "<group>"; };
+		2361F5E82307971400F4B0CB /* actionManager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = actionManager.hpp; sourceTree = "<group>"; };
+		2361F5EA2307971F00F4B0CB /* action.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = action.cpp; sourceTree = "<group>"; };
+		2361F5EB2307971F00F4B0CB /* action.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = action.hpp; sourceTree = "<group>"; };
+		2361F5ED2307973300F4B0CB /* cameraActions.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = cameraActions.cpp; sourceTree = "<group>"; };
+		2361F5EE2307973300F4B0CB /* cameraActions.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = cameraActions.hpp; sourceTree = "<group>"; };
 		23A7DF0C22CB6B7600AA0E6C /* renderDelegate.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = renderDelegate.cpp; sourceTree = "<group>"; };
 		23A7DF0D22CB6B7600AA0E6C /* renderDelegate.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = renderDelegate.hpp; sourceTree = "<group>"; };
 		2B774D8E4178765CE52EAAF5 /* DiskArbitration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DiskArbitration.framework; path = /System/Library/Frameworks/DiskArbitration.framework; sourceTree = "<absolute>"; };
@@ -293,6 +305,38 @@
 			path = testing;
 			sourceTree = "<group>";
 		};
+		2361F5E12305483B00F4B0CB /* shared */ = {
+			isa = PBXGroup;
+			children = (
+				2361F5E22305486000F4B0CB /* cameraController.cpp */,
+				2361F5E32305486000F4B0CB /* cameraController.hpp */,
+			);
+			name = shared;
+			path = src/shared;
+			sourceTree = "<group>";
+		};
+		2361F5E5230796F600F4B0CB /* app */ = {
+			isa = PBXGroup;
+			children = (
+				2361F5E62307970300F4B0CB /* actions */,
+			);
+			name = app;
+			path = src/app;
+			sourceTree = "<group>";
+		};
+		2361F5E62307970300F4B0CB /* actions */ = {
+			isa = PBXGroup;
+			children = (
+				2361F5E72307971400F4B0CB /* actionManager.cpp */,
+				2361F5E82307971400F4B0CB /* actionManager.hpp */,
+				2361F5EA2307971F00F4B0CB /* action.cpp */,
+				2361F5EB2307971F00F4B0CB /* action.hpp */,
+				2361F5ED2307973300F4B0CB /* cameraActions.cpp */,
+				2361F5EE2307973300F4B0CB /* cameraActions.hpp */,
+			);
+			path = actions;
+			sourceTree = "<group>";
+		};
 		25B08E2869634E9BCBA333A2 /* Generated Sources */ = {
 			isa = PBXGroup;
 			children = (
@@ -331,6 +375,8 @@
 		921315FAA7F261D737F4F4C7 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				2361F5E5230796F600F4B0CB /* app */,
+				2361F5E12305483B00F4B0CB /* shared */,
 				234EA77222EDA9C200803B89 /* main.cpp */,
 				234EA77922FACCFC00803B89 /* coral */,
 				234EA78722FAD1E800803B89 /* math */,
@@ -507,19 +553,23 @@
 				2361F5BC22FFC93200F4B0CB /* mesh.cpp in Compile Sources */,
 				23A7DF0E22CB6B7600AA0E6C /* renderDelegate.cpp in Compile Sources */,
 				2361F5C322FFD40800F4B0CB /* vertexArray.cpp in Compile Sources */,
+				2361F5EF2307973300F4B0CB /* cameraActions.cpp in Compile Sources */,
 				2361F5C62300209700F4B0CB /* shader.cpp in Compile Sources */,
 				2361F5D62303BAFE00F4B0CB /* shaderParameter.cpp in Compile Sources */,
 				234EA77122EDA92500803B89 /* openglwindow.cpp in Compile Sources */,
+				2361F5E92307971400F4B0CB /* actionManager.cpp in Compile Sources */,
 				234EA77322EDA9C200803B89 /* main.cpp in Compile Sources */,
 				2361F5D72303BAFE00F4B0CB /* material.cpp in Compile Sources */,
 				2361F5C022FFC95800F4B0CB /* geometry.cpp in Compile Sources */,
 				234EA78522FACCFD00803B89 /* meshSchema.cpp in Compile Sources */,
 				222C237AEDD0C7A3314EA04A /* dummy.cpp in Compile Sources */,
+				2361F5E42305486000F4B0CB /* cameraController.cpp in Compile Sources */,
 				234EA78B22FAD34100803B89 /* math.cpp in Compile Sources */,
 				234EA79222FE7DC100803B89 /* buffer.cpp in Compile Sources */,
 				2361F5E02303CFC700F4B0CB /* openGLRender.cpp in Compile Sources */,
 				234EA77622EDAA3D00803B89 /* usdRenderWindow.cpp in Compile Sources */,
 				234EA78622FACCFD00803B89 /* transform.cpp in Compile Sources */,
+				2361F5EC2307971F00F4B0CB /* action.cpp in Compile Sources */,
 			);
 			name = "Compile Sources";
 			runOnlyForDeploymentPostprocessing = 0;
