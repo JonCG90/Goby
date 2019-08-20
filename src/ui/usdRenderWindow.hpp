@@ -10,6 +10,8 @@
 
 #include "openglwindow.hpp"
 
+#include <app/camera/cameraController.hpp>
+
 #include <coral/scene.hpp>
 
 #include <pxr/usd/usd/stage.h>
@@ -36,6 +38,7 @@ private:
     int m_frame;
     
     coral::Scene m_scene;
+    Goby::CameraController m_cameraController;
 };
 
 #endif /* USDRENDERWINDOW_HPP */

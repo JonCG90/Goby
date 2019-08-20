@@ -17,6 +17,7 @@ CameraAction::CameraAction( const std::string &i_identifier )
 
 void CameraAction::execute( const ActionContext &i_context )
 {
+    std::cout << "Moving forward\n";
 }
     
 CameraMoveForwardAction::CameraMoveForwardAction()

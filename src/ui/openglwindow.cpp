@@ -1,5 +1,7 @@
 #include "openglwindow.hpp"
 
+#include <app/actions/actionManager.hpp>
+
 #include <QtCore/QCoreApplication>
 
 #include <QtGui/QOpenGLContext>
@@ -15,6 +17,7 @@ OpenGLWindow::OpenGLWindow(QWindow *parent)
 , m_device(0)
 {
     setSurfaceType(QWindow::OpenGLSurface);
+    installEventFilter( this );
 }
 
 OpenGLWindow::~OpenGLWindow()
@@ -50,6 +53,16 @@ void OpenGLWindow::render()
 void OpenGLWindow::renderLater()
 {
     requestUpdate();
+}
+
+bool OpenGLWindow::eventFilter( QObject *i_obj, QEvent *i_event )
+{
+    if ( Goby::ActionManager::sharedManager().handleEvent( i_event ) )
+    {
+        return true;
+    }
+    
+    return QWindow::eventFilter( i_obj, i_event );
 }
 
 bool OpenGLWindow::event(QEvent *event)
@@ -115,18 +128,6 @@ void OpenGLWindow::setAnimating(bool animating)
     
     if (animating)
         renderLater();
-}
-
-void OpenGLWindow::keyPressEvent(QKeyEvent *i_event)
-{
-    std::cout << "Key Pressed" << std::endl;
-    QWindow::keyPressEvent(i_event);
-}
-
-void OpenGLWindow::keyReleaseEvent(QKeyEvent *i_event)
-{
-    std::cout << "Key Released" << std::endl;
-    QWindow::keyReleaseEvent(i_event);
 }
 
 void OpenGLWindow::mousePressEvent(QMouseEvent *i_event)

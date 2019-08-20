@@ -40,4 +40,10 @@ using vec3 = glm::tvec3< T, glm::precision::defaultp >;
 template< class T >
 using vec4 = glm::tvec4< T, glm::precision::defaultp >;
 
+template< class T >
+using mat3 = glm::tmat3x3< T, glm::precision::defaultp >;
+
+template< class T >
+using mat4 = glm::tmat4x4< T, glm::precision::defaultp >;
+
 #endif /* MATH_DEFS_HPP */

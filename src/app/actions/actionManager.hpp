@@ -11,7 +11,7 @@
 #include "action.hpp"
 
 #include <QtCore/qnamespace.h>
-#include <QKeyEvent>
+#include <QEvent>
 
 #include <map>
 
@@ -30,13 +30,16 @@ public:
     ActionManager( ActionManager const & ) = delete;
     void operator=( ActionManager const & ) = delete;
     
-private:
-    
-    std::map< Qt::Key, ActionPtr > m_actions;
+    bool handleEvent( QEvent* i_event );
     
 private:
     
-    void registerAction( ActionPtr i_action, Qt::Key i_key );
+    std::map< std::string, ActionPtr > m_actions;
+    
+private:
+    
+    void registerAction( ActionPtr i_action );
+    ActionPtr getAction( const std::string &i_actionID ) const;
 
 };
     

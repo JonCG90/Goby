@@ -15,4 +15,9 @@ Action::Action( const std::string &i_identifier )
 {
 }
     
+std::string Action::getID() const
+{
+    return m_identifier;
+}
+    
 } // namespace Goby

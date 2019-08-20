@@ -30,11 +30,8 @@ public slots:
     
 protected:
     
+    bool eventFilter( QObject *i_obj, QEvent *i_event ) override;
     bool event(QEvent *event) override;
-    
-    // Key events
-    void keyPressEvent(QKeyEvent *i_event) override;
-    void keyReleaseEvent(QKeyEvent *i_event) override;
     
     // Mouse events
     void mousePressEvent(QMouseEvent *i_event) override;

@@ -77,6 +77,7 @@ MeshPolygons MeshSchema::getPolygons() const
     VtValue colorAsVt;
     std::vector< vec4f > colors;
 
+    /*
     if ( UsdImagingGprimAdapter::GetColor( mesh.GetPrim(), UsdTimeCode::Default(), nullptr, &colorAsVt ) )
     {
         const VtVec3fArray &colorData = colorAsVt.Get< VtVec3fArray >();
@@ -86,7 +87,8 @@ MeshPolygons MeshSchema::getPolygons() const
             colors.push_back( vec4f( color[0], color[ 1 ], color[ 2 ], 1.0 ) );
         }
     }
-    
+    */
+     
     MeshPolygons polygons;
     polygons.points = points;
     polygons.colors = colors;

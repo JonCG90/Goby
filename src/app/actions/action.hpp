@@ -29,9 +29,11 @@ public:
     explicit Action( const std::string &i_identifier );
     virtual ~Action() = default;
     
+    std::string getID() const;
+
     virtual std::string getName() const = 0;
     virtual void execute( const ActionContext &i_context ) = 0;
-
+    
 private:
     
     std::string m_identifier;

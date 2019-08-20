@@ -7,6 +7,8 @@
 
 #include "usdRenderWindow.hpp"
 
+#include <math/conversion.hpp>
+
 #include <iostream>
 
 // Temp
@@ -15,6 +17,7 @@
 #include <rendering/marlin/shading/material.hpp>
 #include <glm/gtc/type_ptr.hpp>
 #include <testing/openGLRender.hpp>
+#include "glm/gtc/matrix_transform.hpp"
 
 static const std::string kSolidVertexShader = R"SHADER_SRC(
 #version 410
@@ -24,11 +27,13 @@ layout (location = 1) in vec3 vertexNormal;
 layout (location = 2) in vec2 vertexTexCoord;
 layout (location = 3) in vec4 vertexColor;
 
-uniform mat4 matrix;
+uniform mat4 model;
+uniform mat4 view;
+uniform mat4 projection;
 
 void main()
 {
-    gl_Position = matrix * vec4( vertexPostion, 1.0 );
+    gl_Position = projection * view * model * vec4( vertexPostion, 1.0 );
 }
 
 )SHADER_SRC";
@@ -53,6 +58,13 @@ UsdRenderWindow::UsdRenderWindow()
 
 void UsdRenderWindow::initialize()
 {
+    Goby::RenderCamera camera;
+    camera.position = vec3d( 0.0, 0.0, 60.0 );
+    camera.target = vec3d( 0.0, 0.0, 0.0 );
+    camera.up = vec3d( 0.0, 1.0, 0.0 );
+
+    m_cameraController.reset( camera );
+    
     m_scene.load( "/Users/jongraham/Documents/Models/Kitchen_set/assets/Bottle/Bottle.usd" );
 //    m_scene.load( "/Users/jongraham/Documents/Models/Kitchen_set/Kitchen_set.usd" );
 //    coral::Items items = m_scene.getAllItems();
@@ -71,19 +83,22 @@ void UsdRenderWindow::render()
     glViewport( 0, 0, width() * scale, height() * scale );
     
     glClear( GL_COLOR_BUFFER_BIT );
+    
+    mat4f projection = glm::perspective( 60.0f, 4.0f / 3.0f, 0.1f, 100.0f );
+    mat4d view = m_cameraController.getView();
         
     QMatrix4x4 matrix;
-    matrix.perspective( 60.0f, 4.0f / 3.0f, 0.1f, 100.0f );
-    matrix.translate(0, 0, -60);
     matrix.rotate( 100.0f * m_frame / screen()->refreshRate(), 0, 1, 0 );
-    
     
     marlin::Material material;
     material.update( kSolidVertexShader, kSolidFragmentShader );
     
-    mat4f m = glm::make_mat4( matrix.data() );
+    mat4f model = glm::make_mat4( matrix.data() );
     
-    material.setParameter( "matrix", m );
+    material.setParameter( "model", model );
+    material.setParameter( "view", convertType< float >( view ) );
+    material.setParameter( "projection", projection );
+
     material.setParameter( "albedo", vec4f( 1.0, 1.0, 0.0, 0.5 ) );
 
     material.load();
