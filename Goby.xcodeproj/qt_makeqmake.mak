@@ -177,6 +177,7 @@ Goby.xcodeproj/project.pbxproj: Goby.pro ../../Qt/5.12.1/clang_64/mkspecs/macx-c
 		../../Qt/5.12.1/clang_64/mkspecs/macx-clang/qmake.conf \
 		../../Qt/5.12.1/clang_64/mkspecs/macx-xcode/qmake.conf \
 		../../Qt/5.12.1/clang_64/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		../../Qt/5.12.1/clang_64/mkspecs/features/exclusive_builds.prf \
 		../../Qt/5.12.1/clang_64/mkspecs/features/mac/sdk.prf \
 		../../Qt/5.12.1/clang_64/mkspecs/features/toolchain.prf \
@@ -375,6 +376,7 @@ Goby.xcodeproj/project.pbxproj: Goby.pro ../../Qt/5.12.1/clang_64/mkspecs/macx-c
 ../../Qt/5.12.1/clang_64/mkspecs/macx-clang/qmake.conf:
 ../../Qt/5.12.1/clang_64/mkspecs/macx-xcode/qmake.conf:
 ../../Qt/5.12.1/clang_64/mkspecs/features/spec_post.prf:
+.qmake.stash:
 ../../Qt/5.12.1/clang_64/mkspecs/features/exclusive_builds.prf:
 ../../Qt/5.12.1/clang_64/mkspecs/features/mac/sdk.prf:
 ../../Qt/5.12.1/clang_64/mkspecs/features/toolchain.prf:

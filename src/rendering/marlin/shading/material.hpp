@@ -8,8 +8,9 @@
 #ifndef MARLIN_MATERIAL_HPP
 #define MARLIN_MATERIAL_HPP
 
-#include "shader.hpp"
 #include "shaderParameter.hpp"
+
+#include <rendering/marlin/gl/shader.hpp>
 
 #include <map>
 

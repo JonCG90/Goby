@@ -17,7 +17,7 @@ LEXFLAGS  =
 YACC      = yacc
 YACCFLAGS = -d
 DEFINES       = -DQT_DEPRECATED_WARNINGS -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB
-INCPATH       = -I. -I../../Qt/5.12.1/clang_64/lib/QtWidgets.framework/Headers -I../../Qt/5.12.1/clang_64/lib/QtGui.framework/Headers -I../../Qt/5.12.1/clang_64/lib/QtCore.framework/Headers -I. -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/Applications/Xcode10.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework/Headers -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/Applications/Xcode10.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/AGL.framework/Headers/ -I. -I../../Qt/5.12.1/clang_64/mkspecs/macx-clang -F/Users/jongraham/Qt/5.12.1/clang_64/lib
+INCPATH       = -I. -Isrc -Isrc/thirdparty -I/usr/local/opt/USD/include -I../../Qt/5.12.1/clang_64/lib/QtWidgets.framework/Headers -I../../Qt/5.12.1/clang_64/lib/QtGui.framework/Headers -I../../Qt/5.12.1/clang_64/lib/QtCore.framework/Headers -I. -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/Applications/Xcode10.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework/Headers -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/Applications/Xcode10.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/AGL.framework/Headers/ -I. -I../../Qt/5.12.1/clang_64/mkspecs/macx-clang -F/Users/jongraham/Qt/5.12.1/clang_64/lib
 DEL_FILE  = rm -f
 MOVE      = mv -f
 
@@ -32,7 +32,7 @@ check: first
 
 benchmark: first
 
-compilers: moc_predefs.h moc_mainWindow.cpp ui_mainWindow.h
+compilers: moc_predefs.h moc_mainWindow.cpp moc_mainWindow.cpp moc_openglwindow.cpp ui_mainWindow.h ui_mainWindow.h
 compiler_rcc_make_all:
 compiler_rcc_clean:
 compiler_moc_predefs_make_all: moc_predefs.h
@@ -41,22 +41,37 @@ compiler_moc_predefs_clean:
 moc_predefs.h: ../../Qt/5.12.1/clang_64/mkspecs/features/data/dummy.cpp
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -pipe -stdlib=libc++ -O2 -std=gnu++11 -Wall -W -dM -E -o moc_predefs.h ../../Qt/5.12.1/clang_64/mkspecs/features/data/dummy.cpp
 
-compiler_moc_header_make_all: moc_mainWindow.cpp
+compiler_moc_header_make_all: moc_mainWindow.cpp moc_mainWindow.cpp moc_openglwindow.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) moc_mainWindow.cpp
+	-$(DEL_FILE) moc_mainWindow.cpp moc_mainWindow.cpp moc_openglwindow.cpp
 moc_mainWindow.cpp: src/ui/mainWindow.hpp \
 		../../Qt/5.12.1/clang_64/lib/QtWidgets.framework/Headers/QMainWindow \
 		moc_predefs.h \
 		../../Qt/5.12.1/clang_64/bin/moc
-	/Users/jongraham/Qt/5.12.1/clang_64/bin/moc $(DEFINES) --include /Users/jongraham/Projects/Goby/moc_predefs.h -I/Users/jongraham/Qt/5.12.1/clang_64/mkspecs/macx-clang -I/Users/jongraham/Projects/Goby -I/Users/jongraham/Qt/5.12.1/clang_64/lib/QtWidgets.framework/Headers -I/Users/jongraham/Qt/5.12.1/clang_64/lib/QtGui.framework/Headers -I/Users/jongraham/Qt/5.12.1/clang_64/lib/QtCore.framework/Headers -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.1/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include -F/Users/jongraham/Qt/5.12.1/clang_64/lib src/ui/mainWindow.hpp -o moc_mainWindow.cpp
+	/Users/jongraham/Qt/5.12.1/clang_64/bin/moc $(DEFINES) --include /Users/jongraham/Projects/Goby/moc_predefs.h -I/Users/jongraham/Qt/5.12.1/clang_64/mkspecs/macx-clang -I/Users/jongraham/Projects/Goby -I/Users/jongraham/Projects/Goby/src -I/Users/jongraham/Projects/Goby/src/thirdparty -I/usr/local/opt/USD/include -I/Users/jongraham/Qt/5.12.1/clang_64/lib/QtWidgets.framework/Headers -I/Users/jongraham/Qt/5.12.1/clang_64/lib/QtGui.framework/Headers -I/Users/jongraham/Qt/5.12.1/clang_64/lib/QtCore.framework/Headers -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.1/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include -F/Users/jongraham/Qt/5.12.1/clang_64/lib src/ui/mainWindow.hpp -o moc_mainWindow.cpp
+
+moc_mainWindow.cpp: src/ui/mainWindow.hpp \
+		../../Qt/5.12.1/clang_64/lib/QtWidgets.framework/Headers/QMainWindow \
+		moc_predefs.h \
+		../../Qt/5.12.1/clang_64/bin/moc
+	/Users/jongraham/Qt/5.12.1/clang_64/bin/moc $(DEFINES) --include /Users/jongraham/Projects/Goby/moc_predefs.h -I/Users/jongraham/Qt/5.12.1/clang_64/mkspecs/macx-clang -I/Users/jongraham/Projects/Goby -I/Users/jongraham/Projects/Goby/src -I/Users/jongraham/Projects/Goby/src/thirdparty -I/usr/local/opt/USD/include -I/Users/jongraham/Qt/5.12.1/clang_64/lib/QtWidgets.framework/Headers -I/Users/jongraham/Qt/5.12.1/clang_64/lib/QtGui.framework/Headers -I/Users/jongraham/Qt/5.12.1/clang_64/lib/QtCore.framework/Headers -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.1/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include -F/Users/jongraham/Qt/5.12.1/clang_64/lib src/ui/mainWindow.hpp -o moc_mainWindow.cpp
+
+moc_openglwindow.cpp: src/ui/openglwindow.hpp \
+		moc_predefs.h \
+		../../Qt/5.12.1/clang_64/bin/moc
+	/Users/jongraham/Qt/5.12.1/clang_64/bin/moc $(DEFINES) --include /Users/jongraham/Projects/Goby/moc_predefs.h -I/Users/jongraham/Qt/5.12.1/clang_64/mkspecs/macx-clang -I/Users/jongraham/Projects/Goby -I/Users/jongraham/Projects/Goby/src -I/Users/jongraham/Projects/Goby/src/thirdparty -I/usr/local/opt/USD/include -I/Users/jongraham/Qt/5.12.1/clang_64/lib/QtWidgets.framework/Headers -I/Users/jongraham/Qt/5.12.1/clang_64/lib/QtGui.framework/Headers -I/Users/jongraham/Qt/5.12.1/clang_64/lib/QtCore.framework/Headers -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.1/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include -F/Users/jongraham/Qt/5.12.1/clang_64/lib src/ui/openglwindow.hpp -o moc_openglwindow.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
-compiler_uic_make_all: ui_mainWindow.h
+compiler_uic_make_all: ui_mainWindow.h ui_mainWindow.h
 compiler_uic_clean:
-	-$(DEL_FILE) ui_mainWindow.h
+	-$(DEL_FILE) ui_mainWindow.h ui_mainWindow.h
+ui_mainWindow.h: src/ui/mainWindow.ui \
+		../../Qt/5.12.1/clang_64/bin/uic
+	/Users/jongraham/Qt/5.12.1/clang_64/bin/uic src/ui/mainWindow.ui -o ui_mainWindow.h
+
 ui_mainWindow.h: src/ui/mainWindow.ui \
 		../../Qt/5.12.1/clang_64/bin/uic
 	/Users/jongraham/Qt/5.12.1/clang_64/bin/uic src/ui/mainWindow.ui -o ui_mainWindow.h

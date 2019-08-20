@@ -1,16 +1,16 @@
 /****************************************************************************
- ** Meta object code from reading C++ file 'openglwindow.h'
- **
- ** Created by: The Qt Meta Object Compiler version 67 (Qt 5.12.1)
- **
- ** WARNING! All changes made in this file will be lost!
- *****************************************************************************/
+** Meta object code from reading C++ file 'openglwindow.hpp'
+**
+** Created by: The Qt Meta Object Compiler version 67 (Qt 5.12.1)
+**
+** WARNING! All changes made in this file will be lost!
+*****************************************************************************/
 
 #include "src/ui/openglwindow.hpp"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
-#error "The header file 'openglwindow.h' doesn't include <QObject>."
+#error "The header file 'openglwindow.hpp' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 67
 #error "This file was generated using the moc from 5.12.1. It"
 #error "cannot be used with the include files from this version of Qt."
@@ -25,44 +25,44 @@ struct qt_meta_stringdata_OpenGLWindow_t {
     char stringdata0[36];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
-Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-qptrdiff(offsetof(qt_meta_stringdata_OpenGLWindow_t, stringdata0) + ofs \
-- idx * sizeof(QByteArrayData)) \
-)
+    Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
+    qptrdiff(offsetof(qt_meta_stringdata_OpenGLWindow_t, stringdata0) + ofs \
+        - idx * sizeof(QByteArrayData)) \
+    )
 static const qt_meta_stringdata_OpenGLWindow_t qt_meta_stringdata_OpenGLWindow = {
     {
-        QT_MOC_LITERAL(0, 0, 12), // "OpenGLWindow"
-        QT_MOC_LITERAL(1, 13, 11), // "renderLater"
-        QT_MOC_LITERAL(2, 25, 0), // ""
-        QT_MOC_LITERAL(3, 26, 9) // "renderNow"
-        
+QT_MOC_LITERAL(0, 0, 12), // "OpenGLWindow"
+QT_MOC_LITERAL(1, 13, 11), // "renderLater"
+QT_MOC_LITERAL(2, 25, 0), // ""
+QT_MOC_LITERAL(3, 26, 9) // "renderNow"
+
     },
     "OpenGLWindow\0renderLater\0\0renderNow"
 };
 #undef QT_MOC_LITERAL
 
 static const uint qt_meta_data_OpenGLWindow[] = {
-    
-    // content:
-    8,       // revision
-    0,       // classname
-    0,    0, // classinfo
-    2,   14, // methods
-    0,    0, // properties
-    0,    0, // enums/sets
-    0,    0, // constructors
-    0,       // flags
-    0,       // signalCount
-    
-    // slots: name, argc, parameters, tag, flags
-    1,    0,   24,    2, 0x0a /* Public */,
-    3,    0,   25,    2, 0x0a /* Public */,
-    
-    // slots: parameters
+
+ // content:
+       8,       // revision
+       0,       // classname
+       0,    0, // classinfo
+       2,   14, // methods
+       0,    0, // properties
+       0,    0, // enums/sets
+       0,    0, // constructors
+       0,       // flags
+       0,       // signalCount
+
+ // slots: name, argc, parameters, tag, flags
+       1,    0,   24,    2, 0x0a /* Public */,
+       3,    0,   25,    2, 0x0a /* Public */,
+
+ // slots: parameters
     QMetaType::Void,
     QMetaType::Void,
-    
-    0        // eod
+
+       0        // eod
 };
 
 void OpenGLWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -71,9 +71,9 @@ void OpenGLWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id
         auto *_t = static_cast<OpenGLWindow *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-            case 0: _t->renderLater(); break;
-            case 1: _t->renderNow(); break;
-            default: ;
+        case 0: _t->renderLater(); break;
+        case 1: _t->renderNow(); break;
+        default: ;
         }
     }
     Q_UNUSED(_a);
