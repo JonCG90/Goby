@@ -30,7 +30,6 @@ public slots:
     
 protected:
     
-    bool eventFilter( QObject *i_obj, QEvent *i_event ) override;
     bool event(QEvent *event) override;
     
     // Mouse events

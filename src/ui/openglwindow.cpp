@@ -7,6 +7,7 @@
 #include <QtGui/QOpenGLContext>
 #include <QtGui/QOpenGLPaintDevice>
 #include <QtGui/QPainter>
+#include <QWidget>
 
 #include <iostream>
 
@@ -17,7 +18,6 @@ OpenGLWindow::OpenGLWindow(QWindow *parent)
 , m_device(0)
 {
     setSurfaceType(QWindow::OpenGLSurface);
-    installEventFilter( this );
 }
 
 OpenGLWindow::~OpenGLWindow()
@@ -53,16 +53,6 @@ void OpenGLWindow::render()
 void OpenGLWindow::renderLater()
 {
     requestUpdate();
-}
-
-bool OpenGLWindow::eventFilter( QObject *i_obj, QEvent *i_event )
-{
-    if ( Goby::ActionManager::sharedManager().handleEvent( i_event ) )
-    {
-        return true;
-    }
-    
-    return QWindow::eventFilter( i_obj, i_event );
 }
 
 bool OpenGLWindow::event(QEvent *event)

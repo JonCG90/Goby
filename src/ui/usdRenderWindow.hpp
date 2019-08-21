@@ -10,6 +10,7 @@
 
 #include "openglwindow.hpp"
 
+#include <app/shortcuts/shortcutReceiver.hpp>
 #include <app/camera/cameraController.hpp>
 
 #include <coral/scene.hpp>
@@ -25,13 +26,15 @@
 
 #include <stdio.h>
 
-class UsdRenderWindow : public OpenGLWindow
+class UsdRenderWindow : public OpenGLWindow, public Goby::ShortcutReceiver
 {
 public:
     UsdRenderWindow();
     
     void initialize() override;
     void render() override;
+    
+    Goby::ActionContextPtr getContext() override;
     
 private:
     

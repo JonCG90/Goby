@@ -5,2053 +5,913 @@
 	};
 	objectVersion = 46;
 	objects = {
-		5E618435888B9D49F8540165 = {
-			buildActionMask = 2147483647;
-			files = (
-				);
-			isa = PBXShellScriptBuildPhase;
-			runOnlyForDeploymentPostprocessing = 0;
-			name = "Qt Qmake";
-			shellPath = "/bin/sh";
-			shellScript = "make -C /Users/jongraham/Projects/Goby -f Goby.xcodeproj/qt_makeqmake.mak";
-			showEnvVarsInLog = "0";
-		};
-		6600A89AC0B97D4BA9666997 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/main.cpp";
-			name = "main.cpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.cpp.cpp";
-		};
-		DD8A09B482184031F18D388D = {
-			fileRef = "6600A89AC0B97D4BA9666997";
-			isa = PBXBuildFile;
-			settings = {
-				ATTRIBUTES = (
-					);
-			};
-		};
-		8AB4ACE0B063C484E0B9CB4A = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/ui/mainWindow.cpp";
-			name = "mainWindow.cpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.cpp.cpp";
-		};
-		B2A6F1FFBA4E92771BB02D52 = {
-			fileRef = "8AB4ACE0B063C484E0B9CB4A";
-			isa = PBXBuildFile;
-			settings = {
-				ATTRIBUTES = (
-					);
-			};
-		};
-		14DE1832DDE6C0E767F4D0E6 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/app/actions/action.cpp";
-			name = "action.cpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.cpp.cpp";
-		};
-		487F253519825FD0C38DC431 = {
-			fileRef = "14DE1832DDE6C0E767F4D0E6";
-			isa = PBXBuildFile;
-			settings = {
-				ATTRIBUTES = (
-					);
-			};
-		};
-		78012BB9169387BB507CDB65 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/app/actions/actionManager.cpp";
-			name = "actionManager.cpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.cpp.cpp";
-		};
-		D0DB87E265B14FB286314D80 = {
-			fileRef = "78012BB9169387BB507CDB65";
-			isa = PBXBuildFile;
-			settings = {
-				ATTRIBUTES = (
-					);
-			};
-		};
-		385859B7A777F836DB20E752 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/app/actions/cameraActions.cpp";
-			name = "cameraActions.cpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.cpp.cpp";
-		};
-		8E45DEA25FFE3BD420C0A0C1 = {
-			fileRef = "385859B7A777F836DB20E752";
-			isa = PBXBuildFile;
-			settings = {
-				ATTRIBUTES = (
-					);
-			};
-		};
-		E4EE19EA58D7BDC564388E32 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/app/actions/shortcutManager.cpp";
-			name = "shortcutManager.cpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.cpp.cpp";
-		};
-		8CE6700285A2B49E69605FC0 = {
-			fileRef = "E4EE19EA58D7BDC564388E32";
-			isa = PBXBuildFile;
-			settings = {
-				ATTRIBUTES = (
-					);
-			};
-		};
-		3E82E5C3424997AD76C77244 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/app/camera/camera.cpp";
-			name = "camera.cpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.cpp.cpp";
-		};
-		96AE84FC34FB4E023AA06D76 = {
-			fileRef = "3E82E5C3424997AD76C77244";
-			isa = PBXBuildFile;
-			settings = {
-				ATTRIBUTES = (
-					);
-			};
-		};
-		54D63FD6B6727BBA5CE09D48 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/app/camera/cameraController.cpp";
-			name = "cameraController.cpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.cpp.cpp";
-		};
-		E933E87ADF03B793A66BD6BC = {
-			fileRef = "54D63FD6B6727BBA5CE09D48";
-			isa = PBXBuildFile;
-			settings = {
-				ATTRIBUTES = (
-					);
-			};
-		};
-		E9E010E26D49D73D096C6DDC = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/coral/schema/cameraSchema.cpp";
-			name = "cameraSchema.cpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.cpp.cpp";
-		};
-		6BFF5CE64FA3B9BE54C77465 = {
-			fileRef = "E9E010E26D49D73D096C6DDC";
-			isa = PBXBuildFile;
-			settings = {
-				ATTRIBUTES = (
-					);
-			};
-		};
-		7BB482C114033E2BBD8EDFB7 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/coral/schema/meshSchema.cpp";
-			name = "meshSchema.cpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.cpp.cpp";
-		};
-		9B5F8543CA03DBEA783DE49B = {
-			fileRef = "7BB482C114033E2BBD8EDFB7";
-			isa = PBXBuildFile;
-			settings = {
-				ATTRIBUTES = (
-					);
-			};
-		};
-		9D2BEFCF30321BC5A6D63F57 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/coral/item.cpp";
-			name = "item.cpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.cpp.cpp";
-		};
-		6E2C2BE5A0FAFC2ED381BC86 = {
-			fileRef = "9D2BEFCF30321BC5A6D63F57";
-			isa = PBXBuildFile;
-			settings = {
-				ATTRIBUTES = (
-					);
-			};
-		};
-		76EEA9B5CCD725F9CEAAF222 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/coral/scene.cpp";
-			name = "scene.cpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.cpp.cpp";
-		};
-		CC166453207C9F459DB55EBD = {
-			fileRef = "76EEA9B5CCD725F9CEAAF222";
-			isa = PBXBuildFile;
-			settings = {
-				ATTRIBUTES = (
-					);
-			};
-		};
-		8D5259ACE4C7BFAD42FFA98D = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/coral/transform.cpp";
-			name = "transform.cpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.cpp.cpp";
-		};
-		F1794CD1603B65FE8B946A35 = {
-			fileRef = "8D5259ACE4C7BFAD42FFA98D";
-			isa = PBXBuildFile;
-			settings = {
-				ATTRIBUTES = (
-					);
-			};
-		};
-		766612AB7F9BFD08160B22A3 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/math/conversion.cpp";
-			name = "conversion.cpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.cpp.cpp";
-		};
-		05EFC26F07362C7CA07FD8AF = {
-			fileRef = "766612AB7F9BFD08160B22A3";
-			isa = PBXBuildFile;
-			settings = {
-				ATTRIBUTES = (
-					);
-			};
-		};
-		E5A58C4CE98BF802F0A39321 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/math/math.cpp";
-			name = "math.cpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.cpp.cpp";
-		};
-		2FD91A20307A7C316E3FED13 = {
-			fileRef = "E5A58C4CE98BF802F0A39321";
-			isa = PBXBuildFile;
-			settings = {
-				ATTRIBUTES = (
-					);
-			};
-		};
-		8C2682B2D3A86311D80EDA54 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/rendering/marlin/geometry/geometry.cpp";
-			name = "geometry.cpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.cpp.cpp";
-		};
-		F7F5274FE8293CA1807F9DD6 = {
-			fileRef = "8C2682B2D3A86311D80EDA54";
-			isa = PBXBuildFile;
-			settings = {
-				ATTRIBUTES = (
-					);
-			};
-		};
-		9E23F829502034C327C45FE3 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/rendering/marlin/geometry/mesh.cpp";
-			name = "mesh.cpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.cpp.cpp";
-		};
-		53FA9277731915F504F81B1E = {
-			fileRef = "9E23F829502034C327C45FE3";
-			isa = PBXBuildFile;
-			settings = {
-				ATTRIBUTES = (
-					);
-			};
-		};
-		D8BBA13A24B5D729107427F3 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/rendering/marlin/geometry/meshUtilities.cpp";
-			name = "meshUtilities.cpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.cpp.cpp";
-		};
-		0402C17080930E5E2EA6CBFA = {
-			fileRef = "D8BBA13A24B5D729107427F3";
-			isa = PBXBuildFile;
-			settings = {
-				ATTRIBUTES = (
-					);
-			};
-		};
-		C8B2F5F1E4F557B4F7D4F7D3 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/rendering/marlin/gl/buffer.cpp";
-			name = "buffer.cpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.cpp.cpp";
-		};
-		0D08DC8C41B804331083AA49 = {
-			fileRef = "C8B2F5F1E4F557B4F7D4F7D3";
-			isa = PBXBuildFile;
-			settings = {
-				ATTRIBUTES = (
-					);
-			};
-		};
-		CAF279DDCB0BA67A6203E68A = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/rendering/marlin/gl/shader.cpp";
-			name = "shader.cpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.cpp.cpp";
-		};
-		752FD654E4EB48ECEC699BBC = {
-			fileRef = "CAF279DDCB0BA67A6203E68A";
-			isa = PBXBuildFile;
-			settings = {
-				ATTRIBUTES = (
-					);
-			};
-		};
-		CC1F8CA32C89B326A0F53292 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/rendering/marlin/gl/vertexArray.cpp";
-			name = "vertexArray.cpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.cpp.cpp";
-		};
-		7282E458309F3568F4EA9DD7 = {
-			fileRef = "CC1F8CA32C89B326A0F53292";
-			isa = PBXBuildFile;
-			settings = {
-				ATTRIBUTES = (
-					);
-			};
-		};
-		57D7DB9296B134B503701FC6 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/rendering/marlin/shading/material.cpp";
-			name = "material.cpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.cpp.cpp";
-		};
-		17FCEF451104046E5E3DB100 = {
-			fileRef = "57D7DB9296B134B503701FC6";
-			isa = PBXBuildFile;
-			settings = {
-				ATTRIBUTES = (
-					);
-			};
-		};
-		9FB496D317E6E2B8F1E49775 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/rendering/marlin/shading/shaderParameter.cpp";
-			name = "shaderParameter.cpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.cpp.cpp";
-		};
-		EA383B15E711499928421932 = {
-			fileRef = "9FB496D317E6E2B8F1E49775";
-			isa = PBXBuildFile;
-			settings = {
-				ATTRIBUTES = (
-					);
-			};
-		};
-		183C12DB685A28D5E84B7BAF = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/rendering/marlin/usd/renderDelegate.cpp";
-			name = "renderDelegate.cpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.cpp.cpp";
-		};
-		01623FA5B777AAAC5CA7ED36 = {
-			fileRef = "183C12DB685A28D5E84B7BAF";
-			isa = PBXBuildFile;
-			settings = {
-				ATTRIBUTES = (
-					);
-			};
-		};
-		ED17A9595F720CF0CA87091A = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/rendering/marlin/usd/rendererPlugin.cpp";
-			name = "rendererPlugin.cpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.cpp.cpp";
-		};
-		C50AC03601F6444447507652 = {
-			fileRef = "ED17A9595F720CF0CA87091A";
-			isa = PBXBuildFile;
-			settings = {
-				ATTRIBUTES = (
-					);
-			};
-		};
-		73A7229B674E7677926A5FC7 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/dummy.cpp";
-			name = "dummy.cpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.cpp.cpp";
-		};
-		DE8B12CD82CB98EFE3B4D92A = {
-			fileRef = "73A7229B674E7677926A5FC7";
-			isa = PBXBuildFile;
-			settings = {
-				ATTRIBUTES = (
-					);
-			};
-		};
-		391EA9705F42E6D2A03196C2 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/glm.cpp";
-			name = "glm.cpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.cpp.cpp";
-		};
-		6A3711047F24077F668994F9 = {
-			fileRef = "391EA9705F42E6D2A03196C2";
-			isa = PBXBuildFile;
-			settings = {
-				ATTRIBUTES = (
-					);
-			};
-		};
-		9A4DA6CD8195E4B1CAC7F86D = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/ui/openglwindow.cpp";
-			name = "openglwindow.cpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.cpp.cpp";
-		};
-		B440ED5D23D4D11AD6510DA9 = {
-			fileRef = "9A4DA6CD8195E4B1CAC7F86D";
-			isa = PBXBuildFile;
-			settings = {
-				ATTRIBUTES = (
-					);
-			};
-		};
-		CC0DFB017F9EED97CC59CE96 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/ui/usdRenderWindow.cpp";
-			name = "usdRenderWindow.cpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.cpp.cpp";
-		};
-		4123238F50F3AE8EF32BA5CD = {
-			fileRef = "CC0DFB017F9EED97CC59CE96";
-			isa = PBXBuildFile;
-			settings = {
-				ATTRIBUTES = (
-					);
-			};
-		};
-		C70E9616EF3EBD83D0000B2E = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/moc_mainWindow.cpp";
-			name = "moc_mainWindow.cpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.cpp.cpp";
-		};
-		7E5709D3FE807F8C875AE381 = {
-			fileRef = "C70E9616EF3EBD83D0000B2E";
-			isa = PBXBuildFile;
-			settings = {
-				ATTRIBUTES = (
-					);
-			};
-		};
-		F64781F41A7E9646E6EE3C0E = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/moc_openglwindow.cpp";
-			name = "moc_openglwindow.cpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.cpp.cpp";
-		};
-		384E5238142A224E40F85377 = {
-			fileRef = "F64781F41A7E9646E6EE3C0E";
-			isa = PBXBuildFile;
-			settings = {
-				ATTRIBUTES = (
-					);
-			};
-		};
-		3244324228FB6239A33DB996 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/ui_mainWindow.h";
-			name = "ui_mainWindow.h";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		4F5AC65C949567C2B2372090 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/ui/mainWindow.hpp";
-			name = "mainWindow.hpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		BD6F0BA2DDBFC36681468FF8 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/app/actions/action.hpp";
-			name = "action.hpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		22FF3818D63C188B53AD6EE4 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/app/actions/actionManager.hpp";
-			name = "actionManager.hpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		60D90A805C8382B4445867DF = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/app/actions/cameraActions.hpp";
-			name = "cameraActions.hpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		FB682AA09E3C721E031B46BD = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/app/actions/shortcutManager.hpp";
-			name = "shortcutManager.hpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		A0FCAD4666E2A4899638D5A5 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/app/camera/camera.hpp";
-			name = "camera.hpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		225BA4E476340EF6204321EE = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/app/camera/cameraController.hpp";
-			name = "cameraController.hpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		0F7A82619DE01F1B202DB309 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/coral/schema/cameraSchema.hpp";
-			name = "cameraSchema.hpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		2466DB0628527B9485683A5C = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/coral/schema/meshSchema.hpp";
-			name = "meshSchema.hpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		B039426C1E05E2DFDD74026C = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/coral/item.hpp";
-			name = "item.hpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		708C0A66658C56C8E30A328A = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/coral/scene.hpp";
-			name = "scene.hpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		A84836E655A92D68DC63D3E9 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/coral/transform.hpp";
-			name = "transform.hpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		7D6605719FD5FFE2875815A1 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/math/conversion.hpp";
-			name = "conversion.hpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		82C7BF4355985A707F7BB5B2 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/math/defs.hh";
-			name = "defs.hh";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		A2C62CA3F443B4E1985BA62C = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/math/math.hpp";
-			name = "math.hpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		6A9B7E16443C28E43D0045C3 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/rendering/marlin/geometry/geometry.hpp";
-			name = "geometry.hpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		321D9152E388BC1288946032 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/rendering/marlin/geometry/mesh.hpp";
-			name = "mesh.hpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		329FE6DF12857EB04801A46B = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/rendering/marlin/geometry/meshUtilities.hpp";
-			name = "meshUtilities.hpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		13AA29E6CD1AB11A04BE1020 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/rendering/marlin/gl/buffer.hpp";
-			name = "buffer.hpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		1AA830EDFF4CC9BC5D74125B = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/rendering/marlin/gl/buffer.tpp";
-			name = "buffer.tpp";
-			sourceTree = "<absolute>";
-		};
-		9A804410694A6FC877C150AD = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/rendering/marlin/gl/shader.hpp";
-			name = "shader.hpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		00F393ED7590A14D49C9C754 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/rendering/marlin/gl/vertexArray.hpp";
-			name = "vertexArray.hpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		26EFBCBDA3762631938862F8 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/rendering/marlin/shading/material.hpp";
-			name = "material.hpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		391B4AB67B137B582085115B = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/rendering/marlin/shading/material.tpp";
-			name = "material.tpp";
-			sourceTree = "<absolute>";
-		};
-		C01E1987D1146778FD420349 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/rendering/marlin/shading/shaderParameter.hpp";
-			name = "shaderParameter.hpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		DE9035F6E612B5DCF6B93154 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/rendering/marlin/shading/shaderParameter.tpp";
-			name = "shaderParameter.tpp";
-			sourceTree = "<absolute>";
-		};
-		7E591534FB63341DBBE8542A = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/rendering/marlin/usd/renderDelegate.hpp";
-			name = "renderDelegate.hpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		31A2068002A59DED79FD2BC8 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/rendering/marlin/usd/rendererPlugin.hpp";
-			name = "rendererPlugin.hpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		E92CEE0885F71E51AC0F59CC = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/_features.hpp";
-			name = "_features.hpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		173EA17FBE87D1A1E0D8A67B = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/_fixes.hpp";
-			name = "_fixes.hpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		BCAB2D7BD9810DE1BF6AE777 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/_noise.hpp";
-			name = "_noise.hpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		2771D2DF0604F492D495F070 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/_swizzle.hpp";
-			name = "_swizzle.hpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		F2593D6382880A3CE15AD7D0 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/_swizzle_func.hpp";
-			name = "_swizzle_func.hpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		C0B28967F92DB4A2E28CD381 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/_vectorize.hpp";
-			name = "_vectorize.hpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		CCAEE30B8FD56CBFBD49D630 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/func_common.hpp";
-			name = "func_common.hpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		50509FE4FD49064931952AD3 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/func_common.inl";
-			name = "func_common.inl";
-			sourceTree = "<absolute>";
-		};
-		B520593BB60C2245519DA5FD = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/func_exponential.hpp";
-			name = "func_exponential.hpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		56FBF02F12F0E5D12BBFDA10 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/func_exponential.inl";
-			name = "func_exponential.inl";
-			sourceTree = "<absolute>";
-		};
-		390585214F1E37B565007F7B = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/func_geometric.hpp";
-			name = "func_geometric.hpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		B67421E1F47BA432741B8743 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/func_geometric.inl";
-			name = "func_geometric.inl";
-			sourceTree = "<absolute>";
-		};
-		3ACE5C93BCC05E73CDFF6784 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/func_integer.hpp";
-			name = "func_integer.hpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		14E3318A8BC095255EFC068C = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/func_integer.inl";
-			name = "func_integer.inl";
-			sourceTree = "<absolute>";
-		};
-		23655CE7442603EAD578D9EF = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/func_matrix.hpp";
-			name = "func_matrix.hpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		7BB3CE7D4B5B7693FBBC042A = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/func_matrix.inl";
-			name = "func_matrix.inl";
-			sourceTree = "<absolute>";
-		};
-		848B4FCF5D3CBEC965E661F3 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/func_noise.hpp";
-			name = "func_noise.hpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		DE8D8993280CD1827363C3A8 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/func_noise.inl";
-			name = "func_noise.inl";
-			sourceTree = "<absolute>";
-		};
-		D00538CD3AC62FFC0226E2BA = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/func_packing.hpp";
-			name = "func_packing.hpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		61E231416E2E4B4D088CF8A5 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/func_packing.inl";
-			name = "func_packing.inl";
-			sourceTree = "<absolute>";
-		};
-		75A852FF7C1B20F00A0338AE = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/ui/openglwindow.hpp";
-			name = "openglwindow.hpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		335F613DF68B5AE2862CF20E = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/ui/usdRenderWindow.hpp";
-			name = "usdRenderWindow.hpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		C7DEE728F2EAED4300896986 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/func_trigonometric.hpp";
-			name = "func_trigonometric.hpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		C12EDBBC8B5B6798D3D6BBAE = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/func_trigonometric.inl";
-			name = "func_trigonometric.inl";
-			sourceTree = "<absolute>";
-		};
-		0AC0652B7563CB5732C75243 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/func_vector_relational.hpp";
-			name = "func_vector_relational.hpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		B9FB0F9332C4FB9A439349B1 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/func_vector_relational.inl";
-			name = "func_vector_relational.inl";
-			sourceTree = "<absolute>";
-		};
-		ECE845533EDD1A86A08541C3 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/intrinsic_common.hpp";
-			name = "intrinsic_common.hpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		1BADEAFBEA0BF8BFEED4ED5A = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/intrinsic_common.inl";
-			name = "intrinsic_common.inl";
-			sourceTree = "<absolute>";
-		};
-		D89D904A98B5A2D7355FB15B = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/intrinsic_exponential.hpp";
-			name = "intrinsic_exponential.hpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		9545675C28D67E1D57C990C0 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/intrinsic_exponential.inl";
-			name = "intrinsic_exponential.inl";
-			sourceTree = "<absolute>";
-		};
-		9C9B6A743B66334956F3E592 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/intrinsic_geometric.hpp";
-			name = "intrinsic_geometric.hpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		35FD78B0A33865481B2322AB = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/intrinsic_geometric.inl";
-			name = "intrinsic_geometric.inl";
-			sourceTree = "<absolute>";
-		};
-		938EF8D087C4F3B8F16D6446 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/intrinsic_integer.hpp";
-			name = "intrinsic_integer.hpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		A20B6E7F9A9070A6801B8387 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/intrinsic_integer.inl";
-			name = "intrinsic_integer.inl";
-			sourceTree = "<absolute>";
-		};
-		BDA242240F5E3707454FAFF1 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/intrinsic_matrix.hpp";
-			name = "intrinsic_matrix.hpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		99FF267F4623F676C510CDC3 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/intrinsic_matrix.inl";
-			name = "intrinsic_matrix.inl";
-			sourceTree = "<absolute>";
-		};
-		C0156185E343AE0EE8F9345E = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/intrinsic_trigonometric.hpp";
-			name = "intrinsic_trigonometric.hpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		F1DB435491A613BA6D72C4B7 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/intrinsic_trigonometric.inl";
-			name = "intrinsic_trigonometric.inl";
-			sourceTree = "<absolute>";
-		};
-		15981E5326458E2EDCD65D84 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/intrinsic_vector_relational.hpp";
-			name = "intrinsic_vector_relational.hpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		8381A62BFF726A29FD4AD513 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/intrinsic_vector_relational.inl";
-			name = "intrinsic_vector_relational.inl";
-			sourceTree = "<absolute>";
-		};
-		FEB98BF394ECAF0C449DFC49 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/precision.hpp";
-			name = "precision.hpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		26812C31FE0737C3581E3AB8 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/setup.hpp";
-			name = "setup.hpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		D3C23D29CDEA17981D126B91 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/type_float.hpp";
-			name = "type_float.hpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		4722457D1947306875311D99 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/type_gentype.hpp";
-			name = "type_gentype.hpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		57A057DDA320CAE0228D63B0 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/type_gentype.inl";
-			name = "type_gentype.inl";
-			sourceTree = "<absolute>";
-		};
-		F3DD719A311A82C4DE4006E5 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/type_half.hpp";
-			name = "type_half.hpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		CB9FCB2F38287BA21B7F3844 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/type_half.inl";
-			name = "type_half.inl";
-			sourceTree = "<absolute>";
-		};
-		42E053025425FD7480528B27 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/type_int.hpp";
-			name = "type_int.hpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		A753C2EC6F34958E2D9E3A4A = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/type_mat.hpp";
-			name = "type_mat.hpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		B77D663E254CCDDC01CFCF1C = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/type_mat.inl";
-			name = "type_mat.inl";
-			sourceTree = "<absolute>";
-		};
-		130B183C284B3042E2CD985B = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/type_mat2x2.hpp";
-			name = "type_mat2x2.hpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		D6E3DF43608A84F9492CD302 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/type_mat2x2.inl";
-			name = "type_mat2x2.inl";
-			sourceTree = "<absolute>";
-		};
-		2B651D6108957A96AABF3000 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/type_mat2x3.hpp";
-			name = "type_mat2x3.hpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		B19BAFE0FCF67A9B53CCB799 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/type_mat2x3.inl";
-			name = "type_mat2x3.inl";
-			sourceTree = "<absolute>";
-		};
-		A9AF7E3DEBD09AC4386AA03C = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/type_mat2x4.hpp";
-			name = "type_mat2x4.hpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		FD336DEE13AFC4E5043A6FA2 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/type_mat2x4.inl";
-			name = "type_mat2x4.inl";
-			sourceTree = "<absolute>";
-		};
-		64C1F6C70EC75DC1BBF3BBE2 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/type_mat3x2.hpp";
-			name = "type_mat3x2.hpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		7574C1F7454E5B8C3EBF3AA4 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/type_mat3x2.inl";
-			name = "type_mat3x2.inl";
-			sourceTree = "<absolute>";
-		};
-		8AF5975731A403AE32DB1806 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/type_mat3x3.hpp";
-			name = "type_mat3x3.hpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		62A7D6D6C19B629A68DDFECD = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/type_mat3x3.inl";
-			name = "type_mat3x3.inl";
-			sourceTree = "<absolute>";
-		};
-		0C33E27A88C1374CED3C82E2 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/type_mat3x4.hpp";
-			name = "type_mat3x4.hpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		F367D0447D38E0FE0D5B67B9 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/type_mat3x4.inl";
-			name = "type_mat3x4.inl";
-			sourceTree = "<absolute>";
-		};
-		FAB634D04940831C3D5DCF36 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/type_mat4x2.hpp";
-			name = "type_mat4x2.hpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		5CF15363FA714B8C3A8FA4FF = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/type_mat4x2.inl";
-			name = "type_mat4x2.inl";
-			sourceTree = "<absolute>";
-		};
-		F1C9CAE72583B08E571A0BC5 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/type_mat4x3.hpp";
-			name = "type_mat4x3.hpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		A49347DE9F69EFABB8365100 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/type_mat4x3.inl";
-			name = "type_mat4x3.inl";
-			sourceTree = "<absolute>";
-		};
-		D4D1EE1669A0D880083C2FAA = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/type_mat4x4.hpp";
-			name = "type_mat4x4.hpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		30682FAEE0631A9093D12B65 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/type_mat4x4.inl";
-			name = "type_mat4x4.inl";
-			sourceTree = "<absolute>";
-		};
-		3B8B55ADDACA00E249BF9883 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/type_vec.hpp";
-			name = "type_vec.hpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		854AADB196F47B5281DB5C3D = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/type_vec.inl";
-			name = "type_vec.inl";
-			sourceTree = "<absolute>";
-		};
-		F3B298FEBB1EE158DBED7DD1 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/type_vec1.hpp";
-			name = "type_vec1.hpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		C934F17793AF16B6FD23956E = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/type_vec1.inl";
-			name = "type_vec1.inl";
-			sourceTree = "<absolute>";
-		};
-		AFFBCA274ABD669E94B75E20 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/type_vec2.hpp";
-			name = "type_vec2.hpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		3233054AC86F1FFB959C1829 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/type_vec2.inl";
-			name = "type_vec2.inl";
-			sourceTree = "<absolute>";
-		};
-		57061B513D8525680FCA82AA = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/type_vec3.hpp";
-			name = "type_vec3.hpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		1DA6F454D518ECC73095FD95 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/type_vec3.inl";
-			name = "type_vec3.inl";
-			sourceTree = "<absolute>";
-		};
-		CD5412257A9F1AB1378E5A85 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/type_vec4_avx.inl";
-			name = "type_vec4_avx.inl";
-			sourceTree = "<absolute>";
-		};
-		16E4CB49C63006BCE9756D76 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/type_vec4_avx2.inl";
-			name = "type_vec4_avx2.inl";
-			sourceTree = "<absolute>";
-		};
-		B27445BC48C1D6CABAB38F00 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/type_vec4_sse2.inl";
-			name = "type_vec4_sse2.inl";
-			sourceTree = "<absolute>";
-		};
-		F45AD3BB1B1475EEEB54BA5E = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/type_vec4.hpp";
-			name = "type_vec4.hpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.c.h";
-		};
-		23838CC8241DA039C0E2C7A4 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/thirdparty/glm/detail/type_vec4.inl";
-			name = "type_vec4.inl";
-			sourceTree = "<absolute>";
-		};
-		A434EA1BF3B22D6BB7A988ED = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Qt/5.12.1/clang_64/mkspecs/features/data/dummy.cpp";
-			name = "dummy.cpp";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "sourcecode.cpp.cpp";
-		};
-		222C237AEDD0C7A3314EA04A = {
-			fileRef = "A434EA1BF3B22D6BB7A988ED";
-			isa = PBXBuildFile;
-			settings = {
-				ATTRIBUTES = (
-					);
-			};
-		};
-		5AAF184A72954F8A6922A095 = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/src/ui/mainWindow.ui";
-			name = "mainWindow.ui";
-			sourceTree = "<absolute>";
-		};
-		8BEF0742CD5220DD41393352 = {
-			fileRef = "5AAF184A72954F8A6922A095";
-			isa = PBXBuildFile;
-			settings = {
-				ATTRIBUTES = (
-					);
-			};
-		};
-		E679E9C7E1E2018521C6FD1B = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/Goby.pro";
-			name = "Goby.pro";
-			sourceTree = "<absolute>";
-			lastKnownFileType = "text";
-		};
-		B61FE91E2C7A4FA611ED76CF = {
-			isa = PBXFileReference;
-			path = "/Users/jongraham/Projects/Goby/.qmake.stash";
-			name = ".qmake.stash";
-			sourceTree = "<absolute>";
-		};
-		25B08E2869634E9BCBA333A2 = {
-			isa = PBXGroup;
-			children = (
-				"C70E9616EF3EBD83D0000B2E",
-				"F64781F41A7E9646E6EE3C0E",
-				"3244324228FB6239A33DB996");
-			name = "Generated Sources";
-			sourceTree = "<group>";
-		};
-		FB3C908FA6A710AAAE4CE3AA = {
-			isa = PBXGroup;
-			children = (
-				"2F733327CFBF788C2D53B055");
-			name = "src";
-			sourceTree = "<group>";
-		};
-		2F733327CFBF788C2D53B055 = {
-			isa = PBXGroup;
-			children = (
-				"5AAF184A72954F8A6922A095");
-			name = "ui";
-			sourceTree = "<group>";
-		};
-		921315FAA7F261D737F4F4C7 = {
-			isa = PBXGroup;
-			children = (
-				"6600A89AC0B97D4BA9666997",
-				"F4F73F9AA934BE4F8929D179",
-				"9778280CC0E8AF2EF0D0D888",
-				"F7C54716A3468A918DF623A0",
-				"46238FD89D16EA3F63A0C4FF",
-				"82BEBB36A3F34DA8ABEFE9A9",
-				"E664913043F86E2517A48733");
-			name = "src";
-			sourceTree = "<group>";
-		};
-		9778280CC0E8AF2EF0D0D888 = {
-			isa = PBXGroup;
-			children = (
-				"4FF59708776A5B9DDF19D3EC",
-				"2C3B8FDC955A5D956B8B3720");
-			name = "app";
-			sourceTree = "<group>";
-		};
-		4FF59708776A5B9DDF19D3EC = {
-			isa = PBXGroup;
-			children = (
-				"14DE1832DDE6C0E767F4D0E6",
-				"78012BB9169387BB507CDB65",
-				"385859B7A777F836DB20E752",
-				"E4EE19EA58D7BDC564388E32",
-				"BD6F0BA2DDBFC36681468FF8",
-				"22FF3818D63C188B53AD6EE4",
-				"60D90A805C8382B4445867DF",
-				"FB682AA09E3C721E031B46BD");
-			name = "actions";
-			sourceTree = "<group>";
-		};
-		2C3B8FDC955A5D956B8B3720 = {
-			isa = PBXGroup;
-			children = (
-				"3E82E5C3424997AD76C77244",
-				"54D63FD6B6727BBA5CE09D48",
-				"A0FCAD4666E2A4899638D5A5",
-				"225BA4E476340EF6204321EE");
-			name = "camera";
-			sourceTree = "<group>";
-		};
-		F7C54716A3468A918DF623A0 = {
-			isa = PBXGroup;
-			children = (
-				"98D48015BF1B009C45A8137C",
-				"9D2BEFCF30321BC5A6D63F57",
-				"76EEA9B5CCD725F9CEAAF222",
-				"8D5259ACE4C7BFAD42FFA98D",
-				"B039426C1E05E2DFDD74026C",
-				"708C0A66658C56C8E30A328A",
-				"A84836E655A92D68DC63D3E9");
-			name = "coral";
-			sourceTree = "<group>";
-		};
-		98D48015BF1B009C45A8137C = {
-			isa = PBXGroup;
-			children = (
-				"E9E010E26D49D73D096C6DDC",
-				"7BB482C114033E2BBD8EDFB7",
-				"0F7A82619DE01F1B202DB309",
-				"2466DB0628527B9485683A5C");
-			name = "schema";
-			sourceTree = "<group>";
-		};
-		46238FD89D16EA3F63A0C4FF = {
-			isa = PBXGroup;
-			children = (
-				"766612AB7F9BFD08160B22A3",
-				"E5A58C4CE98BF802F0A39321",
-				"7D6605719FD5FFE2875815A1",
-				"82C7BF4355985A707F7BB5B2",
-				"A2C62CA3F443B4E1985BA62C");
-			name = "math";
-			sourceTree = "<group>";
-		};
-		82BEBB36A3F34DA8ABEFE9A9 = {
-			isa = PBXGroup;
-			children = (
-				"D7DF784201E92A80D8B86063");
-			name = "rendering";
-			sourceTree = "<group>";
-		};
-		D7DF784201E92A80D8B86063 = {
-			isa = PBXGroup;
-			children = (
-				"A832D863AA204884AD98FC91",
-				"1CBE7A38ADF04771BAE401C3",
-				"1F9FA7BDEA2F82DAE25174ED",
-				"F29CD9E28D8E2B2F07DB8DB8");
-			name = "marlin";
-			sourceTree = "<group>";
-		};
-		A832D863AA204884AD98FC91 = {
-			isa = PBXGroup;
-			children = (
-				"8C2682B2D3A86311D80EDA54",
-				"9E23F829502034C327C45FE3",
-				"D8BBA13A24B5D729107427F3",
-				"6A9B7E16443C28E43D0045C3",
-				"321D9152E388BC1288946032",
-				"329FE6DF12857EB04801A46B");
-			name = "geometry";
-			sourceTree = "<group>";
-		};
-		1CBE7A38ADF04771BAE401C3 = {
-			isa = PBXGroup;
-			children = (
-				"C8B2F5F1E4F557B4F7D4F7D3",
-				"CAF279DDCB0BA67A6203E68A",
-				"CC1F8CA32C89B326A0F53292",
-				"13AA29E6CD1AB11A04BE1020",
-				"1AA830EDFF4CC9BC5D74125B",
-				"9A804410694A6FC877C150AD",
-				"00F393ED7590A14D49C9C754");
-			name = "gl";
-			sourceTree = "<group>";
-		};
-		1F9FA7BDEA2F82DAE25174ED = {
-			isa = PBXGroup;
-			children = (
-				"57D7DB9296B134B503701FC6",
-				"9FB496D317E6E2B8F1E49775",
-				"26EFBCBDA3762631938862F8",
-				"391B4AB67B137B582085115B",
-				"C01E1987D1146778FD420349",
-				"DE9035F6E612B5DCF6B93154");
-			name = "shading";
-			sourceTree = "<group>";
-		};
-		F29CD9E28D8E2B2F07DB8DB8 = {
-			isa = PBXGroup;
-			children = (
-				"183C12DB685A28D5E84B7BAF",
-				"ED17A9595F720CF0CA87091A",
-				"7E591534FB63341DBBE8542A",
-				"31A2068002A59DED79FD2BC8");
-			name = "usd";
-			sourceTree = "<group>";
-		};
-		E664913043F86E2517A48733 = {
-			isa = PBXGroup;
-			children = (
-				"23D0764FC95DDC101A9C9236");
-			name = "thirdparty";
-			sourceTree = "<group>";
-		};
-		23D0764FC95DDC101A9C9236 = {
-			isa = PBXGroup;
-			children = (
-				"BEB6AC0E7749F0A821504B4A");
-			name = "glm";
-			sourceTree = "<group>";
-		};
-		BEB6AC0E7749F0A821504B4A = {
-			isa = PBXGroup;
-			children = (
-				"73A7229B674E7677926A5FC7",
-				"391EA9705F42E6D2A03196C2",
-				"E92CEE0885F71E51AC0F59CC",
-				"173EA17FBE87D1A1E0D8A67B",
-				"BCAB2D7BD9810DE1BF6AE777",
-				"2771D2DF0604F492D495F070",
-				"F2593D6382880A3CE15AD7D0",
-				"C0B28967F92DB4A2E28CD381",
-				"CCAEE30B8FD56CBFBD49D630",
-				"50509FE4FD49064931952AD3",
-				"B520593BB60C2245519DA5FD",
-				"56FBF02F12F0E5D12BBFDA10",
-				"390585214F1E37B565007F7B",
-				"B67421E1F47BA432741B8743",
-				"3ACE5C93BCC05E73CDFF6784",
-				"14E3318A8BC095255EFC068C",
-				"23655CE7442603EAD578D9EF",
-				"7BB3CE7D4B5B7693FBBC042A",
-				"848B4FCF5D3CBEC965E661F3",
-				"DE8D8993280CD1827363C3A8",
-				"D00538CD3AC62FFC0226E2BA",
-				"61E231416E2E4B4D088CF8A5",
-				"C7DEE728F2EAED4300896986",
-				"C12EDBBC8B5B6798D3D6BBAE",
-				"0AC0652B7563CB5732C75243",
-				"B9FB0F9332C4FB9A439349B1",
-				"ECE845533EDD1A86A08541C3",
-				"1BADEAFBEA0BF8BFEED4ED5A",
-				"D89D904A98B5A2D7355FB15B",
-				"9545675C28D67E1D57C990C0",
-				"9C9B6A743B66334956F3E592",
-				"35FD78B0A33865481B2322AB",
-				"938EF8D087C4F3B8F16D6446",
-				"A20B6E7F9A9070A6801B8387",
-				"BDA242240F5E3707454FAFF1",
-				"99FF267F4623F676C510CDC3",
-				"C0156185E343AE0EE8F9345E",
-				"F1DB435491A613BA6D72C4B7",
-				"15981E5326458E2EDCD65D84",
-				"8381A62BFF726A29FD4AD513",
-				"FEB98BF394ECAF0C449DFC49",
-				"26812C31FE0737C3581E3AB8",
-				"D3C23D29CDEA17981D126B91",
-				"4722457D1947306875311D99",
-				"57A057DDA320CAE0228D63B0",
-				"F3DD719A311A82C4DE4006E5",
-				"CB9FCB2F38287BA21B7F3844",
-				"42E053025425FD7480528B27",
-				"A753C2EC6F34958E2D9E3A4A",
-				"B77D663E254CCDDC01CFCF1C",
-				"130B183C284B3042E2CD985B",
-				"D6E3DF43608A84F9492CD302",
-				"2B651D6108957A96AABF3000",
-				"B19BAFE0FCF67A9B53CCB799",
-				"A9AF7E3DEBD09AC4386AA03C",
-				"FD336DEE13AFC4E5043A6FA2",
-				"64C1F6C70EC75DC1BBF3BBE2",
-				"7574C1F7454E5B8C3EBF3AA4",
-				"8AF5975731A403AE32DB1806",
-				"62A7D6D6C19B629A68DDFECD",
-				"0C33E27A88C1374CED3C82E2",
-				"F367D0447D38E0FE0D5B67B9",
-				"FAB634D04940831C3D5DCF36",
-				"5CF15363FA714B8C3A8FA4FF",
-				"F1C9CAE72583B08E571A0BC5",
-				"A49347DE9F69EFABB8365100",
-				"D4D1EE1669A0D880083C2FAA",
-				"30682FAEE0631A9093D12B65",
-				"3B8B55ADDACA00E249BF9883",
-				"854AADB196F47B5281DB5C3D",
-				"F3B298FEBB1EE158DBED7DD1",
-				"C934F17793AF16B6FD23956E",
-				"AFFBCA274ABD669E94B75E20",
-				"3233054AC86F1FFB959C1829",
-				"57061B513D8525680FCA82AA",
-				"1DA6F454D518ECC73095FD95",
-				"CD5412257A9F1AB1378E5A85",
-				"16E4CB49C63006BCE9756D76",
-				"B27445BC48C1D6CABAB38F00",
-				"F45AD3BB1B1475EEEB54BA5E",
-				"23838CC8241DA039C0E2C7A4");
-			name = "detail";
-			sourceTree = "<group>";
-		};
-		F4F73F9AA934BE4F8929D179 = {
-			isa = PBXGroup;
-			children = (
-				"8AB4ACE0B063C484E0B9CB4A",
-				"9A4DA6CD8195E4B1CAC7F86D",
-				"CC0DFB017F9EED97CC59CE96",
-				"4F5AC65C949567C2B2372090",
-				"75A852FF7C1B20F00A0338AE",
-				"335F613DF68B5AE2862CF20E");
-			name = "ui";
-			sourceTree = "<group>";
-		};
-		2EB56BE3C2D93CDAB0C52E67 = {
-			isa = PBXGroup;
-			children = (
-				"921315FAA7F261D737F4F4C7");
-			name = "Sources";
-			sourceTree = "<group>";
-		};
-		B8254625CFD509ED2A24A166 = {
-			isa = PBXGroup;
-			children = (
-				"A434EA1BF3B22D6BB7A988ED");
-			name = "Sources [moc_predefs]";
-			sourceTree = "<group>";
-		};
-		12E908B8A1C3C07C115504F5 = {
-			isa = PBXGroup;
-			children = (
-				"FB3C908FA6A710AAAE4CE3AA");
-			name = "Sources [uic]";
-			sourceTree = "<group>";
-		};
-		74B182DB50CB5611B5C1C297 = {
-			isa = PBXGroup;
-			children = (
-				"E679E9C7E1E2018521C6FD1B",
-				"B61FE91E2C7A4FA611ED76CF");
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		7EF0942E79C014DCEC8976BC = {
-			buildActionMask = 2147483647;
-			files = (
-				);
-			isa = PBXShellScriptBuildPhase;
-			runOnlyForDeploymentPostprocessing = 0;
-			name = "Qt Preprocessors";
-			shellPath = "/bin/sh";
-			shellScript = "make -C /Users/jongraham/Projects/Goby -f Goby.xcodeproj/qt_preprocess.mak";
-			showEnvVarsInLog = "0";
-		};
-		F7E50F631C51CD5B5DC0BC43 = {
-			buildActionMask = 2147483647;
-			files = (
-				"DD8A09B482184031F18D388D",
-				"B2A6F1FFBA4E92771BB02D52",
-				"487F253519825FD0C38DC431",
-				"D0DB87E265B14FB286314D80",
-				"8E45DEA25FFE3BD420C0A0C1",
-				"8CE6700285A2B49E69605FC0",
-				"96AE84FC34FB4E023AA06D76",
-				"E933E87ADF03B793A66BD6BC",
-				"6BFF5CE64FA3B9BE54C77465",
-				"9B5F8543CA03DBEA783DE49B",
-				"6E2C2BE5A0FAFC2ED381BC86",
-				"CC166453207C9F459DB55EBD",
-				"F1794CD1603B65FE8B946A35",
-				"05EFC26F07362C7CA07FD8AF",
-				"2FD91A20307A7C316E3FED13",
-				"F7F5274FE8293CA1807F9DD6",
-				"53FA9277731915F504F81B1E",
-				"0402C17080930E5E2EA6CBFA",
-				"0D08DC8C41B804331083AA49",
-				"752FD654E4EB48ECEC699BBC",
-				"7282E458309F3568F4EA9DD7",
-				"17FCEF451104046E5E3DB100",
-				"EA383B15E711499928421932",
-				"01623FA5B777AAAC5CA7ED36",
-				"C50AC03601F6444447507652",
-				"DE8B12CD82CB98EFE3B4D92A",
-				"6A3711047F24077F668994F9",
-				"B440ED5D23D4D11AD6510DA9",
-				"4123238F50F3AE8EF32BA5CD",
-				"7E5709D3FE807F8C875AE381",
-				"384E5238142A224E40F85377",
-				"222C237AEDD0C7A3314EA04A");
-			isa = PBXSourcesBuildPhase;
-			runOnlyForDeploymentPostprocessing = 0;
-			name = "Compile Sources";
-		};
-		BC32D079D1D3D41EDDA1B11F = {
-			isa = PBXFileReference;
-			name = "usd_ms";
-			path = "/usr/local/opt/USD/lib/libusd_ms.dylib";
-			refType = 0;
-			sourceTree = "<absolute>";
-		};
-		BE645BE75800927DBCD4831A = {
-			fileRef = "BC32D079D1D3D41EDDA1B11F";
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		9423C617F16831C7ADE013FC = {
-			isa = PBXFileReference;
-			name = "QtWidgets.framework";
-			path = "/Users/jongraham/Qt/5.12.1/clang_64/lib/QtWidgets.framework";
-			refType = 0;
-			sourceTree = "<absolute>";
-			lastKnownFileType = "wrapper.framework";
-		};
-		95F90FD887394882F77E54C0 = {
-			fileRef = "9423C617F16831C7ADE013FC";
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		897F7DBDCA6B394E806B8406 = {
-			isa = PBXFileReference;
-			name = "QtGui.framework";
-			path = "/Users/jongraham/Qt/5.12.1/clang_64/lib/QtGui.framework";
-			refType = 0;
-			sourceTree = "<absolute>";
-			lastKnownFileType = "wrapper.framework";
-		};
-		563CF89DC182C977E17F2B26 = {
-			fileRef = "897F7DBDCA6B394E806B8406";
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		FA9F1F063CC0FF64ABA45477 = {
-			isa = PBXFileReference;
-			name = "QtCore.framework";
-			path = "/Users/jongraham/Qt/5.12.1/clang_64/lib/QtCore.framework";
-			refType = 0;
-			sourceTree = "<absolute>";
-			lastKnownFileType = "wrapper.framework";
-		};
-		09CDE38A61979F80CF9B1830 = {
-			fileRef = "FA9F1F063CC0FF64ABA45477";
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		2B774D8E4178765CE52EAAF5 = {
-			isa = PBXFileReference;
-			name = "DiskArbitration.framework";
-			path = "/System/Library/Frameworks/DiskArbitration.framework";
-			refType = 0;
-			sourceTree = "<absolute>";
-			lastKnownFileType = "wrapper.framework";
-		};
-		A99B2AA0F9CBBDD12BA126A4 = {
-			fileRef = "2B774D8E4178765CE52EAAF5";
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		A1A67BEAA744704B29168D39 = {
-			isa = PBXFileReference;
-			name = "IOKit.framework";
-			path = "/System/Library/Frameworks/IOKit.framework";
-			refType = 0;
-			sourceTree = "<absolute>";
-			lastKnownFileType = "wrapper.framework";
-		};
-		8D267F2E4776F0ECA2F49DC8 = {
-			fileRef = "A1A67BEAA744704B29168D39";
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		D4B32C2222F82AC56BADEB21 = {
-			isa = PBXFileReference;
-			name = "OpenGL.framework";
-			path = "/System/Library/Frameworks/OpenGL.framework";
-			refType = 0;
-			sourceTree = "<absolute>";
-			lastKnownFileType = "wrapper.framework";
-		};
-		8771A8C96E9C391044035D99 = {
-			fileRef = "D4B32C2222F82AC56BADEB21";
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		8D9815BDB5BD9F90D2BC05C5 = {
-			isa = PBXFileReference;
-			name = "AGL.framework";
-			path = "/System/Library/Frameworks/AGL.framework";
-			refType = 0;
-			sourceTree = "<absolute>";
-			lastKnownFileType = "wrapper.framework";
-		};
-		E45E51A644D5FC9F942ECE55 = {
-			fileRef = "8D9815BDB5BD9F90D2BC05C5";
-			isa = PBXBuildFile;
-			settings = {
-			};
-		};
-		AF39DD055C3EF8226FBE929D = {
-			children = (
-				"BC32D079D1D3D41EDDA1B11F",
-				"9423C617F16831C7ADE013FC",
-				"897F7DBDCA6B394E806B8406",
-				"FA9F1F063CC0FF64ABA45477",
-				"2B774D8E4178765CE52EAAF5",
-				"A1A67BEAA744704B29168D39",
-				"D4B32C2222F82AC56BADEB21",
-				"8D9815BDB5BD9F90D2BC05C5");
-			isa = PBXGroup;
-			name = "Frameworks";
-			sourceTree = "<group>";
-		};
-		D1C883685E82D5676953459A = {
-			buildActionMask = 2147483647;
-			files = (
-				"BE645BE75800927DBCD4831A",
-				"95F90FD887394882F77E54C0",
-				"563CF89DC182C977E17F2B26",
-				"09CDE38A61979F80CF9B1830",
-				"A99B2AA0F9CBBDD12BA126A4",
-				"8D267F2E4776F0ECA2F49DC8",
-				"8771A8C96E9C391044035D99",
-				"E45E51A644D5FC9F942ECE55");
-			isa = PBXFrameworksBuildPhase;
-			runOnlyForDeploymentPostprocessing = 0;
-			name = "Link Binary With Libraries";
-		};
-		30414803F31797EB689AE508 = {
-			buildActionMask = 2147483647;
-			files = (
-				);
-			isa = PBXResourcesBuildPhase;
-			runOnlyForDeploymentPostprocessing = 0;
-			name = "Copy Bundle Resources";
-		};
-		99542592E9780B9225F24AA8 = {
+
+/* Begin PBXAggregateTarget section */
+		64B82EDCD43786E5F2F07AAE /* Qt Preprocess */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 6CC3B5D2136C7CD6A5CF5A59 /* Build configuration list for PBXNativeTarget "Goby" */;
+			buildPhases = (
+				5E618435888B9D49F8540165 /* Qt Qmake */,
+				7EF0942E79C014DCEC8976BC /* Qt Preprocessors */,
+			);
+			dependencies = (
+			);
+			name = "Qt Preprocess";
+			productName = "Qt Preprocess";
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		09CDE38A61979F80CF9B1830 /* QtCore.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = FA9F1F063CC0FF64ABA45477 /* QtCore.framework */; };
+		23237F1722BF855D003ACB0B /* moc_openglwindow.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 23237F1622BF855D003ACB0B /* moc_openglwindow.cpp */; };
+		23237F1E22C4D48F003ACB0B /* rendererPlugin.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 23237F1C22C4D48F003ACB0B /* rendererPlugin.cpp */; };
+		234EA77122EDA92500803B89 /* openglwindow.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 234EA76F22EDA92500803B89 /* openglwindow.cpp */; };
+		234EA77322EDA9C200803B89 /* main.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 234EA77222EDA9C200803B89 /* main.cpp */; };
+		234EA77622EDAA3D00803B89 /* usdRenderWindow.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 234EA77422EDAA3D00803B89 /* usdRenderWindow.cpp */; };
+		234EA77822F1961F00803B89 /* pluginInfo.json in Copy Bundle Resources */ = {isa = PBXBuildFile; fileRef = 234EA77722F1961F00803B89 /* pluginInfo.json */; };
+		234EA78322FACCFD00803B89 /* scene.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 234EA77A22FACCFC00803B89 /* scene.cpp */; };
+		234EA78422FACCFD00803B89 /* item.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 234EA77C22FACCFC00803B89 /* item.cpp */; };
+		234EA78522FACCFD00803B89 /* meshSchema.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 234EA77F22FACCFC00803B89 /* meshSchema.cpp */; };
+		234EA78622FACCFD00803B89 /* transform.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 234EA78022FACCFC00803B89 /* transform.cpp */; };
+		234EA78B22FAD34100803B89 /* math.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 234EA78922FAD34100803B89 /* math.cpp */; };
+		234EA79222FE7DC100803B89 /* buffer.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 234EA79022FE7DC100803B89 /* buffer.cpp */; };
+		2361F5B222FED82A00F4B0CB /* buffer.tpp in Copy Bundle Resources */ = {isa = PBXBuildFile; fileRef = 2361F5B122FED82A00F4B0CB /* buffer.tpp */; };
+		2361F5BC22FFC93200F4B0CB /* mesh.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 2361F5B722FFC93200F4B0CB /* mesh.cpp */; };
+		2361F5BD22FFC93200F4B0CB /* meshUtilities.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 2361F5BA22FFC93200F4B0CB /* meshUtilities.cpp */; };
+		2361F5C022FFC95800F4B0CB /* geometry.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 2361F5BE22FFC95800F4B0CB /* geometry.cpp */; };
+		2361F5C322FFD40800F4B0CB /* vertexArray.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 2361F5C122FFD40800F4B0CB /* vertexArray.cpp */; };
+		2361F5C62300209700F4B0CB /* shader.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 2361F5C42300209700F4B0CB /* shader.cpp */; };
+		2361F5D52303BAFE00F4B0CB /* shaderParameter.tpp in Copy Bundle Resources */ = {isa = PBXBuildFile; fileRef = 2361F5D22303BAFE00F4B0CB /* shaderParameter.tpp */; };
+		2361F5D62303BAFE00F4B0CB /* shaderParameter.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 2361F5D32303BAFE00F4B0CB /* shaderParameter.cpp */; };
+		2361F5D72303BAFE00F4B0CB /* material.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 2361F5D42303BAFE00F4B0CB /* material.cpp */; };
+		2361F5D92303C08500F4B0CB /* material.tpp in Copy Bundle Resources */ = {isa = PBXBuildFile; fileRef = 2361F5D82303C08500F4B0CB /* material.tpp */; };
+		2361F5E02303CFC700F4B0CB /* openGLRender.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 2361F5DE2303CFC700F4B0CB /* openGLRender.cpp */; };
+		2361F5E92307971400F4B0CB /* actionManager.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 2361F5E72307971400F4B0CB /* actionManager.cpp */; };
+		2361F5EC2307971F00F4B0CB /* action.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 2361F5EA2307971F00F4B0CB /* action.cpp */; };
+		2361F5F5230936BE00F4B0CB /* cameraSchema.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 2361F5F3230936BE00F4B0CB /* cameraSchema.cpp */; };
+		2361F5F923094FB700F4B0CB /* cameraController.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 2361F5F823094FB700F4B0CB /* cameraController.cpp */; };
+		2361F5FC23094FC700F4B0CB /* camera.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 2361F5FA23094FC700F4B0CB /* camera.cpp */; };
+		2361F5FF230AB61100F4B0CB /* conversion.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 2361F5FD230AB61100F4B0CB /* conversion.cpp */; };
+		2361F606230BFD9400F4B0CB /* shortcutManager.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 2361F605230BFD9400F4B0CB /* shortcutManager.cpp */; };
+		2361F609230BFDF300F4B0CB /* shortcutReceiver.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 2361F607230BFDF300F4B0CB /* shortcutReceiver.cpp */; };
+		2361F60C230C016300F4B0CB /* shortcutFilter.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 2361F60A230C016300F4B0CB /* shortcutFilter.cpp */; };
+		2361F60E230C082900F4B0CB /* shortcutFilter.hpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 2361F60B230C016300F4B0CB /* shortcutFilter.hpp */; };
+		2361F611230D419D00F4B0CB /* actionContext.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 2361F60F230D419D00F4B0CB /* actionContext.cpp */; };
+		2361F622230D4B1200F4B0CB /* cameraActions.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 2361F621230D4B1200F4B0CB /* cameraActions.cpp */; };
+		2361F625230D4B2600F4B0CB /* cameraActionContext.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 2361F623230D4B2600F4B0CB /* cameraActionContext.cpp */; };
+		23A7DF0E22CB6B7600AA0E6C /* renderDelegate.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 23A7DF0C22CB6B7600AA0E6C /* renderDelegate.cpp */; };
+		563CF89DC182C977E17F2B26 /* QtGui.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = 897F7DBDCA6B394E806B8406 /* QtGui.framework */; };
+		7E5709D3FE807F8C875AE381 /* moc_mainWindow.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = C70E9616EF3EBD83D0000B2E /* moc_mainWindow.cpp */; settings = {ATTRIBUTES = (); }; };
+		8771A8C96E9C391044035D99 /* OpenGL.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = D4B32C2222F82AC56BADEB21 /* OpenGL.framework */; };
+		8D267F2E4776F0ECA2F49DC8 /* IOKit.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = A1A67BEAA744704B29168D39 /* IOKit.framework */; };
+		95F90FD887394882F77E54C0 /* QtWidgets.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = 9423C617F16831C7ADE013FC /* QtWidgets.framework */; };
+		A99B2AA0F9CBBDD12BA126A4 /* DiskArbitration.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = 2B774D8E4178765CE52EAAF5 /* DiskArbitration.framework */; };
+		B2A6F1FFBA4E92771BB02D52 /* mainWindow.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 8AB4ACE0B063C484E0B9CB4A /* mainWindow.cpp */; settings = {ATTRIBUTES = (); }; };
+		E45E51A644D5FC9F942ECE55 /* AGL.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = 8D9815BDB5BD9F90D2BC05C5 /* AGL.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		23237F1222BF827D003ACB0B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6DB9C3763D02B1415CD9D565 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 64B82EDCD43786E5F2F07AAE;
+			remoteInfo = "Qt Preprocess";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		99542592E9780B9225F24AA8 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				);
+			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B9CD14F8C3B7531AB9AA3099 = {
-			isa = PBXFileReference;
-			includeInIndex = 0;
-			explicitFileType = "wrapper.application";
-			path = "Goby.app";
-			sourceTree = BUILT_PRODUCTS_DIR;
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		23237F1622BF855D003ACB0B /* moc_openglwindow.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moc_openglwindow.cpp; sourceTree = "<group>"; };
+		23237F1C22C4D48F003ACB0B /* rendererPlugin.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = rendererPlugin.cpp; sourceTree = "<group>"; };
+		23237F1D22C4D48F003ACB0B /* rendererPlugin.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = rendererPlugin.hpp; sourceTree = "<group>"; };
+		234EA76F22EDA92500803B89 /* openglwindow.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = openglwindow.cpp; path = src/ui/openglwindow.cpp; sourceTree = "<group>"; };
+		234EA77022EDA92500803B89 /* openglwindow.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = openglwindow.hpp; path = src/ui/openglwindow.hpp; sourceTree = "<group>"; };
+		234EA77222EDA9C200803B89 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = src/main.cpp; sourceTree = "<group>"; };
+		234EA77422EDAA3D00803B89 /* usdRenderWindow.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = usdRenderWindow.cpp; path = src/ui/usdRenderWindow.cpp; sourceTree = "<group>"; };
+		234EA77522EDAA3D00803B89 /* usdRenderWindow.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = usdRenderWindow.hpp; path = src/ui/usdRenderWindow.hpp; sourceTree = "<group>"; };
+		234EA77722F1961F00803B89 /* pluginInfo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = pluginInfo.json; sourceTree = "<group>"; };
+		234EA77A22FACCFC00803B89 /* scene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = scene.cpp; sourceTree = "<group>"; };
+		234EA77B22FACCFC00803B89 /* transform.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = transform.hpp; sourceTree = "<group>"; };
+		234EA77C22FACCFC00803B89 /* item.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = item.cpp; sourceTree = "<group>"; };
+		234EA77E22FACCFC00803B89 /* meshSchema.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = meshSchema.hpp; sourceTree = "<group>"; };
+		234EA77F22FACCFC00803B89 /* meshSchema.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = meshSchema.cpp; sourceTree = "<group>"; };
+		234EA78022FACCFC00803B89 /* transform.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = transform.cpp; sourceTree = "<group>"; };
+		234EA78122FACCFC00803B89 /* item.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = item.hpp; sourceTree = "<group>"; };
+		234EA78222FACCFC00803B89 /* scene.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = scene.hpp; sourceTree = "<group>"; };
+		234EA78822FAD23000803B89 /* defs.hh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = defs.hh; sourceTree = "<group>"; };
+		234EA78922FAD34100803B89 /* math.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = math.cpp; sourceTree = "<group>"; };
+		234EA78A22FAD34100803B89 /* math.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = math.hpp; sourceTree = "<group>"; };
+		234EA79022FE7DC100803B89 /* buffer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = buffer.cpp; sourceTree = "<group>"; };
+		234EA79122FE7DC100803B89 /* buffer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = buffer.hpp; sourceTree = "<group>"; };
+		2361F5B122FED82A00F4B0CB /* buffer.tpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = buffer.tpp; sourceTree = "<group>"; };
+		2361F5B722FFC93200F4B0CB /* mesh.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mesh.cpp; sourceTree = "<group>"; };
+		2361F5B822FFC93200F4B0CB /* meshUtilities.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = meshUtilities.hpp; sourceTree = "<group>"; };
+		2361F5B922FFC93200F4B0CB /* mesh.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = mesh.hpp; sourceTree = "<group>"; };
+		2361F5BA22FFC93200F4B0CB /* meshUtilities.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = meshUtilities.cpp; sourceTree = "<group>"; };
+		2361F5BE22FFC95800F4B0CB /* geometry.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = geometry.cpp; sourceTree = "<group>"; };
+		2361F5BF22FFC95800F4B0CB /* geometry.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = geometry.hpp; sourceTree = "<group>"; };
+		2361F5C122FFD40800F4B0CB /* vertexArray.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = vertexArray.cpp; sourceTree = "<group>"; };
+		2361F5C222FFD40800F4B0CB /* vertexArray.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = vertexArray.hpp; sourceTree = "<group>"; };
+		2361F5C42300209700F4B0CB /* shader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = shader.cpp; sourceTree = "<group>"; };
+		2361F5C52300209700F4B0CB /* shader.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = shader.hpp; sourceTree = "<group>"; };
+		2361F5D02303BAFE00F4B0CB /* shaderParameter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = shaderParameter.hpp; sourceTree = "<group>"; };
+		2361F5D12303BAFE00F4B0CB /* material.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = material.hpp; sourceTree = "<group>"; };
+		2361F5D22303BAFE00F4B0CB /* shaderParameter.tpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = shaderParameter.tpp; sourceTree = "<group>"; };
+		2361F5D32303BAFE00F4B0CB /* shaderParameter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = shaderParameter.cpp; sourceTree = "<group>"; };
+		2361F5D42303BAFE00F4B0CB /* material.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = material.cpp; sourceTree = "<group>"; };
+		2361F5D82303C08500F4B0CB /* material.tpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = material.tpp; sourceTree = "<group>"; };
+		2361F5DE2303CFC700F4B0CB /* openGLRender.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = openGLRender.cpp; sourceTree = "<group>"; };
+		2361F5DF2303CFC700F4B0CB /* openGLRender.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = openGLRender.hpp; sourceTree = "<group>"; };
+		2361F5E72307971400F4B0CB /* actionManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = actionManager.cpp; sourceTree = "<group>"; };
+		2361F5E82307971400F4B0CB /* actionManager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = actionManager.hpp; sourceTree = "<group>"; };
+		2361F5EA2307971F00F4B0CB /* action.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = action.cpp; sourceTree = "<group>"; };
+		2361F5EB2307971F00F4B0CB /* action.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = action.hpp; sourceTree = "<group>"; };
+		2361F5F3230936BE00F4B0CB /* cameraSchema.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = cameraSchema.cpp; sourceTree = "<group>"; };
+		2361F5F4230936BE00F4B0CB /* cameraSchema.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = cameraSchema.hpp; sourceTree = "<group>"; };
+		2361F5F723094FB700F4B0CB /* cameraController.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = cameraController.hpp; sourceTree = "<group>"; };
+		2361F5F823094FB700F4B0CB /* cameraController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cameraController.cpp; sourceTree = "<group>"; };
+		2361F5FA23094FC700F4B0CB /* camera.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = camera.cpp; sourceTree = "<group>"; };
+		2361F5FB23094FC700F4B0CB /* camera.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = camera.hpp; sourceTree = "<group>"; };
+		2361F5FD230AB61100F4B0CB /* conversion.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = conversion.cpp; sourceTree = "<group>"; };
+		2361F5FE230AB61100F4B0CB /* conversion.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = conversion.hpp; sourceTree = "<group>"; };
+		2361F604230BFD9400F4B0CB /* shortcutManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = shortcutManager.hpp; sourceTree = "<group>"; };
+		2361F605230BFD9400F4B0CB /* shortcutManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = shortcutManager.cpp; sourceTree = "<group>"; };
+		2361F607230BFDF300F4B0CB /* shortcutReceiver.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = shortcutReceiver.cpp; sourceTree = "<group>"; };
+		2361F608230BFDF300F4B0CB /* shortcutReceiver.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = shortcutReceiver.hpp; sourceTree = "<group>"; };
+		2361F60A230C016300F4B0CB /* shortcutFilter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = shortcutFilter.cpp; sourceTree = "<group>"; };
+		2361F60B230C016300F4B0CB /* shortcutFilter.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = shortcutFilter.hpp; sourceTree = "<group>"; };
+		2361F60F230D419D00F4B0CB /* actionContext.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = actionContext.cpp; sourceTree = "<group>"; };
+		2361F610230D419D00F4B0CB /* actionContext.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = actionContext.hpp; sourceTree = "<group>"; };
+		2361F620230D4B1200F4B0CB /* cameraActions.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = cameraActions.hpp; sourceTree = "<group>"; };
+		2361F621230D4B1200F4B0CB /* cameraActions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cameraActions.cpp; sourceTree = "<group>"; };
+		2361F623230D4B2600F4B0CB /* cameraActionContext.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = cameraActionContext.cpp; sourceTree = "<group>"; };
+		2361F624230D4B2600F4B0CB /* cameraActionContext.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = cameraActionContext.hpp; sourceTree = "<group>"; };
+		23A7DF0C22CB6B7600AA0E6C /* renderDelegate.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = renderDelegate.cpp; sourceTree = "<group>"; };
+		23A7DF0D22CB6B7600AA0E6C /* renderDelegate.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = renderDelegate.hpp; sourceTree = "<group>"; };
+		2B774D8E4178765CE52EAAF5 /* DiskArbitration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DiskArbitration.framework; path = /System/Library/Frameworks/DiskArbitration.framework; sourceTree = "<absolute>"; };
+		3244324228FB6239A33DB996 /* ui_mainWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ui_mainWindow.h; path = /Users/jongraham/Projects/Goby/ui_mainWindow.h; sourceTree = "<absolute>"; };
+		4F5AC65C949567C2B2372090 /* mainWindow.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = mainWindow.hpp; path = /Users/jongraham/Projects/Goby/src/ui/mainWindow.hpp; sourceTree = "<absolute>"; };
+		5AAF184A72954F8A6922A095 /* mainWindow.ui */ = {isa = PBXFileReference; lastKnownFileType = text; name = mainWindow.ui; path = /Users/jongraham/Projects/Goby/src/ui/mainWindow.ui; sourceTree = "<absolute>"; };
+		897F7DBDCA6B394E806B8406 /* QtGui.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtGui.framework; path = /Users/jongraham/Qt/5.12.1/clang_64/lib/QtGui.framework; sourceTree = "<absolute>"; };
+		8AB4ACE0B063C484E0B9CB4A /* mainWindow.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = mainWindow.cpp; path = /Users/jongraham/Projects/Goby/src/ui/mainWindow.cpp; sourceTree = "<absolute>"; };
+		8D9815BDB5BD9F90D2BC05C5 /* AGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AGL.framework; path = /System/Library/Frameworks/AGL.framework; sourceTree = "<absolute>"; };
+		9423C617F16831C7ADE013FC /* QtWidgets.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtWidgets.framework; path = /Users/jongraham/Qt/5.12.1/clang_64/lib/QtWidgets.framework; sourceTree = "<absolute>"; };
+		A1A67BEAA744704B29168D39 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
+		B9CD14F8C3B7531AB9AA3099 /* Goby.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Goby.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C70E9616EF3EBD83D0000B2E /* moc_mainWindow.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = moc_mainWindow.cpp; path = /Users/jongraham/Projects/Goby/moc_mainWindow.cpp; sourceTree = "<absolute>"; };
+		D4B32C2222F82AC56BADEB21 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
+		E679E9C7E1E2018521C6FD1B /* Goby.pro */ = {isa = PBXFileReference; lastKnownFileType = text; name = Goby.pro; path = /Users/jongraham/Projects/Goby/Goby.pro; sourceTree = "<absolute>"; };
+		FA9F1F063CC0FF64ABA45477 /* QtCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtCore.framework; path = /Users/jongraham/Qt/5.12.1/clang_64/lib/QtCore.framework; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D1C883685E82D5676953459A /* Link Binary With Libraries */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95F90FD887394882F77E54C0 /* QtWidgets.framework in Link Binary With Libraries */,
+				563CF89DC182C977E17F2B26 /* QtGui.framework in Link Binary With Libraries */,
+				09CDE38A61979F80CF9B1830 /* QtCore.framework in Link Binary With Libraries */,
+				A99B2AA0F9CBBDD12BA126A4 /* DiskArbitration.framework in Link Binary With Libraries */,
+				8D267F2E4776F0ECA2F49DC8 /* IOKit.framework in Link Binary With Libraries */,
+				8771A8C96E9C391044035D99 /* OpenGL.framework in Link Binary With Libraries */,
+				E45E51A644D5FC9F942ECE55 /* AGL.framework in Link Binary With Libraries */,
+			);
+			name = "Link Binary With Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FE0A091FDBFB3E9C31B7A1BD = {
-			children = (
-				"B9CD14F8C3B7531AB9AA3099");
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		12E908B8A1C3C07C115504F5 /* Sources [uic] */ = {
 			isa = PBXGroup;
-			name = "Products";
+			children = (
+				FB3C908FA6A710AAAE4CE3AA /* src */,
+			);
+			name = "Sources [uic]";
 			sourceTree = "<group>";
 		};
-		E8C543AB96796ECAA2E65C57 = {
-			children = (
-				"2EB56BE3C2D93CDAB0C52E67",
-				"25B08E2869634E9BCBA333A2",
-				"B8254625CFD509ED2A24A166",
-				"12E908B8A1C3C07C115504F5",
-				"74B182DB50CB5611B5C1C297",
-				"AF39DD055C3EF8226FBE929D",
-				"FE0A091FDBFB3E9C31B7A1BD");
+		23237F1822C4D40B003ACB0B /* rendering */ = {
 			isa = PBXGroup;
-			name = "Goby";
+			children = (
+				23237F1922C4D40B003ACB0B /* marlin */,
+				23237F1B22C4D40B003ACB0B /* koi */,
+			);
+			name = rendering;
+			path = src/rendering;
 			sourceTree = "<group>";
 		};
-		64B82EDCD43786E5F2F07AAE = {
-			buildPhases = (
-				"5E618435888B9D49F8540165",
-				"7EF0942E79C014DCEC8976BC");
-			dependencies = (
-				);
-			buildConfigurationList = 6CC3B5D2136C7CD6A5CF5A59;
-			isa = PBXAggregateTarget;
-			buildRules = (
-);
-			productName = "Qt Preprocess";
-			name = "Qt Preprocess";
+		23237F1922C4D40B003ACB0B /* marlin */ = {
+			isa = PBXGroup;
+			children = (
+				2361F5CF2303BAFE00F4B0CB /* shading */,
+				2361F5B622FFC93200F4B0CB /* geometry */,
+				234EA78C22FE7AFF00803B89 /* gl */,
+				23237F1A22C4D40B003ACB0B /* usd */,
+			);
+			path = marlin;
+			sourceTree = "<group>";
 		};
-		A0B05F9685E61BAF5C648AF1 = {
-			isa = PBXTargetDependency;
-			target = "64B82EDCD43786E5F2F07AAE";
+		23237F1A22C4D40B003ACB0B /* usd */ = {
+			isa = PBXGroup;
+			children = (
+				23237F1C22C4D48F003ACB0B /* rendererPlugin.cpp */,
+				23237F1D22C4D48F003ACB0B /* rendererPlugin.hpp */,
+				23A7DF0C22CB6B7600AA0E6C /* renderDelegate.cpp */,
+				23A7DF0D22CB6B7600AA0E6C /* renderDelegate.hpp */,
+				234EA77722F1961F00803B89 /* pluginInfo.json */,
+			);
+			path = usd;
+			sourceTree = "<group>";
 		};
-		148D68D49A6EDF1F54E7E4B9 = {
-			buildPhases = (
-				"F7E50F631C51CD5B5DC0BC43",
-				"D1C883685E82D5676953459A",
-				"30414803F31797EB689AE508",
-				"99542592E9780B9225F24AA8");
-			dependencies = (
-				"A0B05F9685E61BAF5C648AF1");
-			productReference = "B9CD14F8C3B7531AB9AA3099";
-			buildConfigurationList = 6CC3B5D2136C7CD6A5CF5A59;
+		23237F1B22C4D40B003ACB0B /* koi */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = koi;
+			sourceTree = "<group>";
+		};
+		234EA77922FACCFC00803B89 /* coral */ = {
+			isa = PBXGroup;
+			children = (
+				234EA77C22FACCFC00803B89 /* item.cpp */,
+				234EA78122FACCFC00803B89 /* item.hpp */,
+				234EA77A22FACCFC00803B89 /* scene.cpp */,
+				234EA78222FACCFC00803B89 /* scene.hpp */,
+				234EA78022FACCFC00803B89 /* transform.cpp */,
+				234EA77B22FACCFC00803B89 /* transform.hpp */,
+				234EA77D22FACCFC00803B89 /* schema */,
+			);
+			name = coral;
+			path = src/coral;
+			sourceTree = "<group>";
+		};
+		234EA77D22FACCFC00803B89 /* schema */ = {
+			isa = PBXGroup;
+			children = (
+				2361F5F3230936BE00F4B0CB /* cameraSchema.cpp */,
+				2361F5F4230936BE00F4B0CB /* cameraSchema.hpp */,
+				234EA77F22FACCFC00803B89 /* meshSchema.cpp */,
+				234EA77E22FACCFC00803B89 /* meshSchema.hpp */,
+			);
+			path = schema;
+			sourceTree = "<group>";
+		};
+		234EA78722FAD1E800803B89 /* math */ = {
+			isa = PBXGroup;
+			children = (
+				234EA78822FAD23000803B89 /* defs.hh */,
+				234EA78922FAD34100803B89 /* math.cpp */,
+				234EA78A22FAD34100803B89 /* math.hpp */,
+				2361F5FD230AB61100F4B0CB /* conversion.cpp */,
+				2361F5FE230AB61100F4B0CB /* conversion.hpp */,
+			);
+			name = math;
+			path = src/math;
+			sourceTree = "<group>";
+		};
+		234EA78C22FE7AFF00803B89 /* gl */ = {
+			isa = PBXGroup;
+			children = (
+				234EA79022FE7DC100803B89 /* buffer.cpp */,
+				234EA79122FE7DC100803B89 /* buffer.hpp */,
+				2361F5B122FED82A00F4B0CB /* buffer.tpp */,
+				2361F5C122FFD40800F4B0CB /* vertexArray.cpp */,
+				2361F5C222FFD40800F4B0CB /* vertexArray.hpp */,
+				2361F5C42300209700F4B0CB /* shader.cpp */,
+				2361F5C52300209700F4B0CB /* shader.hpp */,
+			);
+			path = gl;
+			sourceTree = "<group>";
+		};
+		2361F5B622FFC93200F4B0CB /* geometry */ = {
+			isa = PBXGroup;
+			children = (
+				2361F5B722FFC93200F4B0CB /* mesh.cpp */,
+				2361F5B922FFC93200F4B0CB /* mesh.hpp */,
+				2361F5BA22FFC93200F4B0CB /* meshUtilities.cpp */,
+				2361F5B822FFC93200F4B0CB /* meshUtilities.hpp */,
+				2361F5BE22FFC95800F4B0CB /* geometry.cpp */,
+				2361F5BF22FFC95800F4B0CB /* geometry.hpp */,
+			);
+			path = geometry;
+			sourceTree = "<group>";
+		};
+		2361F5CF2303BAFE00F4B0CB /* shading */ = {
+			isa = PBXGroup;
+			children = (
+				2361F5D02303BAFE00F4B0CB /* shaderParameter.hpp */,
+				2361F5D12303BAFE00F4B0CB /* material.hpp */,
+				2361F5D22303BAFE00F4B0CB /* shaderParameter.tpp */,
+				2361F5D32303BAFE00F4B0CB /* shaderParameter.cpp */,
+				2361F5D42303BAFE00F4B0CB /* material.cpp */,
+				2361F5D82303C08500F4B0CB /* material.tpp */,
+			);
+			path = shading;
+			sourceTree = "<group>";
+		};
+		2361F5DA2303CEEE00F4B0CB /* testing */ = {
+			isa = PBXGroup;
+			children = (
+				2361F5DE2303CFC700F4B0CB /* openGLRender.cpp */,
+				2361F5DF2303CFC700F4B0CB /* openGLRender.hpp */,
+			);
+			path = testing;
+			sourceTree = "<group>";
+		};
+		2361F5E5230796F600F4B0CB /* app */ = {
+			isa = PBXGroup;
+			children = (
+				2361F603230BFD9400F4B0CB /* shortcuts */,
+				2361F5E62307970300F4B0CB /* actions */,
+				2361F5F623094F7D00F4B0CB /* camera */,
+			);
+			name = app;
+			path = src/app;
+			sourceTree = "<group>";
+		};
+		2361F5E62307970300F4B0CB /* actions */ = {
+			isa = PBXGroup;
+			children = (
+				2361F61F230D4B1200F4B0CB /* camera */,
+				2361F5E72307971400F4B0CB /* actionManager.cpp */,
+				2361F5E82307971400F4B0CB /* actionManager.hpp */,
+				2361F5EA2307971F00F4B0CB /* action.cpp */,
+				2361F5EB2307971F00F4B0CB /* action.hpp */,
+				2361F60F230D419D00F4B0CB /* actionContext.cpp */,
+				2361F610230D419D00F4B0CB /* actionContext.hpp */,
+			);
+			path = actions;
+			sourceTree = "<group>";
+		};
+		2361F5F623094F7D00F4B0CB /* camera */ = {
+			isa = PBXGroup;
+			children = (
+				2361F5F823094FB700F4B0CB /* cameraController.cpp */,
+				2361F5F723094FB700F4B0CB /* cameraController.hpp */,
+				2361F5FA23094FC700F4B0CB /* camera.cpp */,
+				2361F5FB23094FC700F4B0CB /* camera.hpp */,
+			);
+			path = camera;
+			sourceTree = "<group>";
+		};
+		2361F603230BFD9400F4B0CB /* shortcuts */ = {
+			isa = PBXGroup;
+			children = (
+				2361F604230BFD9400F4B0CB /* shortcutManager.hpp */,
+				2361F605230BFD9400F4B0CB /* shortcutManager.cpp */,
+				2361F607230BFDF300F4B0CB /* shortcutReceiver.cpp */,
+				2361F608230BFDF300F4B0CB /* shortcutReceiver.hpp */,
+				2361F60A230C016300F4B0CB /* shortcutFilter.cpp */,
+				2361F60B230C016300F4B0CB /* shortcutFilter.hpp */,
+			);
+			path = shortcuts;
+			sourceTree = "<group>";
+		};
+		2361F61F230D4B1200F4B0CB /* camera */ = {
+			isa = PBXGroup;
+			children = (
+				2361F623230D4B2600F4B0CB /* cameraActionContext.cpp */,
+				2361F624230D4B2600F4B0CB /* cameraActionContext.hpp */,
+				2361F621230D4B1200F4B0CB /* cameraActions.cpp */,
+				2361F620230D4B1200F4B0CB /* cameraActions.hpp */,
+			);
+			path = camera;
+			sourceTree = "<group>";
+		};
+		25B08E2869634E9BCBA333A2 /* Generated Sources */ = {
+			isa = PBXGroup;
+			children = (
+				C70E9616EF3EBD83D0000B2E /* moc_mainWindow.cpp */,
+				3244324228FB6239A33DB996 /* ui_mainWindow.h */,
+				23237F1622BF855D003ACB0B /* moc_openglwindow.cpp */,
+			);
+			name = "Generated Sources";
+			sourceTree = "<group>";
+		};
+		2EB56BE3C2D93CDAB0C52E67 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				2361F5DA2303CEEE00F4B0CB /* testing */,
+				921315FAA7F261D737F4F4C7 /* src */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		2F733327CFBF788C2D53B055 /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				5AAF184A72954F8A6922A095 /* mainWindow.ui */,
+			);
+			name = ui;
+			sourceTree = "<group>";
+		};
+		74B182DB50CB5611B5C1C297 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E679E9C7E1E2018521C6FD1B /* Goby.pro */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		921315FAA7F261D737F4F4C7 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				2361F5E5230796F600F4B0CB /* app */,
+				234EA77222EDA9C200803B89 /* main.cpp */,
+				234EA77922FACCFC00803B89 /* coral */,
+				234EA78722FAD1E800803B89 /* math */,
+				23237F1822C4D40B003ACB0B /* rendering */,
+				F4F73F9AA934BE4F8929D179 /* ui */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		AF39DD055C3EF8226FBE929D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9423C617F16831C7ADE013FC /* QtWidgets.framework */,
+				897F7DBDCA6B394E806B8406 /* QtGui.framework */,
+				FA9F1F063CC0FF64ABA45477 /* QtCore.framework */,
+				2B774D8E4178765CE52EAAF5 /* DiskArbitration.framework */,
+				A1A67BEAA744704B29168D39 /* IOKit.framework */,
+				D4B32C2222F82AC56BADEB21 /* OpenGL.framework */,
+				8D9815BDB5BD9F90D2BC05C5 /* AGL.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B8254625CFD509ED2A24A166 /* Sources [moc_predefs] */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Sources [moc_predefs]";
+			sourceTree = "<group>";
+		};
+		E8C543AB96796ECAA2E65C57 /* Goby */ = {
+			isa = PBXGroup;
+			children = (
+				2EB56BE3C2D93CDAB0C52E67 /* Sources */,
+				25B08E2869634E9BCBA333A2 /* Generated Sources */,
+				B8254625CFD509ED2A24A166 /* Sources [moc_predefs] */,
+				12E908B8A1C3C07C115504F5 /* Sources [uic] */,
+				74B182DB50CB5611B5C1C297 /* Supporting Files */,
+				AF39DD055C3EF8226FBE929D /* Frameworks */,
+				FE0A091FDBFB3E9C31B7A1BD /* Products */,
+			);
+			name = Goby;
+			sourceTree = "<group>";
+		};
+		F4F73F9AA934BE4F8929D179 /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				234EA76F22EDA92500803B89 /* openglwindow.cpp */,
+				234EA77022EDA92500803B89 /* openglwindow.hpp */,
+				8AB4ACE0B063C484E0B9CB4A /* mainWindow.cpp */,
+				4F5AC65C949567C2B2372090 /* mainWindow.hpp */,
+				234EA77422EDAA3D00803B89 /* usdRenderWindow.cpp */,
+				234EA77522EDAA3D00803B89 /* usdRenderWindow.hpp */,
+			);
+			name = ui;
+			sourceTree = "<group>";
+		};
+		FB3C908FA6A710AAAE4CE3AA /* src */ = {
+			isa = PBXGroup;
+			children = (
+				2F733327CFBF788C2D53B055 /* ui */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		FE0A091FDBFB3E9C31B7A1BD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B9CD14F8C3B7531AB9AA3099 /* Goby.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		148D68D49A6EDF1F54E7E4B9 /* Goby */ = {
 			isa = PBXNativeTarget;
+			buildConfigurationList = 6CC3B5D2136C7CD6A5CF5A59 /* Build configuration list for PBXNativeTarget "Goby" */;
+			buildPhases = (
+				F7E50F631C51CD5B5DC0BC43 /* Compile Sources */,
+				D1C883685E82D5676953459A /* Link Binary With Libraries */,
+				30414803F31797EB689AE508 /* Copy Bundle Resources */,
+				99542592E9780B9225F24AA8 /* Embed Frameworks */,
+			);
 			buildRules = (
-);
+			);
+			dependencies = (
+				A0B05F9685E61BAF5C648AF1 /* PBXTargetDependency */,
+			);
+			name = Goby;
+			productName = Goby;
+			productReference = B9CD14F8C3B7531AB9AA3099 /* Goby.app */;
 			productType = "com.apple.product-type.application";
-			name = "Goby";
-			productName = "Goby";
 		};
-		3AA6C32AC930069E80220CF1 = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = "NO";
-				"ARCHS[sdk=macosx*]" = "x86_64";
-				COPY_PHASE_STRIP = "NO";
-				ENABLE_BITCODE = "NO";
-				GCC_OPTIMIZATION_LEVEL = "0";
-				ONLY_ACTIVE_ARCH = "YES";
-				PRODUCT_BUNDLE_IDENTIFIER = "Graham.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "Goby";
-				QMAKE_PKGINFO_TYPEINFO = "????";
-				QT_LIBRARY_SUFFIX = "_debug";
-				SDKROOT = "macosx";
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				CC = "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang";
-				LDPLUSPLUS = "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++";
-				INFOPLIST_FILE = "Info.plist";
-				SYMROOT = "/Users/jongraham/Projects/Goby/.xcode";
-				CONFIGURATION_BUILD_DIR = "/Users/jongraham/Projects/Goby/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
-				DYLIB_CURRENT_VERSION = "1.0.0";
-				DYLIB_COMPATIBILITY_VERSION = "1.0";
-				MACOSX_DEPLOYMENT_TARGET = "10.12";
-				HEADER_SEARCH_PATHS = (
-					".",
-					"src",
-					"src/thirdparty",
-					"/usr/local/opt/USD/include",
-					"../../Qt/5.12.1/clang_64/lib/QtWidgets.framework/Headers",
-					"../../Qt/5.12.1/clang_64/lib/QtGui.framework/Headers",
-					"../../Qt/5.12.1/clang_64/lib/QtCore.framework/Headers",
-					".",
-					"/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/Applications/Xcode10.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework/Headers",
-					"/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/Applications/Xcode10.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/AGL.framework/Headers/",
-					".",
-					"../../Qt/5.12.1/clang_64/mkspecs/macx-clang");
-				LIBRARY_SEARCH_PATHS = (
-					"/usr/local/opt/USD/lib",
-					"/Users/jongraham/Qt/5.12.1/clang_64/lib",
-					"/System/Library/Frameworks/");
-				FRAMEWORK_SEARCH_PATHS = (
-					"/Users/jongraham/Qt/5.12.1/clang_64/lib",
-					"/Users/jongraham/Qt/5.12.1/clang_64/lib");
-				OTHER_CFLAGS = (
-					"-pipe",
-					"-O2",
-					"-Wall",
-					"-W",
-					"-fPIC",
-					"-DQT_DEPRECATED_WARNINGS",
-					"-DQT_NO_DEBUG",
-					"-DQT_WIDGETS_LIB",
-					"-DQT_GUI_LIB",
-					"-DQT_CORE_LIB");
-				OTHER_CPLUSPLUSFLAGS = (
-					"-pipe",
-					"-stdlib=libc++",
-					"-O2",
-					"-std=gnu++11",
-					"-Wall",
-					"-W",
-					"-fPIC",
-					"-DQT_DEPRECATED_WARNINGS",
-					"-DQT_NO_DEBUG",
-					"-DQT_WIDGETS_LIB",
-					"-DQT_GUI_LIB",
-					"-DQT_CORE_LIB");
-				OTHER_LDFLAGS = (
-						"-stdlib=libc++",
-						"-headerpad_max_install_names",
-						"-Wl,-rpath,@executable_path/Frameworks",
-						"-Wl,-rpath,/Users/jongraham/Qt/5.12.1/clang_64/lib",
-						"-F/Users/jongraham/Qt/5.12.1/clang_64/lib",
-						"-L/usr/local/opt/USD/lib");
-				ARCHS = "x86_64";
-			};
-			name = "Debug";
-		};
-		77418F46922677BB04ED38DD = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = "NO";
-				"ARCHS[sdk=macosx*]" = "x86_64";
-				COPY_PHASE_STRIP = "NO";
-				ENABLE_BITCODE = "NO";
-				GCC_OPTIMIZATION_LEVEL = "0";
-				ONLY_ACTIVE_ARCH = "YES";
-				PRODUCT_BUNDLE_IDENTIFIER = "Graham.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "Goby";
-				QMAKE_PKGINFO_TYPEINFO = "????";
-				QT_LIBRARY_SUFFIX = "_debug";
-				SDKROOT = "macosx";
-				PRODUCT_NAME = "Goby";
-			};
-			name = "Debug";
-		};
-		339EE1B2CC4FC24589A0EA95 = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = "NO";
-				"ARCHS[sdk=macosx*]" = "x86_64";
-				COPY_PHASE_STRIP = "NO";
-				ENABLE_BITCODE = "NO";
-				PRODUCT_BUNDLE_IDENTIFIER = "Graham.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "Goby";
-				QMAKE_PKGINFO_TYPEINFO = "????";
-				QT_LIBRARY_SUFFIX = "";
-				SDKROOT = "macosx";
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				CC = "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang";
-				LDPLUSPLUS = "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++";
-				INFOPLIST_FILE = "Info.plist";
-				SYMROOT = "/Users/jongraham/Projects/Goby/.xcode";
-				CONFIGURATION_BUILD_DIR = "/Users/jongraham/Projects/Goby/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
-				DYLIB_CURRENT_VERSION = "1.0.0";
-				DYLIB_COMPATIBILITY_VERSION = "1.0";
-				MACOSX_DEPLOYMENT_TARGET = "10.12";
-				HEADER_SEARCH_PATHS = (
-					".",
-					"src",
-					"src/thirdparty",
-					"/usr/local/opt/USD/include",
-					"../../Qt/5.12.1/clang_64/lib/QtWidgets.framework/Headers",
-					"../../Qt/5.12.1/clang_64/lib/QtGui.framework/Headers",
-					"../../Qt/5.12.1/clang_64/lib/QtCore.framework/Headers",
-					".",
-					"/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/Applications/Xcode10.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework/Headers",
-					"/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/Applications/Xcode10.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/AGL.framework/Headers/",
-					".",
-					"../../Qt/5.12.1/clang_64/mkspecs/macx-clang");
-				LIBRARY_SEARCH_PATHS = (
-					"/usr/local/opt/USD/lib",
-					"/Users/jongraham/Qt/5.12.1/clang_64/lib",
-					"/System/Library/Frameworks/");
-				FRAMEWORK_SEARCH_PATHS = (
-					"/Users/jongraham/Qt/5.12.1/clang_64/lib",
-					"/Users/jongraham/Qt/5.12.1/clang_64/lib");
-				OTHER_CFLAGS = (
-					"-pipe",
-					"-O2",
-					"-Wall",
-					"-W",
-					"-fPIC",
-					"-DQT_DEPRECATED_WARNINGS",
-					"-DQT_NO_DEBUG",
-					"-DQT_WIDGETS_LIB",
-					"-DQT_GUI_LIB",
-					"-DQT_CORE_LIB");
-				OTHER_CPLUSPLUSFLAGS = (
-					"-pipe",
-					"-stdlib=libc++",
-					"-O2",
-					"-std=gnu++11",
-					"-Wall",
-					"-W",
-					"-fPIC",
-					"-DQT_DEPRECATED_WARNINGS",
-					"-DQT_NO_DEBUG",
-					"-DQT_WIDGETS_LIB",
-					"-DQT_GUI_LIB",
-					"-DQT_CORE_LIB");
-				OTHER_LDFLAGS = (
-						"-stdlib=libc++",
-						"-headerpad_max_install_names",
-						"-Wl,-rpath,@executable_path/Frameworks",
-						"-Wl,-rpath,/Users/jongraham/Qt/5.12.1/clang_64/lib",
-						"-F/Users/jongraham/Qt/5.12.1/clang_64/lib",
-						"-L/usr/local/opt/USD/lib");
-				ARCHS = "x86_64";
-			};
-			name = "Release";
-		};
-		6666AA5E688052234F6758D8 = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = "NO";
-				"ARCHS[sdk=macosx*]" = "x86_64";
-				COPY_PHASE_STRIP = "NO";
-				ENABLE_BITCODE = "NO";
-				PRODUCT_BUNDLE_IDENTIFIER = "Graham.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "Goby";
-				QMAKE_PKGINFO_TYPEINFO = "????";
-				QT_LIBRARY_SUFFIX = "";
-				SDKROOT = "macosx";
-				PRODUCT_NAME = "Goby";
-			};
-			name = "Release";
-		};
-		DAC4C1AA5EDEA1C85E9CA5E6 = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				"3AA6C32AC930069E80220CF1",
-				"339EE1B2CC4FC24589A0EA95");
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "Release";
-		};
-		6CC3B5D2136C7CD6A5CF5A59 = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				"77418F46922677BB04ED38DD",
-				"6666AA5E688052234F6758D8");
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "Release";
-		};
-		6DB9C3763D02B1415CD9D565 = {
-			hasScannedForEncodings = 1;
-			compatibilityVersion = "Xcode 3.2";
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6DB9C3763D02B1415CD9D565 /* Project object */ = {
 			isa = PBXProject;
-			mainGroup = "E8C543AB96796ECAA2E65C57";
-			productRefGroup = "FE0A091FDBFB3E9C31B7A1BD";
-			buildConfigurationList = "DAC4C1AA5EDEA1C85E9CA5E6";
+			attributes = {
+			};
+			buildConfigurationList = DAC4C1AA5EDEA1C85E9CA5E6 /* Build configuration list for PBXProject "Goby" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E8C543AB96796ECAA2E65C57 /* Goby */;
+			productRefGroup = FE0A091FDBFB3E9C31B7A1BD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				"148D68D49A6EDF1F54E7E4B9",
-				"64B82EDCD43786E5F2F07AAE");
-			attributes = {
-				TargetAttributes = {
-				};
-			};
+				148D68D49A6EDF1F54E7E4B9 /* Goby */,
+				64B82EDCD43786E5F2F07AAE /* Qt Preprocess */,
+			);
 		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		30414803F31797EB689AE508 /* Copy Bundle Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2361F5B222FED82A00F4B0CB /* buffer.tpp in Copy Bundle Resources */,
+				2361F5D92303C08500F4B0CB /* material.tpp in Copy Bundle Resources */,
+				234EA77822F1961F00803B89 /* pluginInfo.json in Copy Bundle Resources */,
+				2361F5D52303BAFE00F4B0CB /* shaderParameter.tpp in Copy Bundle Resources */,
+			);
+			name = "Copy Bundle Resources";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5E618435888B9D49F8540165 /* Qt Qmake */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "Qt Qmake";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/jongraham/Projects/Goby -f Goby.xcodeproj/qt_makeqmake.mak\n";
+			showEnvVarsInLog = 0;
+		};
+		7EF0942E79C014DCEC8976BC /* Qt Preprocessors */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "Qt Preprocessors";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/jongraham/Projects/Goby -f Goby.xcodeproj/qt_preprocess.mak\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F7E50F631C51CD5B5DC0BC43 /* Compile Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2361F60E230C082900F4B0CB /* shortcutFilter.hpp in Compile Sources */,
+				234EA78322FACCFD00803B89 /* scene.cpp in Compile Sources */,
+				234EA78422FACCFD00803B89 /* item.cpp in Compile Sources */,
+				2361F5BD22FFC93200F4B0CB /* meshUtilities.cpp in Compile Sources */,
+				23237F1E22C4D48F003ACB0B /* rendererPlugin.cpp in Compile Sources */,
+				2361F5FC23094FC700F4B0CB /* camera.cpp in Compile Sources */,
+				2361F60C230C016300F4B0CB /* shortcutFilter.cpp in Compile Sources */,
+				B2A6F1FFBA4E92771BB02D52 /* mainWindow.cpp in Compile Sources */,
+				7E5709D3FE807F8C875AE381 /* moc_mainWindow.cpp in Compile Sources */,
+				23237F1722BF855D003ACB0B /* moc_openglwindow.cpp in Compile Sources */,
+				2361F5BC22FFC93200F4B0CB /* mesh.cpp in Compile Sources */,
+				23A7DF0E22CB6B7600AA0E6C /* renderDelegate.cpp in Compile Sources */,
+				2361F5C322FFD40800F4B0CB /* vertexArray.cpp in Compile Sources */,
+				2361F611230D419D00F4B0CB /* actionContext.cpp in Compile Sources */,
+				2361F5C62300209700F4B0CB /* shader.cpp in Compile Sources */,
+				2361F5D62303BAFE00F4B0CB /* shaderParameter.cpp in Compile Sources */,
+				234EA77122EDA92500803B89 /* openglwindow.cpp in Compile Sources */,
+				2361F5E92307971400F4B0CB /* actionManager.cpp in Compile Sources */,
+				2361F625230D4B2600F4B0CB /* cameraActionContext.cpp in Compile Sources */,
+				2361F622230D4B1200F4B0CB /* cameraActions.cpp in Compile Sources */,
+				234EA77322EDA9C200803B89 /* main.cpp in Compile Sources */,
+				2361F5D72303BAFE00F4B0CB /* material.cpp in Compile Sources */,
+				2361F5FF230AB61100F4B0CB /* conversion.cpp in Compile Sources */,
+				2361F5C022FFC95800F4B0CB /* geometry.cpp in Compile Sources */,
+				234EA78522FACCFD00803B89 /* meshSchema.cpp in Compile Sources */,
+				234EA78B22FAD34100803B89 /* math.cpp in Compile Sources */,
+				234EA79222FE7DC100803B89 /* buffer.cpp in Compile Sources */,
+				2361F5F923094FB700F4B0CB /* cameraController.cpp in Compile Sources */,
+				2361F5E02303CFC700F4B0CB /* openGLRender.cpp in Compile Sources */,
+				2361F5F5230936BE00F4B0CB /* cameraSchema.cpp in Compile Sources */,
+				2361F609230BFDF300F4B0CB /* shortcutReceiver.cpp in Compile Sources */,
+				234EA77622EDAA3D00803B89 /* usdRenderWindow.cpp in Compile Sources */,
+				234EA78622FACCFD00803B89 /* transform.cpp in Compile Sources */,
+				2361F5EC2307971F00F4B0CB /* action.cpp in Compile Sources */,
+				2361F606230BFD9400F4B0CB /* shortcutManager.cpp in Compile Sources */,
+			);
+			name = "Compile Sources";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A0B05F9685E61BAF5C648AF1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 64B82EDCD43786E5F2F07AAE /* Qt Preprocess */;
+			targetProxy = 23237F1222BF827D003ACB0B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		339EE1B2CC4FC24589A0EA95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
+				ARCHS = x86_64;
+				"ARCHS[sdk=macosx*]" = x86_64;
+				CC = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang;
+				CONFIGURATION_BUILD_DIR = "/Users/jongraham/Projects/Goby/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1.0;
+				DYLIB_CURRENT_VERSION = 1.0.0;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					/Users/jongraham/Qt/5.12.1/clang_64/lib,
+					/Users/jongraham/Qt/5.12.1/clang_64/lib,
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = (
+					.,
+					../../Qt/5.12.1/clang_64/lib/QtWidgets.framework/Headers,
+					../../Qt/5.12.1/clang_64/lib/QtGui.framework/Headers,
+					../../Qt/5.12.1/clang_64/lib/QtCore.framework/Headers,
+					.,
+					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/Applications/Xcode10.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework/Headers,
+					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/Applications/Xcode10.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/AGL.framework/Headers/,
+					.,
+					"../../Qt/5.12.1/clang_64/mkspecs/macx-clang",
+				);
+				INFOPLIST_FILE = Info.plist;
+				LDPLUSPLUS = "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++";
+				LIBRARY_SEARCH_PATHS = (
+					/Users/jongraham/Qt/5.12.1/clang_64/lib,
+					/System/Library/Frameworks/,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				OTHER_CFLAGS = (
+					"-pipe",
+					"-O2",
+					"-Wall",
+					"-W",
+					"-fPIC",
+					"-DQT_DEPRECATED_WARNINGS",
+					"-DQT_NO_DEBUG",
+					"-DQT_WIDGETS_LIB",
+					"-DQT_GUI_LIB",
+					"-DQT_CORE_LIB",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-pipe",
+					"-stdlib=libc++",
+					"-O2",
+					"-std=gnu++11",
+					"-Wall",
+					"-W",
+					"-fPIC",
+					"-DQT_DEPRECATED_WARNINGS",
+					"-DQT_NO_DEBUG",
+					"-DQT_WIDGETS_LIB",
+					"-DQT_GUI_LIB",
+					"-DQT_CORE_LIB",
+				);
+				OTHER_LDFLAGS = (
+					"-stdlib=libc++",
+					"-headerpad_max_install_names",
+					"-Wl,-rpath,@executable_path/Frameworks",
+					"-Wl,-rpath,/Users/jongraham/Qt/5.12.1/clang_64/lib",
+					"-F/Users/jongraham/Qt/5.12.1/clang_64/lib",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Graham.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Goby;
+				QMAKE_PKGINFO_TYPEINFO = "????";
+				QT_LIBRARY_SUFFIX = "";
+				SDKROOT = macosx;
+				SYMROOT = /Users/jongraham/Projects/Goby/.xcode;
+			};
+			name = Release;
+		};
+		3AA6C32AC930069E80220CF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
+				ARCHS = x86_64;
+				"ARCHS[sdk=macosx*]" = x86_64;
+				CC = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang;
+				CONFIGURATION_BUILD_DIR = "/Users/jongraham/Projects/Goby/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1.0;
+				DYLIB_CURRENT_VERSION = 1.0.0;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					/Users/jongraham/Qt/5.12.1/clang_64/lib,
+					/Users/jongraham/Qt/5.12.1/clang_64/lib,
+				);
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = (
+					.,
+					../../Qt/5.12.1/clang_64/lib/QtWidgets.framework/Headers,
+					../../Qt/5.12.1/clang_64/lib/QtGui.framework/Headers,
+					../../Qt/5.12.1/clang_64/lib/QtCore.framework/Headers,
+					.,
+					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/Applications/Xcode10.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework/Headers,
+					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/Applications/Xcode10.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/AGL.framework/Headers/,
+					.,
+					"../../Qt/5.12.1/clang_64/mkspecs/macx-clang",
+				);
+				INFOPLIST_FILE = Info.plist;
+				LDPLUSPLUS = "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++";
+				LIBRARY_SEARCH_PATHS = (
+					/Users/jongraham/Qt/5.12.1/clang_64/lib,
+					/System/Library/Frameworks/,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-pipe",
+					"-O2",
+					"-Wall",
+					"-W",
+					"-fPIC",
+					"-DQT_DEPRECATED_WARNINGS",
+					"-DQT_NO_DEBUG",
+					"-DQT_WIDGETS_LIB",
+					"-DQT_GUI_LIB",
+					"-DQT_CORE_LIB",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-pipe",
+					"-stdlib=libc++",
+					"-O2",
+					"-std=gnu++11",
+					"-Wall",
+					"-W",
+					"-fPIC",
+					"-DQT_DEPRECATED_WARNINGS",
+					"-DQT_NO_DEBUG",
+					"-DQT_WIDGETS_LIB",
+					"-DQT_GUI_LIB",
+					"-DQT_CORE_LIB",
+				);
+				OTHER_LDFLAGS = (
+					"-stdlib=libc++",
+					"-headerpad_max_install_names",
+					"-Wl,-rpath,@executable_path/Frameworks",
+					"-Wl,-rpath,/Users/jongraham/Qt/5.12.1/clang_64/lib",
+					"-F/Users/jongraham/Qt/5.12.1/clang_64/lib",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Graham.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Goby;
+				QMAKE_PKGINFO_TYPEINFO = "????";
+				QT_LIBRARY_SUFFIX = _debug;
+				SDKROOT = macosx;
+				SYMROOT = /Users/jongraham/Projects/Goby/.xcode;
+			};
+			name = Debug;
+		};
+		6666AA5E688052234F6758D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
+				"ARCHS[sdk=macosx*]" = x86_64;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_BITCODE = NO;
+				HEADER_SEARCH_PATHS = (
+					.,
+					../../Qt/5.12.1/clang_64/lib/QtWidgets.framework/Headers,
+					../../Qt/5.12.1/clang_64/lib/QtGui.framework/Headers,
+					../../Qt/5.12.1/clang_64/lib/QtCore.framework/Headers,
+					.,
+					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/Applications/Xcode10.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework/Headers,
+					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/Applications/Xcode10.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/AGL.framework/Headers/,
+					.,
+					"../../Qt/5.12.1/clang_64/mkspecs/macx-clang",
+					/usr/local/opt/USD/include,
+					./src,
+					./src/thirdparty,
+				);
+				LD_RUNPATH_SEARCH_PATHS = /usr/local/opt/USD/lib;
+				LIBRARY_SEARCH_PATHS = (
+					/Users/jongraham/Qt/5.12.1/clang_64/lib,
+					/System/Library/Frameworks/,
+					/usr/local/opt/USD/lib,
+				);
+				OTHER_LDFLAGS = (
+					"-stdlib=libc++",
+					"-headerpad_max_install_names",
+					"-Wl,-rpath,@executable_path/Frameworks",
+					"-Wl,-rpath,/Users/jongraham/Qt/5.12.1/clang_64/lib",
+					"-F/Users/jongraham/Qt/5.12.1/clang_64/lib",
+					"-lusd_ms",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Graham.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Goby;
+				QMAKE_PKGINFO_TYPEINFO = "????";
+				QT_LIBRARY_SUFFIX = "";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		77418F46922677BB04ED38DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
+				"ARCHS[sdk=macosx*]" = x86_64;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_BITCODE = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				HEADER_SEARCH_PATHS = (
+					.,
+					../../Qt/5.12.1/clang_64/lib/QtWidgets.framework/Headers,
+					../../Qt/5.12.1/clang_64/lib/QtGui.framework/Headers,
+					../../Qt/5.12.1/clang_64/lib/QtCore.framework/Headers,
+					.,
+					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/Applications/Xcode10.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework/Headers,
+					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/Applications/Xcode10.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/AGL.framework/Headers/,
+					.,
+					"../../Qt/5.12.1/clang_64/mkspecs/macx-clang",
+					/usr/local/opt/USD/include,
+					./src,
+					./src/thirdparty,
+				);
+				LD_RUNPATH_SEARCH_PATHS = /usr/local/opt/USD/lib;
+				LIBRARY_SEARCH_PATHS = (
+					/Users/jongraham/Qt/5.12.1/clang_64/lib,
+					/System/Library/Frameworks/,
+					/usr/local/opt/USD/lib,
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-stdlib=libc++",
+					"-headerpad_max_install_names",
+					"-Wl,-rpath,@executable_path/Frameworks",
+					"-Wl,-rpath,/Users/jongraham/Qt/5.12.1/clang_64/lib",
+					"-F/Users/jongraham/Qt/5.12.1/clang_64/lib",
+					"-lusd_ms",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Graham.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Goby;
+				QMAKE_PKGINFO_TYPEINFO = "????";
+				QT_LIBRARY_SUFFIX = _debug;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6CC3B5D2136C7CD6A5CF5A59 /* Build configuration list for PBXNativeTarget "Goby" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77418F46922677BB04ED38DD /* Debug */,
+				6666AA5E688052234F6758D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DAC4C1AA5EDEA1C85E9CA5E6 /* Build configuration list for PBXProject "Goby" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AA6C32AC930069E80220CF1 /* Debug */,
+				339EE1B2CC4FC24589A0EA95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
 	};
-	rootObject = "6DB9C3763D02B1415CD9D565";
+	rootObject = 6DB9C3763D02B1415CD9D565 /* Project object */;
 }

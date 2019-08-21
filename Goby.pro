@@ -36,7 +36,6 @@ SOURCES += \
     src/app/actions/action.cpp \
     src/app/actions/actionManager.cpp \
     src/app/actions/cameraActions.cpp \
-    src/app/actions/shortcutManager.cpp \
     src/app/camera/camera.cpp \
     src/app/camera/cameraController.cpp \
     src/coral/schema/cameraSchema.cpp \
@@ -62,13 +61,14 @@ SOURCES += \
     src/ui/openglwindow.cpp \
     src/ui/usdRenderWindow.cpp \
     src/main.cpp \
+    src/app/shortcuts/shortcutFilter.cpp \
+    src/app/shortcuts/shortcutManager.cpp \
+    src/app/shortcuts/shortcutReceiver.cpp
 
 HEADERS += \
-    src/ui/mainWindow.hpp \
     src/app/actions/action.hpp \
     src/app/actions/actionManager.hpp \
     src/app/actions/cameraActions.hpp \
-    src/app/actions/shortcutManager.hpp \
     src/app/camera/camera.hpp \
     src/app/camera/cameraController.hpp \
     src/coral/schema/cameraSchema.hpp \
@@ -193,7 +193,10 @@ HEADERS += \
     src/thirdparty/glm/detail/type_vec4_avx2.inl \
     src/thirdparty/glm/detail/type_vec4_sse2.inl \
     src/thirdparty/glm/detail/type_vec4.hpp \
-    src/thirdparty/glm/detail/type_vec4.inl
+    src/thirdparty/glm/detail/type_vec4.inl \
+    src/app/shortcuts/shortcutFilter.hpp \
+    src/app/shortcuts/shortcutManager.hpp \
+    src/app/shortcuts/shortcutReceiver.hpp
 
 FORMS += \
         src/ui/mainWindow.ui \

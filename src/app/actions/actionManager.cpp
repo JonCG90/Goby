@@ -8,7 +8,8 @@
 #include "actionManager.hpp"
 
 #include "cameraActions.hpp"
-#include "shortcutManager.hpp"
+
+#include <app/shortcuts/shortcutManager.hpp>
 
 #include <QKeyEvent>
 
@@ -30,24 +31,12 @@ ActionManager::ActionManager()
     shortcutManager.registerShortcut( Qt::Key::Key_W, cameraForward->getID() );
 }
     
-bool ActionManager::handleEvent( QEvent* i_event )
+bool ActionManager::executeAction( std::string i_actionID, ActionContextPtr i_context ) const
 {
-    if ( i_event->type() == QEvent::KeyPress )
+    ActionPtr action = getAction( i_actionID );
+    if ( action != nullptr )
     {
-        QKeyEvent* keyEvent = static_cast< QKeyEvent* >( i_event );
-        const int key = keyEvent->key();
-    
-        std::string actionID;
-        if ( ShortcutManager::sharedManager().getShortcut( static_cast< Qt::Key >( key ), actionID ) )
-        {
-            ActionPtr action = getAction( actionID );
-            if ( action != nullptr )
-            {
-                const ActionContext context;
-                action->execute( context );
-                return true;
-            }
-        }
+        action->execute( i_context );
     }
     
     return false;

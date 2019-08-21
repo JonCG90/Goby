@@ -30,7 +30,7 @@ public:
     ActionManager( ActionManager const & ) = delete;
     void operator=( ActionManager const & ) = delete;
     
-    bool handleEvent( QEvent* i_event );
+    bool executeAction( std::string i_actionID, ActionContextPtr i_context ) const;
     
 private:
     

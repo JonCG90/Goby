@@ -8,7 +8,9 @@
 #ifndef GOBY_CAMERAACTIONS_HPP
 #define GOBY_CAMERAACTIONS_HPP
 
-#include "action.hpp"
+#include <app/actions/action.hpp>
+#include <app/actions/camera/cameraActionContext.hpp>
+#include <app/camera/cameraController.hpp>
 
 namespace Goby
 {
@@ -22,8 +24,11 @@ public:
     ~CameraAction() override = default;
     
     std::string getName() const override = 0;
-    void execute( const ActionContext &i_context ) override;
+    void execute( const ActionContextPtr &i_context ) override;
     
+protected:
+    
+    virtual void updateCameraController( CameraController* i_controller ) = 0;
 };
     
 class CameraMoveForwardAction : public CameraAction
@@ -31,8 +36,14 @@ class CameraMoveForwardAction : public CameraAction
 public:
     
     CameraMoveForwardAction();
+    ~CameraMoveForwardAction() = default;
+    
     std::string getName() const override;
     
+private:
+    
+    void updateCameraController( CameraController* i_controller ) override;
+
 };
     
 } // namespace Goby

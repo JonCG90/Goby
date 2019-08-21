@@ -19,16 +19,4 @@ private:
     Ui::MainWindow *ui;
 };
 
-class AppEventFilter : public QObject
-{
-    Q_OBJECT
-    
-public:
-    
-    explicit AppEventFilter( QObject* i_parent );
-    ~AppEventFilter() = default;
-    
-    bool eventFilter( QObject* i_obj, QEvent* i_event) override;
-};
-
 #endif // MAINWINDOW_HPP

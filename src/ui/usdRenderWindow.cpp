@@ -7,6 +7,7 @@
 
 #include "usdRenderWindow.hpp"
 
+#include <app/actions/camera/cameraActionContext.hpp>
 #include <math/conversion.hpp>
 
 #include <iostream>
@@ -130,4 +131,9 @@ void UsdRenderWindow::render()
     material.unload();
     
     ++m_frame;
+}
+
+Goby::ActionContextPtr UsdRenderWindow::getContext()
+{
+    return Goby::CameraActionContext::context( &m_cameraController );
 }
