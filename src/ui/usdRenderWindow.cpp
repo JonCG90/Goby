@@ -10,7 +10,10 @@
 #include <app/actions/camera/cameraActionContext.hpp>
 #include <math/conversion.hpp>
 
+#include <QMouseEvent>
+
 #include <iostream>
+
 
 // Temp
 #include <coral/schema/meshSchema.hpp>
@@ -78,6 +81,14 @@ void UsdRenderWindow::initialize()
 //    }
 }
 
+void UsdRenderWindow::update()
+{
+    const double dt = m_timer.elapsedMilliseconds();
+    m_cameraController.update( dt );
+    
+    m_timer.reset();
+}
+
 void UsdRenderWindow::render()
 {
     const qreal scale = devicePixelRatio();
@@ -136,4 +147,24 @@ void UsdRenderWindow::render()
 Goby::ActionContextPtr UsdRenderWindow::getContext()
 {
     return Goby::CameraActionContext::context( &m_cameraController );
+}
+
+void UsdRenderWindow::mousePressEvent( QMouseEvent *i_event )
+{
+    std::cout << "Mouse Pressed" << std::endl;
+    OpenGLWindow::mousePressEvent(i_event);
+}
+
+void UsdRenderWindow::mouseReleaseEvent( QMouseEvent *i_event )
+{
+    std::cout << "Mouse Released" << std::endl;
+    OpenGLWindow::mouseReleaseEvent(i_event);
+}
+
+void UsdRenderWindow::mouseMoveEvent( QMouseEvent *i_event )
+{
+    std::cout << "Mouse Moved" << std::endl;
+    const vec2i delta( i_event->x(), i_event->y() );
+    m_cameraController.update( delta );
+    OpenGLWindow::mouseMoveEvent( i_event );
 }

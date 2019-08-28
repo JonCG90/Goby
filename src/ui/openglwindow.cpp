@@ -34,6 +34,10 @@ void OpenGLWindow::initialize()
 {
 }
 
+void OpenGLWindow::update()
+{
+}
+
 void OpenGLWindow::render()
 {
     if (!m_device)
@@ -104,6 +108,7 @@ void OpenGLWindow::renderNow()
         initialize();
     }
     
+    update();
     render();
     
     m_context->swapBuffers(this);

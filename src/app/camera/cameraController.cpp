@@ -9,13 +9,16 @@
 
 #include "glm/gtc/matrix_transform.hpp"
 
+#include <algorithm>
+#include <iostream>
+
 namespace Goby
 {
 
 CameraController::CameraController()
     : m_type( CameraContolType::Fly )
     , m_lookSensitivity( 1.0 )
-    , m_moveSensitivity( 1.0 )
+    , m_moveSensitivity( 0.1 )
 {
 }
     
@@ -26,25 +29,47 @@ void CameraController::reset( const RenderCamera &i_camera )
     m_up = i_camera.up;
 }
     
-void CameraController::translate( const vec3d &i_direction, double i_dt )
+void CameraController::update( double i_dt )
 {
-    const vec3d tranlate = ( m_moveSensitivity * i_dt) * i_direction;
-    m_position += tranlate;
-    m_target += tranlate;
-}
-
-void CameraController::update( double i_dx, double i_dy, double i_dt )
-{
+    const double dt = std::min( 100.0, i_dt );
+    
+    vec3d moveDirection = vec3d( 0.0, 0.0, 0.0 );
+    if ( moveDirection != m_moveDirection )
+    {
+        moveDirection = glm::normalize( m_moveDirection );
+    }
+    
     switch ( m_type ) {
         case CameraContolType::Fly:
-            
+        {
+            translate( moveDirection, i_dt );
             break;
+        }
         case CameraContolType::Orbit:
             
             break;
         default:
             break;
     }
+    
+    m_delta = vec2i( 0.0 );
+}
+    
+void CameraController::translate( const vec3d &i_direction, double i_dt )
+{
+    const vec3d translate = ( m_moveSensitivity * i_dt ) * i_direction;
+    m_position += translate;
+    m_target += translate;
+}
+    
+void CameraController::setMoveDirection( const vec3d &i_direction )
+{
+    m_moveDirection += i_direction;
+}
+
+void CameraController::update( const vec2i &i_delta )
+{
+    m_delta += i_delta;
 }
     
 mat4d CameraController::getView() const

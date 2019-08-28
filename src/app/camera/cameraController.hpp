@@ -35,8 +35,11 @@ public:
     ~CameraController() = default;
     
     void reset( const RenderCamera &i_camera );
-    void update( double i_dx, double i_dy, double i_dt );
+    void update( double i_dt );
+    
+    void update( const vec2i &i_delta );
     void translate( const vec3d &i_direction, double i_dt );
+    void setMoveDirection( const vec3d &i_direction );
     
     mat4d getView() const;
 
@@ -45,6 +48,9 @@ private:
     CameraContolType m_type;
     double m_lookSensitivity;
     double m_moveSensitivity;
+    vec2i m_delta;
+    
+    vec3d m_moveDirection;
     
     vec3d m_position;
     vec3d m_target;

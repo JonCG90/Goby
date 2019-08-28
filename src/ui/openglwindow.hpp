@@ -18,6 +18,8 @@ public:
     ~OpenGLWindow();
     
     virtual void render(QPainter *painter);
+    
+    virtual void update();
     virtual void render();
     
     virtual void initialize();

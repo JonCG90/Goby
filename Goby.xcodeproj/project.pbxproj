@@ -59,6 +59,7 @@
 		2361F611230D419D00F4B0CB /* actionContext.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 2361F60F230D419D00F4B0CB /* actionContext.cpp */; };
 		2361F622230D4B1200F4B0CB /* cameraActions.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 2361F621230D4B1200F4B0CB /* cameraActions.cpp */; };
 		2361F625230D4B2600F4B0CB /* cameraActionContext.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 2361F623230D4B2600F4B0CB /* cameraActionContext.cpp */; };
+		2361F62A230D5BF800F4B0CB /* timer.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 2361F628230D5BF800F4B0CB /* timer.cpp */; };
 		23A7DF0E22CB6B7600AA0E6C /* renderDelegate.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 23A7DF0C22CB6B7600AA0E6C /* renderDelegate.cpp */; };
 		563CF89DC182C977E17F2B26 /* QtGui.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = 897F7DBDCA6B394E806B8406 /* QtGui.framework */; };
 		7E5709D3FE807F8C875AE381 /* moc_mainWindow.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = C70E9616EF3EBD83D0000B2E /* moc_mainWindow.cpp */; settings = {ATTRIBUTES = (); }; };
@@ -159,6 +160,8 @@
 		2361F621230D4B1200F4B0CB /* cameraActions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cameraActions.cpp; sourceTree = "<group>"; };
 		2361F623230D4B2600F4B0CB /* cameraActionContext.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = cameraActionContext.cpp; sourceTree = "<group>"; };
 		2361F624230D4B2600F4B0CB /* cameraActionContext.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = cameraActionContext.hpp; sourceTree = "<group>"; };
+		2361F628230D5BF800F4B0CB /* timer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = timer.cpp; sourceTree = "<group>"; };
+		2361F629230D5BF800F4B0CB /* timer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = timer.hpp; sourceTree = "<group>"; };
 		23A7DF0C22CB6B7600AA0E6C /* renderDelegate.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = renderDelegate.cpp; sourceTree = "<group>"; };
 		23A7DF0D22CB6B7600AA0E6C /* renderDelegate.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = renderDelegate.hpp; sourceTree = "<group>"; };
 		2B774D8E4178765CE52EAAF5 /* DiskArbitration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DiskArbitration.framework; path = /System/Library/Frameworks/DiskArbitration.framework; sourceTree = "<absolute>"; };
@@ -392,6 +395,16 @@
 			path = camera;
 			sourceTree = "<group>";
 		};
+		2361F627230D5BE800F4B0CB /* utilities */ = {
+			isa = PBXGroup;
+			children = (
+				2361F628230D5BF800F4B0CB /* timer.cpp */,
+				2361F629230D5BF800F4B0CB /* timer.hpp */,
+			);
+			name = utilities;
+			path = src/utilities;
+			sourceTree = "<group>";
+		};
 		25B08E2869634E9BCBA333A2 /* Generated Sources */ = {
 			isa = PBXGroup;
 			children = (
@@ -431,11 +444,12 @@
 			isa = PBXGroup;
 			children = (
 				2361F5E5230796F600F4B0CB /* app */,
-				234EA77222EDA9C200803B89 /* main.cpp */,
 				234EA77922FACCFC00803B89 /* coral */,
+				234EA77222EDA9C200803B89 /* main.cpp */,
 				234EA78722FAD1E800803B89 /* math */,
 				23237F1822C4D40B003ACB0B /* rendering */,
 				F4F73F9AA934BE4F8929D179 /* ui */,
+				2361F627230D5BE800F4B0CB /* utilities */,
 			);
 			name = src;
 			sourceTree = "<group>";
@@ -631,6 +645,7 @@
 				234EA78622FACCFD00803B89 /* transform.cpp in Compile Sources */,
 				2361F5EC2307971F00F4B0CB /* action.cpp in Compile Sources */,
 				2361F606230BFD9400F4B0CB /* shortcutManager.cpp in Compile Sources */,
+				2361F62A230D5BF800F4B0CB /* timer.cpp in Compile Sources */,
 			);
 			name = "Compile Sources";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -807,6 +822,8 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				"ARCHS[sdk=macosx*]" = x86_64;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = (
@@ -850,6 +867,8 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				"ARCHS[sdk=macosx*]" = x86_64;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_BITCODE = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;

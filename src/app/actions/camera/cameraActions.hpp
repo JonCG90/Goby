@@ -15,7 +15,7 @@
 namespace Goby
 {
     
-class CameraAction : public Action
+class CameraAction : public ToggleAction
 {
 public:
     
@@ -24,11 +24,11 @@ public:
     ~CameraAction() override = default;
     
     std::string getName() const override = 0;
-    void execute( const ActionContextPtr &i_context ) override;
+    void execute( const ActionContextPtr &i_context, bool i_state ) override;
     
 protected:
     
-    virtual void updateCameraController( CameraController* i_controller ) = 0;
+    virtual void updateCameraController( CameraController* i_controller, bool i_state ) = 0;
 };
     
 class CameraMoveForwardAction : public CameraAction
@@ -42,8 +42,53 @@ public:
     
 private:
     
-    void updateCameraController( CameraController* i_controller ) override;
+    void updateCameraController( CameraController* i_controller, bool i_state ) override;
 
+};
+    
+class CameraMoveBackwardAction : public CameraAction
+{
+public:
+    
+    CameraMoveBackwardAction();
+    ~CameraMoveBackwardAction() = default;
+    
+    std::string getName() const override;
+    
+private:
+    
+    void updateCameraController( CameraController* i_controller, bool i_state ) override;
+    
+};
+
+class CameraMoveLeftAction : public CameraAction
+{
+public:
+    
+    CameraMoveLeftAction();
+    ~CameraMoveLeftAction() = default;
+    
+    std::string getName() const override;
+    
+private:
+    
+    void updateCameraController( CameraController* i_controller, bool i_state ) override;
+    
+};
+
+class CameraMoveRightAction : public CameraAction
+{
+public:
+    
+    CameraMoveRightAction();
+    ~CameraMoveRightAction() = default;
+    
+    std::string getName() const override;
+    
+private:
+    
+    void updateCameraController( CameraController* i_controller, bool i_state ) override;
+    
 };
     
 } // namespace Goby

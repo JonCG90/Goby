@@ -27,7 +27,7 @@ ShortcutEventFilter::ShortcutEventFilter( QObject* i_parent )
 
 bool ShortcutEventFilter::eventFilter( QObject* i_obj, QEvent* i_event)
 {
-    if ( i_event->type() == QEvent::Type::KeyPress )
+    if ( i_event->type() == QEvent::Type::KeyPress || i_event->type() == QEvent::Type::KeyRelease )
     {
         const QKeyEvent* keyEvent = static_cast< QKeyEvent* >( i_event );
         const Qt::Key key = static_cast< Qt::Key >( keyEvent->key() );
@@ -43,8 +43,8 @@ bool ShortcutEventFilter::eventFilter( QObject* i_obj, QEvent* i_event)
                 std::string actionID;
                 if ( ShortcutManager::sharedManager().getShortcut( key, actionID ) && context != nullptr )
                 {
-                    ActionManager::sharedManager().executeAction( actionID, context );
-                    return true;
+                    const bool state = i_event->type() == QEvent::Type::KeyPress;
+                    return ActionManager::sharedManager().executeAction( actionID, context, state );
                 }
             }
 

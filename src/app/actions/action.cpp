@@ -20,4 +20,15 @@ std::string Action::getID() const
     return m_identifier;
 }
     
+TriggerAction::TriggerAction( const std::string &i_identifier )
+    : Action( i_identifier )
+{
+}
+    
+ToggleAction::ToggleAction( const std::string &i_identifier )
+    : Action( i_identifier )
+{
+}
+
+    
 } // namespace Goby

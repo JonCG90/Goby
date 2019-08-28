@@ -11,11 +11,11 @@ namespace Goby
 {
     
 CameraAction::CameraAction( const std::string &i_identifier )
-    : Action( i_identifier )
+    : ToggleAction( i_identifier )
 {
 }
 
-void CameraAction::execute( const ActionContextPtr &i_context )
+void CameraAction::execute( const ActionContextPtr &i_context, bool i_state )
 {
     CameraActionContextPtr cameraContext = std::dynamic_pointer_cast< CameraActionContext >( i_context );
     if ( cameraContext  )
@@ -23,7 +23,7 @@ void CameraAction::execute( const ActionContextPtr &i_context )
         CameraController* controller = cameraContext->controller;
         if ( controller != nullptr )
         {
-            updateCameraController( controller );
+            updateCameraController( controller, i_state );
         }
     }
 }
@@ -38,9 +38,82 @@ std::string CameraMoveForwardAction::getName() const
     return "Move Forward";
 }
     
-void CameraMoveForwardAction::updateCameraController( CameraController* i_controller )
+void CameraMoveForwardAction::updateCameraController( CameraController* i_controller, bool i_state )
 {
-    i_controller->translate( vec3d( 0.0, 0.0, 1.0 ), 1.0 );
+    if ( i_state )
+    {
+        i_controller->setMoveDirection( vec3d( 0.0, 0.0, 1.0 ) );
+    }
+    else
+    {
+        i_controller->setMoveDirection( vec3d( 0.0, 0.0, -1.0 ) );
+    }
+}
+
+CameraMoveBackwardAction::CameraMoveBackwardAction()
+: CameraAction( "Camera:Backward" )
+{
+}
+
+std::string CameraMoveBackwardAction::getName() const
+{
+    return "Move Backward";
+}
+
+void CameraMoveBackwardAction::updateCameraController( CameraController* i_controller, bool i_state )
+{
+    if ( i_state )
+    {
+        i_controller->setMoveDirection( vec3d( 0.0, 0.0, -1.0 ) );
+    }
+    else
+    {
+        i_controller->setMoveDirection( vec3d( 0.0, 0.0, 1.0 ) );
+    }
+}
+
+CameraMoveLeftAction::CameraMoveLeftAction()
+: CameraAction( "Camera:Left" )
+{
+}
+
+std::string CameraMoveLeftAction::getName() const
+{
+    return "Move Left";
+}
+
+void CameraMoveLeftAction::updateCameraController( CameraController* i_controller, bool i_state )
+{
+    if ( i_state )
+    {
+        i_controller->setMoveDirection( vec3d( 1.0, 0.0, 0.0 ) );
+    }
+    else
+    {
+        i_controller->setMoveDirection( vec3d( -1.0, 0.0, 0.0 ) );
+    }
+}
+
+CameraMoveRightAction::CameraMoveRightAction()
+: CameraAction( "Camera:Right" )
+{
+}
+
+std::string CameraMoveRightAction::getName() const
+{
+    return "Move Right";
+}
+
+void CameraMoveRightAction::updateCameraController( CameraController* i_controller, bool i_state )
+{
+    if ( i_state )
+    {
+        i_controller->setMoveDirection( vec3d( -1.0, 0.0, 0.0 ) );
+    }
+    else
+    {
+        i_controller->setMoveDirection( vec3d( 1.0, 0.0, 0.0 ) );
+    }
 }
     
 } // namespace Goby

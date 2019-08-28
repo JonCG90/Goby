@@ -13,6 +13,8 @@
 #include <app/shortcuts/shortcutReceiver.hpp>
 #include <app/camera/cameraController.hpp>
 
+#include <utilities/timer.hpp>
+
 #include <coral/scene.hpp>
 
 #include <pxr/usd/usd/stage.h>
@@ -32,6 +34,7 @@ public:
     UsdRenderWindow();
     
     void initialize() override;
+    void update() override;
     void render() override;
     
     Goby::ActionContextPtr getContext() override;
@@ -42,6 +45,13 @@ private:
     
     coral::Scene m_scene;
     Goby::CameraController m_cameraController;
+    Timer m_timer;
+    
+private:
+    
+    void mousePressEvent( QMouseEvent *i_event ) override;
+    void mouseReleaseEvent( QMouseEvent *i_event ) override;
+    void mouseMoveEvent( QMouseEvent *i_event ) override;
 };
 
 #endif /* USDRENDERWINDOW_HPP */
