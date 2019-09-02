@@ -96,7 +96,7 @@ void UsdRenderWindow::render()
     
     glClear( GL_COLOR_BUFFER_BIT );
     
-    mat4f projection = glm::perspective( 60.0f, 4.0f / 3.0f, 0.1f, 100.0f );
+    mat4f projection = glm::perspective( 45.0f, static_cast< float >( width() ) / static_cast< float >( width() ), 0.1f, 1000.0f );
     mat4d view = m_cameraController.getView();
         
     QMatrix4x4 matrix;

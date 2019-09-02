@@ -42,11 +42,11 @@ void CameraMoveForwardAction::updateCameraController( CameraController* i_contro
 {
     if ( i_state )
     {
-        i_controller->setMoveDirection( vec3d( 0.0, 0.0, 1.0 ) );
+        i_controller->setMoveDirection( vec3d( 0.0, 0.0, -1.0 ) );
     }
     else
     {
-        i_controller->setMoveDirection( vec3d( 0.0, 0.0, -1.0 ) );
+        i_controller->setMoveDirection( vec3d( 0.0, 0.0, 1.0 ) );
     }
 }
 
@@ -64,11 +64,11 @@ void CameraMoveBackwardAction::updateCameraController( CameraController* i_contr
 {
     if ( i_state )
     {
-        i_controller->setMoveDirection( vec3d( 0.0, 0.0, -1.0 ) );
+        i_controller->setMoveDirection( vec3d( 0.0, 0.0, 1.0 ) );
     }
     else
     {
-        i_controller->setMoveDirection( vec3d( 0.0, 0.0, 1.0 ) );
+        i_controller->setMoveDirection( vec3d( 0.0, 0.0, -1.0 ) );
     }
 }
 
@@ -86,11 +86,11 @@ void CameraMoveLeftAction::updateCameraController( CameraController* i_controlle
 {
     if ( i_state )
     {
-        i_controller->setMoveDirection( vec3d( 1.0, 0.0, 0.0 ) );
+        i_controller->setMoveDirection( vec3d( -1.0, 0.0, 0.0 ) );
     }
     else
     {
-        i_controller->setMoveDirection( vec3d( -1.0, 0.0, 0.0 ) );
+        i_controller->setMoveDirection( vec3d( 1.0, 0.0, 0.0 ) );
     }
 }
 
@@ -108,11 +108,11 @@ void CameraMoveRightAction::updateCameraController( CameraController* i_controll
 {
     if ( i_state )
     {
-        i_controller->setMoveDirection( vec3d( -1.0, 0.0, 0.0 ) );
+        i_controller->setMoveDirection( vec3d( 1.0, 0.0, 0.0 ) );
     }
     else
     {
-        i_controller->setMoveDirection( vec3d( 1.0, 0.0, 0.0 ) );
+        i_controller->setMoveDirection( vec3d( -1.0, 0.0, 0.0 ) );
     }
 }
     
