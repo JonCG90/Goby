@@ -8,6 +8,8 @@
 #ifndef CAMERACONTROLLER_HPP
 #define CAMERACONTROLLER_HPP
 
+#include <app/camera/control/cameraControl.hpp>
+
 #include <math/math.hpp>
 
 namespace Goby
@@ -19,13 +21,6 @@ enum class CameraContolType
     Orbit,
     Count,
 };
-    
-struct RenderCamera
-{
-    vec3d position;
-    vec3d target;
-    vec3d up;
-};
 
 class CameraController
 {
@@ -34,11 +29,12 @@ public:
     CameraController();
     ~CameraController() = default;
     
+    void setType( CameraContolType i_type );
+    
     void reset( const RenderCamera &i_camera );
     void update( double i_dt );
     
     void update( const vec2i &i_delta );
-    void translate( const vec3d &i_direction, double i_dt );
     void setMoveDirection( const vec3d &i_direction );
     
     mat4d getView() const;
@@ -46,15 +42,10 @@ public:
 private:
     
     CameraContolType m_type;
-    double m_lookSensitivity;
-    double m_moveSensitivity;
+    CameraControlPtr m_control;
+    
     vec2i m_delta;
-    
     vec3d m_moveDirection;
-    
-    vec3d m_position;
-    vec3d m_target;
-    vec3d m_up;
     
     mat4d m_view;
     

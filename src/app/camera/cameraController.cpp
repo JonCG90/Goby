@@ -7,6 +7,8 @@
 
 #include "cameraController.hpp"
 
+#include <app/camera/control/flyControl.hpp>
+
 #include "glm/gtc/matrix_transform.hpp"
 
 #include <algorithm>
@@ -16,17 +18,34 @@ namespace Goby
 {
 
 CameraController::CameraController()
-    : m_type( CameraContolType::Fly )
-    , m_lookSensitivity( 1.0 )
-    , m_moveSensitivity( 0.1 )
+    : m_type( CameraContolType::Count )
 {
+    setType( CameraContolType::Fly );
+}
+    
+void CameraController::setType( CameraContolType i_type )
+{
+    if ( m_type == i_type )
+    {
+        return;
+    }
+    
+    switch ( i_type ) {
+        case CameraContolType::Fly:
+        {
+            m_control = std::make_shared< FlyControl >();
+            break;
+        }
+        default:
+            break;
+    }
+    
+    m_type = i_type;
 }
     
 void CameraController::reset( const RenderCamera &i_camera )
 {
-    m_position = i_camera.position;
-    m_target = i_camera.target;
-    m_up = i_camera.up;
+    m_control->reset( i_camera );
 }
     
 void CameraController::update( double i_dt )
@@ -37,29 +56,22 @@ void CameraController::update( double i_dt )
     if ( moveDirection != m_moveDirection )
     {
         moveDirection = glm::normalize( m_moveDirection );
-    }
-    
-    switch ( m_type ) {
-        case CameraContolType::Fly:
-        {
-            translate( moveDirection, i_dt );
-            break;
+        
+        switch ( m_type ) {
+            case CameraContolType::Fly:
+            {
+                m_control->updateMove( moveDirection * dt );
+                break;
+            }
+            case CameraContolType::Orbit:
+                
+                break;
+            default:
+                break;
         }
-        case CameraContolType::Orbit:
-            
-            break;
-        default:
-            break;
     }
     
     m_delta = vec2i( 0.0 );
-}
-    
-void CameraController::translate( const vec3d &i_direction, double i_dt )
-{
-    const vec3d translate = ( m_moveSensitivity * i_dt ) * i_direction;
-    m_position += translate;
-    m_target += translate;
 }
     
 void CameraController::setMoveDirection( const vec3d &i_direction )
@@ -74,7 +86,7 @@ void CameraController::update( const vec2i &i_delta )
     
 mat4d CameraController::getView() const
 {
-    return glm::lookAt( m_position, m_target, m_up );
+    return m_control->getViewMatrix();
 }
     
 } // namespace Goby
