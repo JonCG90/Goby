@@ -24,9 +24,9 @@ public:
     
     void reset( const RenderCamera &i_camera ) override;
     
-    void updateMove( const vec3d &i_move ) override;
-    void updateLook( const vec2d &i_look ) override;
-    
+    void updateMoveInput( const vec3d &i_moveInput, double dt ) override;
+    void updateLookInput( const vec2d &i_lookInput, bool i_mouseDown, double dt ) override;
+        
     mat4d getViewMatrix() override;
     
 private:
@@ -44,6 +44,8 @@ private:
     
     mat4d m_view;
     
+    vec2d m_prevLookInput;
+    bool m_mouseDown;
     bool m_dirty;
     
 private:

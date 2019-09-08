@@ -151,20 +151,20 @@ Goby::ActionContextPtr UsdRenderWindow::getContext()
 
 void UsdRenderWindow::mousePressEvent( QMouseEvent *i_event )
 {
-    std::cout << "Mouse Pressed" << std::endl;
+    m_cameraController.mouseStateChanged( true );
     OpenGLWindow::mousePressEvent(i_event);
 }
 
 void UsdRenderWindow::mouseReleaseEvent( QMouseEvent *i_event )
 {
-    std::cout << "Mouse Released" << std::endl;
+    m_cameraController.mouseStateChanged( false );
     OpenGLWindow::mouseReleaseEvent(i_event);
 }
 
 void UsdRenderWindow::mouseMoveEvent( QMouseEvent *i_event )
 {
-    std::cout << "Mouse Moved" << std::endl;
-    const vec2i delta( i_event->x(), i_event->y() );
-    m_cameraController.update( delta );
+    const vec2d lookCoords( static_cast< double >( i_event->x() ) / static_cast< double >( x() ),
+                            static_cast< double >( i_event->y() ) / static_cast< double >( y() ) );
+    m_cameraController.updateLookCoords( lookCoords );
     OpenGLWindow::mouseMoveEvent( i_event );
 }

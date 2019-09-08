@@ -127,25 +127,21 @@ void OpenGLWindow::setAnimating(bool animating)
 
 void OpenGLWindow::mousePressEvent(QMouseEvent *i_event)
 {
-    std::cout << "Mouse Pressed" << std::endl;
     QWindow::mousePressEvent(i_event);
 }
 
 void OpenGLWindow::mouseReleaseEvent(QMouseEvent *i_event)
 {
-    std::cout << "Mouse Released" << std::endl;
     QWindow::mouseReleaseEvent(i_event);
 }
 
 void OpenGLWindow::mouseMoveEvent(QMouseEvent *i_event)
 {
-    std::cout << "Mouse Moved" << std::endl;
     QWindow::mouseMoveEvent(i_event);
 }
 
 void OpenGLWindow::resizeEvent(QResizeEvent *i_event)
 {
-    std::cout << "Resize Event" << std::endl;
     QWindow::resizeEvent(i_event);
 }
 

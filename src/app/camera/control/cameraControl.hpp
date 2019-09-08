@@ -31,8 +31,8 @@ public:
     
     virtual void reset( const RenderCamera &i_camera ) = 0;
     
-    virtual void updateMove( const vec3d &i_move );
-    virtual void updateLook( const vec2d &i_look );
+    virtual void updateMoveInput( const vec3d &i_moveInput, double dt );
+    virtual void updateLookInput( const vec2d &i_lookInput, bool i_mouseDown, double dt );
     
     virtual mat4d getViewMatrix() = 0;
 };

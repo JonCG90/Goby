@@ -16,8 +16,9 @@ FlyControl::FlyControl()
     : m_pitch( 0.0 )
     , m_yaw( -90.0 )
     , m_roll( 0.0 )
-    , m_translateSensitivity( 1.0 )
-    , m_rotateSensitivity( 1.0 )
+    , m_translateSensitivity( 0.5 )
+    , m_rotateSensitivity( 3.0 )
+    , m_mouseDown( false )
     , m_dirty( true )
 {
 }
@@ -34,14 +35,27 @@ void FlyControl::reset( const RenderCamera &i_camera )
     m_dirty = true;
 }
     
-void FlyControl::updateMove( const vec3d &i_move )
+void FlyControl::updateMoveInput( const vec3d &i_moveInput, double dt )
 {
-    translate( i_move );
+    translate( i_moveInput * dt );
 }
-    
-void FlyControl::updateLook( const vec2d &i_look )
+
+void FlyControl::updateLookInput( const vec2d &i_lookInput, bool i_mouseDown, double dt )
 {
-    rotate( i_look.y, i_look.x, 0.0 );
+    if ( i_mouseDown )
+    {
+        vec2d delta( 0.0 );
+        
+        if ( m_mouseDown )
+        {
+            delta = ( i_lookInput - m_prevLookInput ) * dt;
+            rotate( delta.y, delta.x, 0.0 );
+        }
+        
+        m_prevLookInput = i_lookInput;
+    }
+    
+    m_mouseDown = i_mouseDown;
 }
     
 void FlyControl::rotate( double i_pitch, double i_yaw, double i_roll )
@@ -75,6 +89,11 @@ void FlyControl::rotate( double i_pitch, double i_yaw, double i_roll )
     
 void FlyControl::translate( const vec3d &i_translation )
 {
+    if ( i_translation == vec3d( 0.0 ) )
+    {
+        return;
+    }
+    
     // Generate camera basis vectors
     const vec3d x = glm::cross( m_direction, m_up );
     const vec3d &y = m_up;
@@ -90,7 +109,6 @@ void FlyControl::translate( const vec3d &i_translation )
     vec4d translateGlobal = basis * translateCamera;
     
     m_position += ( m_translateSensitivity * vec3d( translateGlobal.x, translateGlobal.y, translateGlobal.z ) );
-
     m_dirty = true;
 }
     

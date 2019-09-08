@@ -9,12 +9,12 @@
 
 namespace Goby
 {
-
-void CameraControl::updateMove( const vec3d &i_move )
+    
+void CameraControl::updateMoveInput( const vec3d &i_moveInput, double dt )
 {
 }
 
-void CameraControl::updateLook( const vec2d &i_look )
+void CameraControl::updateLookInput( const vec2d &i_lookInput, bool i_mouseDown, double dt )
 {
 }
     

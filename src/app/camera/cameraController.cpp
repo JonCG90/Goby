@@ -19,6 +19,7 @@ namespace Goby
 
 CameraController::CameraController()
     : m_type( CameraContolType::Count )
+    , m_mouseDown( false )
 {
     setType( CameraContolType::Fly );
 }
@@ -52,26 +53,31 @@ void CameraController::update( double i_dt )
 {
     const double dt = std::min( 100.0, i_dt );
     
-    vec3d moveDirection = vec3d( 0.0, 0.0, 0.0 );
-    if ( moveDirection != m_moveDirection )
+    // Normalize move direction
+    vec3d moveDirection = m_moveDirection;
+    if ( moveDirection != vec3d( 0.0 ) )
     {
-        moveDirection = glm::normalize( m_moveDirection );
-        
-        switch ( m_type ) {
-            case CameraContolType::Fly:
-            {
-                m_control->updateMove( moveDirection * dt );
-                break;
-            }
-            case CameraContolType::Orbit:
-                
-                break;
-            default:
-                break;
-        }
+        moveDirection = glm::normalize( moveDirection );
     }
     
-    m_delta = vec2i( 0.0 );
+    switch ( m_type ) {
+        case CameraContolType::Fly:
+        {
+            m_control->updateMoveInput( moveDirection, dt );
+            m_control->updateLookInput( m_lookCoords, m_mouseDown, dt );
+            break;
+        }
+        case CameraContolType::Orbit:
+            
+            break;
+        default:
+            break;
+    }
+}
+    
+void CameraController::mouseStateChanged( bool i_isDown )
+{
+    m_mouseDown = i_isDown;
 }
     
 void CameraController::setMoveDirection( const vec3d &i_direction )
@@ -79,9 +85,9 @@ void CameraController::setMoveDirection( const vec3d &i_direction )
     m_moveDirection += i_direction;
 }
 
-void CameraController::update( const vec2i &i_delta )
+void CameraController::updateLookCoords( const vec2d &i_lookCoords )
 {
-    m_delta += i_delta;
+    m_lookCoords = i_lookCoords;
 }
     
 mat4d CameraController::getView() const

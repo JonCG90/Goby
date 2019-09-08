@@ -34,7 +34,9 @@ public:
     void reset( const RenderCamera &i_camera );
     void update( double i_dt );
     
-    void update( const vec2i &i_delta );
+    void mouseStateChanged( bool i_isDown );
+    
+    void updateLookCoords( const vec2d &i_lookCoords );
     void setMoveDirection( const vec3d &i_direction );
     
     mat4d getView() const;
@@ -44,8 +46,9 @@ private:
     CameraContolType m_type;
     CameraControlPtr m_control;
     
-    vec2i m_delta;
+    vec2d m_lookCoords;
     vec3d m_moveDirection;
+    bool m_mouseDown;
     
     mat4d m_view;
     
