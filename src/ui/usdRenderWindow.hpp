@@ -17,6 +17,8 @@
 
 #include <coral/scene.hpp>
 
+#include <rendering/marlin/api/marlin.hpp>
+
 #include <pxr/usd/usd/stage.h>
 #include <pxr/usdImaging/usdImagingGL/engine.h>
 
@@ -43,7 +45,8 @@ private:
     
     int m_frame;
     
-    coral::Scene m_scene;
+    marlin::Entity m_scene;
+    
     Goby::CameraController m_cameraController;
     Timer m_timer;
     

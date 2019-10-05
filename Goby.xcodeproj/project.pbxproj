@@ -63,6 +63,14 @@
 		2361F62E231D2C9500F4B0CB /* flyControl.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 2361F62C231D2C9500F4B0CB /* flyControl.cpp */; };
 		2361F631231D2CDE00F4B0CB /* cameraControl.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 2361F62F231D2CDE00F4B0CB /* cameraControl.cpp */; };
 		23A7DF0E22CB6B7600AA0E6C /* renderDelegate.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 23A7DF0C22CB6B7600AA0E6C /* renderDelegate.cpp */; };
+		23ABB6152343451B0047CCAB /* scene.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 23ABB6132343451A0047CCAB /* scene.cpp */; };
+		23ABB618234346F10047CCAB /* renderItem.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 23ABB616234346F10047CCAB /* renderItem.cpp */; };
+		23ABB61B2344A9EE0047CCAB /* renderManager.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 23ABB6192344A9EE0047CCAB /* renderManager.cpp */; };
+		23ABB62023489FC90047CCAB /* renderer.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 23ABB61E23489FC90047CCAB /* renderer.cpp */; };
+		23ABB6232348A0C70047CCAB /* entity.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 23ABB6212348A0C70047CCAB /* entity.cpp */; };
+		23ABB6262348A2880047CCAB /* marlin.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 23ABB6242348A2880047CCAB /* marlin.cpp */; };
+		23ABB62A2348A5E30047CCAB /* context.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 23ABB6282348A5E30047CCAB /* context.cpp */; };
+		23D4A0E02348B47000AD3D75 /* updateTask.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 23D4A0DF2348B47000AD3D75 /* updateTask.cpp */; };
 		563CF89DC182C977E17F2B26 /* QtGui.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = 897F7DBDCA6B394E806B8406 /* QtGui.framework */; };
 		7E5709D3FE807F8C875AE381 /* moc_mainWindow.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = C70E9616EF3EBD83D0000B2E /* moc_mainWindow.cpp */; settings = {ATTRIBUTES = (); }; };
 		8771A8C96E9C391044035D99 /* OpenGL.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = D4B32C2222F82AC56BADEB21 /* OpenGL.framework */; };
@@ -170,6 +178,22 @@
 		2361F630231D2CDE00F4B0CB /* cameraControl.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = cameraControl.hpp; sourceTree = "<group>"; };
 		23A7DF0C22CB6B7600AA0E6C /* renderDelegate.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = renderDelegate.cpp; sourceTree = "<group>"; };
 		23A7DF0D22CB6B7600AA0E6C /* renderDelegate.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = renderDelegate.hpp; sourceTree = "<group>"; };
+		23ABB6132343451A0047CCAB /* scene.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = scene.cpp; sourceTree = "<group>"; };
+		23ABB6142343451A0047CCAB /* scene.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = scene.hpp; sourceTree = "<group>"; };
+		23ABB616234346F10047CCAB /* renderItem.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = renderItem.cpp; sourceTree = "<group>"; };
+		23ABB617234346F10047CCAB /* renderItem.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = renderItem.hpp; sourceTree = "<group>"; };
+		23ABB6192344A9EE0047CCAB /* renderManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = renderManager.cpp; sourceTree = "<group>"; };
+		23ABB61A2344A9EE0047CCAB /* renderManager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = renderManager.hpp; sourceTree = "<group>"; };
+		23ABB61E23489FC90047CCAB /* renderer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = renderer.cpp; sourceTree = "<group>"; };
+		23ABB61F23489FC90047CCAB /* renderer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = renderer.hpp; sourceTree = "<group>"; };
+		23ABB6212348A0C70047CCAB /* entity.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = entity.cpp; sourceTree = "<group>"; };
+		23ABB6222348A0C70047CCAB /* entity.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = entity.hpp; sourceTree = "<group>"; };
+		23ABB6242348A2880047CCAB /* marlin.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = marlin.cpp; sourceTree = "<group>"; };
+		23ABB6252348A2880047CCAB /* marlin.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = marlin.hpp; sourceTree = "<group>"; };
+		23ABB6282348A5E30047CCAB /* context.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = context.cpp; sourceTree = "<group>"; };
+		23ABB6292348A5E30047CCAB /* context.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = context.hpp; sourceTree = "<group>"; };
+		23D4A0DE2348B47000AD3D75 /* updateTask.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = updateTask.hpp; sourceTree = "<group>"; };
+		23D4A0DF2348B47000AD3D75 /* updateTask.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = updateTask.cpp; sourceTree = "<group>"; };
 		2B774D8E4178765CE52EAAF5 /* DiskArbitration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DiskArbitration.framework; path = /System/Library/Frameworks/DiskArbitration.framework; sourceTree = "<absolute>"; };
 		3244324228FB6239A33DB996 /* ui_mainWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ui_mainWindow.h; path = /Users/jongraham/Projects/Goby/ui_mainWindow.h; sourceTree = "<absolute>"; };
 		4F5AC65C949567C2B2372090 /* mainWindow.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = mainWindow.hpp; path = /Users/jongraham/Projects/Goby/src/ui/mainWindow.hpp; sourceTree = "<absolute>"; };
@@ -226,9 +250,13 @@
 		23237F1922C4D40B003ACB0B /* marlin */ = {
 			isa = PBXGroup;
 			children = (
-				2361F5CF2303BAFE00F4B0CB /* shading */,
+				23ABB61D23489FAC0047CCAB /* api */,
+				23ABB6272348A5D20047CCAB /* context */,
 				2361F5B622FFC93200F4B0CB /* geometry */,
 				234EA78C22FE7AFF00803B89 /* gl */,
+				23ABB61C23489F830047CCAB /* renderer */,
+				23ABB612234344F10047CCAB /* scene */,
+				2361F5CF2303BAFE00F4B0CB /* shading */,
 				23237F1A22C4D40B003ACB0B /* usd */,
 			);
 			path = marlin;
@@ -309,12 +337,12 @@
 		2361F5B622FFC93200F4B0CB /* geometry */ = {
 			isa = PBXGroup;
 			children = (
+				2361F5BE22FFC95800F4B0CB /* geometry.cpp */,
+				2361F5BF22FFC95800F4B0CB /* geometry.hpp */,
 				2361F5B722FFC93200F4B0CB /* mesh.cpp */,
 				2361F5B922FFC93200F4B0CB /* mesh.hpp */,
 				2361F5BA22FFC93200F4B0CB /* meshUtilities.cpp */,
 				2361F5B822FFC93200F4B0CB /* meshUtilities.hpp */,
-				2361F5BE22FFC95800F4B0CB /* geometry.cpp */,
-				2361F5BF22FFC95800F4B0CB /* geometry.hpp */,
 			);
 			path = geometry;
 			sourceTree = "<group>";
@@ -322,12 +350,12 @@
 		2361F5CF2303BAFE00F4B0CB /* shading */ = {
 			isa = PBXGroup;
 			children = (
-				2361F5D02303BAFE00F4B0CB /* shaderParameter.hpp */,
-				2361F5D12303BAFE00F4B0CB /* material.hpp */,
-				2361F5D22303BAFE00F4B0CB /* shaderParameter.tpp */,
-				2361F5D32303BAFE00F4B0CB /* shaderParameter.cpp */,
 				2361F5D42303BAFE00F4B0CB /* material.cpp */,
+				2361F5D12303BAFE00F4B0CB /* material.hpp */,
 				2361F5D82303C08500F4B0CB /* material.tpp */,
+				2361F5D32303BAFE00F4B0CB /* shaderParameter.cpp */,
+				2361F5D02303BAFE00F4B0CB /* shaderParameter.hpp */,
+				2361F5D22303BAFE00F4B0CB /* shaderParameter.tpp */,
 			);
 			path = shading;
 			sourceTree = "<group>";
@@ -421,6 +449,50 @@
 				2361F630231D2CDE00F4B0CB /* cameraControl.hpp */,
 			);
 			path = control;
+			sourceTree = "<group>";
+		};
+		23ABB612234344F10047CCAB /* scene */ = {
+			isa = PBXGroup;
+			children = (
+				23ABB6132343451A0047CCAB /* scene.cpp */,
+				23ABB6142343451A0047CCAB /* scene.hpp */,
+				23ABB616234346F10047CCAB /* renderItem.cpp */,
+				23ABB617234346F10047CCAB /* renderItem.hpp */,
+				23ABB6192344A9EE0047CCAB /* renderManager.cpp */,
+				23ABB61A2344A9EE0047CCAB /* renderManager.hpp */,
+			);
+			path = scene;
+			sourceTree = "<group>";
+		};
+		23ABB61C23489F830047CCAB /* renderer */ = {
+			isa = PBXGroup;
+			children = (
+				23ABB61E23489FC90047CCAB /* renderer.cpp */,
+				23ABB61F23489FC90047CCAB /* renderer.hpp */,
+			);
+			path = renderer;
+			sourceTree = "<group>";
+		};
+		23ABB61D23489FAC0047CCAB /* api */ = {
+			isa = PBXGroup;
+			children = (
+				23ABB6212348A0C70047CCAB /* entity.cpp */,
+				23ABB6222348A0C70047CCAB /* entity.hpp */,
+				23ABB6242348A2880047CCAB /* marlin.cpp */,
+				23ABB6252348A2880047CCAB /* marlin.hpp */,
+			);
+			path = api;
+			sourceTree = "<group>";
+		};
+		23ABB6272348A5D20047CCAB /* context */ = {
+			isa = PBXGroup;
+			children = (
+				23D4A0DF2348B47000AD3D75 /* updateTask.cpp */,
+				23D4A0DE2348B47000AD3D75 /* updateTask.hpp */,
+				23ABB6282348A5E30047CCAB /* context.cpp */,
+				23ABB6292348A5E30047CCAB /* context.hpp */,
+			);
+			path = context;
 			sourceTree = "<group>";
 		};
 		25B08E2869634E9BCBA333A2 /* Generated Sources */ = {
@@ -635,22 +707,29 @@
 				23237F1E22C4D48F003ACB0B /* rendererPlugin.cpp in Compile Sources */,
 				2361F5FC23094FC700F4B0CB /* camera.cpp in Compile Sources */,
 				2361F60C230C016300F4B0CB /* shortcutFilter.cpp in Compile Sources */,
+				23D4A0E02348B47000AD3D75 /* updateTask.cpp in Compile Sources */,
+				23ABB6152343451B0047CCAB /* scene.cpp in Compile Sources */,
 				B2A6F1FFBA4E92771BB02D52 /* mainWindow.cpp in Compile Sources */,
 				7E5709D3FE807F8C875AE381 /* moc_mainWindow.cpp in Compile Sources */,
 				23237F1722BF855D003ACB0B /* moc_openglwindow.cpp in Compile Sources */,
 				2361F5BC22FFC93200F4B0CB /* mesh.cpp in Compile Sources */,
+				23ABB62A2348A5E30047CCAB /* context.cpp in Compile Sources */,
 				23A7DF0E22CB6B7600AA0E6C /* renderDelegate.cpp in Compile Sources */,
 				2361F631231D2CDE00F4B0CB /* cameraControl.cpp in Compile Sources */,
 				2361F5C322FFD40800F4B0CB /* vertexArray.cpp in Compile Sources */,
 				2361F611230D419D00F4B0CB /* actionContext.cpp in Compile Sources */,
+				23ABB61B2344A9EE0047CCAB /* renderManager.cpp in Compile Sources */,
 				2361F62E231D2C9500F4B0CB /* flyControl.cpp in Compile Sources */,
 				2361F5C62300209700F4B0CB /* shader.cpp in Compile Sources */,
 				2361F5D62303BAFE00F4B0CB /* shaderParameter.cpp in Compile Sources */,
 				234EA77122EDA92500803B89 /* openglwindow.cpp in Compile Sources */,
 				2361F5E92307971400F4B0CB /* actionManager.cpp in Compile Sources */,
 				2361F625230D4B2600F4B0CB /* cameraActionContext.cpp in Compile Sources */,
+				23ABB618234346F10047CCAB /* renderItem.cpp in Compile Sources */,
 				2361F622230D4B1200F4B0CB /* cameraActions.cpp in Compile Sources */,
 				234EA77322EDA9C200803B89 /* main.cpp in Compile Sources */,
+				23ABB6262348A2880047CCAB /* marlin.cpp in Compile Sources */,
+				23ABB6232348A0C70047CCAB /* entity.cpp in Compile Sources */,
 				2361F5D72303BAFE00F4B0CB /* material.cpp in Compile Sources */,
 				2361F5FF230AB61100F4B0CB /* conversion.cpp in Compile Sources */,
 				2361F5C022FFC95800F4B0CB /* geometry.cpp in Compile Sources */,
@@ -665,6 +744,7 @@
 				234EA78622FACCFD00803B89 /* transform.cpp in Compile Sources */,
 				2361F5EC2307971F00F4B0CB /* action.cpp in Compile Sources */,
 				2361F606230BFD9400F4B0CB /* shortcutManager.cpp in Compile Sources */,
+				23ABB62023489FC90047CCAB /* renderer.cpp in Compile Sources */,
 				2361F62A230D5BF800F4B0CB /* timer.cpp in Compile Sources */,
 			);
 			name = "Compile Sources";
@@ -855,6 +935,7 @@
 					/usr/local/opt/USD/include,
 					./src,
 					./src/thirdparty,
+					./src/rendering,
 				);
 				LD_RUNPATH_SEARCH_PATHS = /usr/local/opt/USD/lib;
 				LIBRARY_SEARCH_PATHS = (
@@ -901,6 +982,7 @@
 					/usr/local/opt/USD/include,
 					./src,
 					./src/thirdparty,
+					./src/rendering,
 				);
 				LD_RUNPATH_SEARCH_PATHS = /usr/local/opt/USD/lib;
 				LIBRARY_SEARCH_PATHS = (

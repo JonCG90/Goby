@@ -69,16 +69,7 @@ void UsdRenderWindow::initialize()
 
     m_cameraController.reset( camera );
     
-    m_scene.load( "/Users/jongraham/Documents/Models/Kitchen_set/assets/Bottle/Bottle.usd" );
-//    m_scene.load( "/Users/jongraham/Documents/Models/Kitchen_set/Kitchen_set.usd" );
-//    coral::Items items = m_scene.getAllItems();
-//
-//    for ( const coral::Item &item : items )
-//    {
-//        std::cout << item.getPath() << std::endl;
-//        coral::MeshSchema mesh = coral::MeshSchema( item );
-//        coral::MeshPolygons geom = mesh.getPolygons();
-//    }
+    m_scene = marlin::createScene();
 }
 
 void UsdRenderWindow::update()
@@ -86,11 +77,15 @@ void UsdRenderWindow::update()
     const double dt = m_timer.elapsedMilliseconds();
     m_cameraController.update( dt );
     
+    marlin::update();
+    
     m_timer.reset();
 }
 
 void UsdRenderWindow::render()
 {
+    marlin::render( m_scene );
+    
     const qreal scale = devicePixelRatio();
     glViewport( 0, 0, width() * scale, height() * scale );
     
@@ -116,7 +111,10 @@ void UsdRenderWindow::render()
     material.load();
     material.bind();
     
-    coral::Items items = m_scene.getAllItems();
+    coral::Scene scene;
+    scene.load( "/Users/jongraham/Documents/Models/Kitchen_set/assets/Bottle/Bottle.usd" );
+    //    scene.load( "/Users/jongraham/Documents/Models/Kitchen_set/Kitchen_set.usd" );
+    coral::Items items = scene.getAllItems();
     
     for ( const coral::Item &item : items )
     {

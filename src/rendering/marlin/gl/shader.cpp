@@ -147,7 +147,6 @@ void Shader::setVec2f( const std::string &i_param, vec2f i_value )
         glUniform2f( location, static_cast< GLfloat >( i_value.x ),
                                static_cast< GLfloat >( i_value.y ) );
     }
-    
 }
 
 void Shader::setVec3f( const std::string &i_param, vec3f i_value )
